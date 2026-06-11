@@ -1,659 +1,736 @@
 <!DOCTYPE html>
 <html lang="vi">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Mastery – Coaching F&B | Coach Loan Vũ</title>
-    <meta name="description" content="Chương trình coaching 1:1 chuyên sâu dành cho chủ quán nghiêm túc với tăng trưởng dài hạn.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        /* ══════════════════════════════════════════════════════════ */
-        /* ── LIQUID GLASS LUXURY THEME – Dịch vụ 3 ──────────────── */
-        /* ══════════════════════════════════════════════════════════ */
-        html, body { overflow-x: hidden; max-width: 100%; }
-        :root {
-            --bm-black:  #080808;
-            --bm-dark2:  #0e0e0e;
-            --bm-dark3:  #111111;
-            --bm-gold:   #C9A84C;
-            --bm-gold-light: #D4AF37;
-            --bm-accent: #2E7D32;
-            --bm-card:   rgba(255,255,255,0.03);
-            --bm-border: rgba(201,168,76,0.10);
-            --bm-glass:  rgba(255,255,255,0.04);
-            --bm-easing: cubic-bezier(0.16, 1, 0.3, 1);
-            --font-luxury: 'Playfair Display', Georgia, serif;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Business Mastery – Khai vấn chiến lược 1:1 cho doanh nhân F&B. Đồng hành dài hạn cùng Coach Edina Trâm để bứt phá doanh thu và xây dựng thương hiệu bền vững." />
+  <title>Business Mastery – Coach Edina Trâm</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ── Premium Emerald Depth theme for DV3 ── */
+    html,
+    body {
+      overflow-x: hidden;
+      max-width: 100%;
+    }
 
-        body { 
-            background: var(--bm-black); 
-            color: #E8E4DC; 
-        }
+    :root {
+      --page-accent: #014F3D;
+      --page-accent-dark: #012E24;
+      --page-accent-rgb: 1, 79, 61;
+      --bm-gold: #C8A244;
+      --bm-card: #FFFFFF;
+      --bm-border: #DED3B8;
+      --bm-glow: rgba(1, 79, 61, 0.06);
+    }
 
-        h1, h2, h3, h4 { 
-            color: var(--bm-gold); 
-            font-family: var(--font-luxury);
-            letter-spacing: 0.02em;
-        }
-        h1 { letter-spacing: 0.06em; }
-        p { color: rgba(255,255,255,0.75); }
-        
-        .site-header { 
-            background: rgba(8,8,8,0.92); 
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(201,168,76,0.08); 
-        }
-        .nav-logo, .nav-logo span { color: var(--bm-gold); }
-        .nav-links a { color: #B0BEC5; }
-        .nav-links a.active, .nav-links a:hover { color: var(--bm-gold); }
-        .nav-links a::after { background: var(--bm-gold); }
+    body {
+      background: var(--color-bg);
+      color: var(--color-fg);
+      padding-bottom: 80px;
+    }
 
-        .btn-primary {
-            background: linear-gradient(135deg, var(--bm-accent), #1b5e20);
-            color: #fff;
-            box-shadow: 0 4px 20px rgba(46, 125, 50, 0.35), 0 0 40px rgba(46,125,50,0.1);
-            transition: all 0.4s var(--bm-easing);
-        }
-        .btn-primary:hover {
-            background: linear-gradient(135deg, #1b5e20, var(--bm-accent));
-            color: #fff;
-            box-shadow: 0 6px 30px rgba(46, 125, 50, 0.5), 0 0 60px rgba(46,125,50,0.15);
-            transform: translateY(-2px);
-        }
-        .btn-gold {
-            background: transparent;
-            color: var(--bm-gold);
-            border: 1px solid var(--bm-gold);
-            padding: var(--space-3) var(--space-6);
-            display: inline-block;
-            text-align: center;
-            font-weight: 600;
-            border-radius: var(--radius-full);
-            transition: all 0.4s var(--bm-easing);
-            position: relative;
-        }
-        .btn-gold:hover {
-            background: var(--bm-gold);
-            color: var(--bm-black);
-            box-shadow: 0 0 30px rgba(201,168,76,0.25);
-        }
+    /* Extra prominent glow blobs for BM */
+    .glow-blob--1 {
+      width: 600px;
+      height: 600px;
+      top: 5%;
+      left: -10%;
+      opacity: 0.45;
+    }
 
-        .badge {
-            background: rgba(201,168,76,0.08);
-            color: var(--bm-gold);
-            border: 1px solid rgba(201,168,76,0.15);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-        }
+    .glow-blob--2 {
+      width: 500px;
+      height: 500px;
+      top: 35%;
+      right: -8%;
+      opacity: 0.35;
+    }
 
-        /* ── Ambient Glow Blobs ── */
-        .bm-glow-blob {
-            position: fixed;
-            border-radius: 50%;
-            filter: blur(80px);
-            opacity: 0.06;
-            pointer-events: none;
-            z-index: 0;
-        }
-        .bm-glow-blob-1 {
-            width: 500px; height: 500px;
-            background: var(--bm-gold);
-            top: 10%; left: -10%;
-            animation: bm-blob-float 20s ease-in-out infinite alternate;
-        }
-        .bm-glow-blob-2 {
-            width: 400px; height: 400px;
-            background: var(--bm-gold-light);
-            bottom: 20%; right: -8%;
-            animation: bm-blob-float 25s ease-in-out infinite alternate-reverse;
-        }
-        @keyframes bm-blob-float {
-            0% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(30px, -20px) scale(1.1); }
-            100% { transform: translate(-20px, 30px) scale(0.95); }
-        }
+    /* ── Premium section divider ── */
+    .bm-divider {
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--page-accent), var(--bm-gold));
+      margin-block: var(--space-4);
+      border-radius: var(--radius-full);
+    }
 
-        /* ── Helpers ── */
-        .bm-section { 
-            padding-block: var(--space-20); 
-            overflow: hidden;
-            position: relative;
-            z-index: 1;
-        }
-        /* Mobile section padding */
-        @media(max-width:600px) {
-            .bm-section { padding-inline: var(--space-4); }
-            .container { padding-inline: var(--space-4); }
-            .hero-content h1 { font-size: clamp(2rem, 8vw, 2.8rem); }
-            .faq-q { padding: var(--space-3) var(--space-4); font-size: var(--text-base); }
-            .faq-a { padding: 0 var(--space-4); }
-            .bm-card { padding: var(--space-4); backdrop-filter: none; -webkit-backdrop-filter: none; }
-            .pricing-card { padding: var(--space-4); }
-            .btn-primary, .btn-gold, .btn {
-                display: block; white-space: normal; text-align: center;
-                max-width: calc(100% - 2rem); box-sizing: border-box;
-                margin-left: auto; margin-right: auto; line-height: 1.4;
-            }
-            .bm-glow-blob { display: none; }
-        }
-        .bm-section.alt { 
-            background: var(--bm-dark2); 
-        }
-        .section-header { position: relative; z-index: 1; }
-        .section-header p { color: #94A3B8; }
-        .section-header h2 { font-size: clamp(1.75rem, 3vw, 2.5rem); }
+    .section-header .bm-divider {
+      margin-inline: auto;
+    }
 
-        .bm-divider {
-            width: 60px;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--bm-gold), transparent);
-            opacity: 0.6;
-            margin-block: var(--space-4);
-        }
-        .section-header .bm-divider { margin-inline: auto; }
+    /* ── Plan features list ── */
+    .plan-features {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+      margin-block: var(--space-6);
+      flex: 1;
+    }
 
-        /* ── Glassmorphism Card ── */
-        .bm-card {
-            background: var(--bm-glass);
-            backdrop-filter: blur(12px) saturate(1.3);
-            -webkit-backdrop-filter: blur(12px) saturate(1.3);
-            border: 1px solid var(--bm-border);
-            border-radius: var(--radius-lg);
-            padding: var(--space-8);
-            transition: all 0.5s var(--bm-easing);
-            position: relative;
-        }
-        .bm-card:hover { 
-            border-color: rgba(201,168,76,0.35); 
-            transform: translateY(-6px); 
-            box-shadow: 0 20px 50px rgba(0,0,0,0.4), 0 0 30px rgba(201,168,76,0.06);
-        }
-        .bm-card-icon {
-            font-size: 2rem;
-            color: var(--bm-gold);
-            margin-bottom: var(--space-4);
-        }
+    .plan-features li {
+      display: flex;
+      gap: var(--space-2);
+      font-size: var(--text-sm);
+      align-items: flex-start;
+      line-height: 1.6;
+    }
 
-        /* Grid standards */
-        .bm-grid-3 { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--space-6); }
-        .bm-grid-2 { display: grid; grid-template-columns: repeat(2,1fr); gap: var(--space-6); }
-        @media(max-width:1024px) { .bm-grid-3 { grid-template-columns: repeat(2,1fr); } }
-        @media(max-width:768px)  { 
-            .bm-grid-3 { grid-template-columns: 1fr; } 
-            .bm-grid-2 { grid-template-columns: 1fr; }
-        }
+    .plan-features li svg {
+      flex-shrink: 0;
+      margin-top: 3px;
+      color: var(--bm-gold);
+    }
 
-        /* ── SECTION ĐẶC BIỆT ── */
-        /* Hero – Cinematic Full-Screen */
-        .hero {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: var(--space-8);
-            align-items: center;
-        }
-        .hero-section-bg {
-            background:
-                radial-gradient(ellipse at 8% 70%, rgba(201, 120, 20, 0.35) 0%, transparent 50%),
-                radial-gradient(ellipse at 90% 10%, rgba(40, 20, 5, 0.50) 0%, transparent 55%),
-                radial-gradient(ellipse at 45% 50%, rgba(201, 168, 76, 0.06) 0%, transparent 65%),
-                var(--bm-black);
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-        .hero-content h1 { 
-            line-height: 1.05; margin-bottom: var(--space-4); 
-            font-size: clamp(3rem, 5vw, 5rem); letter-spacing: 0.06em; 
-            font-family: var(--font-luxury);
-            text-shadow: 0 0 80px rgba(201,168,76,0.15);
-        }
-        .hero-tagline { 
-            font-size: var(--text-2xl); color: rgba(255,255,255,0.9); 
-            font-family: var(--font-luxury); font-style: italic;
-            margin-bottom: var(--space-4); 
-        }
-        .hero-info { 
-            display: inline-block;
-            background: var(--bm-glass);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            padding: var(--space-4); border-radius: var(--radius-md); 
-            border-left: 2px solid var(--bm-gold); margin-block: var(--space-6);
-        }
-        .hero-img-wrap { text-align: center; position: relative; }
-        .hero-img { border-radius: var(--radius-lg); max-height: 600px; object-fit: contain; }
-        .hero-img-wrap::after {
-            content: '';
-            position: absolute;
-            bottom: 0; left: 0; right: 0;
-            height: 40%;
-            background: linear-gradient(to top, var(--bm-black) 0%, transparent 100%);
-            pointer-events: none;
-        }
+    /* ── Capacity note ── */
+    .capacity-note {
+      text-align: center;
+      margin-top: var(--space-8);
+      font-size: var(--text-sm);
+      font-style: italic;
+      color: var(--bm-gold);
+    }
 
-        /* ── Timeline / Process – Glassmorphism ── */
-        .timeline-item { 
-            display: flex; gap: var(--space-4); 
-            background: var(--bm-glass);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            padding: var(--space-6); border-radius: var(--radius-md); 
-            border-left: 2px solid rgba(201,168,76,0.25);
-            margin-bottom: var(--space-4);
-            transition: all 0.4s var(--bm-easing);
-        }
-        .timeline-item:hover {
-            border-left-color: var(--bm-gold);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            transform: translateX(4px);
-        }
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      body {
+        padding-bottom: 100px;
+      }
 
-        /* ── Pricing – Glassmorphism + Gradient Border ── */
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: var(--space-6);
-            margin-top: var(--space-8);
-        }
-        .pricing-card {
-            background: var(--bm-glass);
-            backdrop-filter: blur(12px) saturate(1.3);
-            -webkit-backdrop-filter: blur(12px) saturate(1.3);
-            border: 1px solid var(--bm-border);
-            border-radius: var(--radius-lg);
-            padding: var(--space-8);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-            transition: all 0.5s var(--bm-easing);
-        }
-        .pricing-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.4);
-        }
-        .pricing-card.featured {
-            background: rgba(201,168,76,0.08);
-            border: 2px solid var(--bm-gold);
-            transform: scale(1.05);
-            z-index: 2;
-            box-shadow: 0 0 40px rgba(201,168,76,0.12), 0 20px 60px rgba(0,0,0,0.3);
-        }
-        .pricing-card.featured::before {
-            content: 'ĐỀ XUẤT';
-            position: absolute; top:0; left: 50%; transform: translateX(-50%);
-            background: linear-gradient(90deg, var(--bm-gold), var(--bm-gold-light));
-            color: var(--bm-black); font-size: 0.75rem; font-weight: bold; width: 100%; padding: 4px 0;
-            letter-spacing: 2px;
-            font-family: var(--font-luxury);
-        }
-        @media(max-width:768px) {
-            .pricing-grid { grid-template-columns: 1fr; }
-            .pricing-card.featured { transform: scale(1); }
-        }
+      .srv-hero h1 {
+        font-size: clamp(2.2rem, 8vw, 3rem);
+      }
+    }
 
-        /* ── Box Headings Adjustment ── */
-        .bm-card h3, .bm-card h4, 
-        .timeline-item h3, .timeline-item h4,
-        .pricing-card h3, .pricing-card h4,
-        .hero-info span {
-            letter-spacing: 0.06em;
-            margin-bottom: var(--space-6) !important;
-            line-height: 1.5;
-        }
-        .hero-info span { margin-bottom: 0 !important; }
+    @media (max-width: 480px) {
+      .container {
+        padding-inline: var(--space-4);
+      }
 
-        /* ── Sticky CTA – Glassmorphism ── */
-        .sticky-cta {
-            position: fixed;
-            bottom: 0; left: 0; right: 0;
-            background: rgba(8,8,8,0.85);
-            backdrop-filter: blur(16px) saturate(1.4);
-            -webkit-backdrop-filter: blur(16px) saturate(1.4);
-            border-top: 1px solid rgba(201,168,76,0.15);
-            padding: var(--space-3) var(--space-6);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: var(--space-4);
-            z-index: 100;
-        }
-        .sticky-cta-info { display: flex; flex-direction: column; }
-        .sticky-cta-title { font-weight: 700; color: var(--bm-gold); font-size: var(--text-base); font-family: var(--font-luxury); }
-        .sticky-cta-meta { font-size: var(--text-sm); color: rgba(255,255,255,0.65); margin-top: 2px; }
-        .sticky-cta .btn { white-space: nowrap; flex-shrink: 0; padding: 8px 24px; }
-        @media(max-width:768px) {
-            .pricing-grid { grid-template-columns: 1fr; }
-            .pricing-card.featured { transform: scale(1); }
-            .hero-content h1 { font-size: clamp(2rem, 8vw, 2.5rem); }
-            .bm-section { padding-block: var(--space-12); }
-            .sticky-cta { padding: var(--space-2) var(--space-4); }
-            .sticky-cta-title { font-size: var(--text-sm); line-height: 1.4; }
-            .sticky-cta-meta { font-size: 0.75rem; }
-            .sticky-cta .btn { padding: 6px 16px; font-size: var(--text-xs); }
-        }
-        @media(max-width:640px){ .sticky-cta { flex-wrap: wrap; justify-content: center; text-align: center; } .sticky-cta-info { width: 100%; align-items: center; } }
-    </style>
+      .srv-section,
+      .srv-section--alt {
+        padding-inline: var(--space-4);
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-    <!-- Ambient Glow Blobs -->
-    <div class="bm-glow-blob bm-glow-blob-1" aria-hidden="true"></div>
-    <div class="bm-glow-blob bm-glow-blob-2" aria-hidden="true"></div>
-
-    <!-- Header -->
-    <site-header></site-header>
-
-    <main>
-        <!-- Section 1: Hero -->
-        <section class="bm-section hero-section-bg">
-            <div class="container">
-                <div class="hero">
-                <div class="hero-content">
-                    <span class="badge" style="letter-spacing: 2px;">COACHING 1:1 CHIẾN LƯỢC DÀI HẠN</span>
-                    <h1>BUSINESS MASTERY</h1>
-                    <p class="hero-tagline">Làm chủ mô hình của bạn ở cấp độ chiến lược</p>
-                    <p style="font-size:var(--text-lg)">Chương trình coaching 1:1 chuyên sâu dành cho chủ quán nghiêm túc với tăng trưởng dài hạn. Đồng hành hàng tuần, cá nhân hóa tuyệt đối theo chính mô hình, nguồn lực và ưu tiên của bạn.</p>
-                    
-                    <div class="hero-info">
-                        <span style="color:var(--bm-gold); font-size:1.5rem; display:inline-block; margin-right:8px;">🎁</span>
-                        <span style="color:#fff; font-weight:600">Ưu đãi: Buổi tư vấn 1:1 cùng Loan miễn phí trị giá $200</span>
-                    </div>
-
-                    <div>
-                        <a href="lien-he.html" class="btn btn-primary" style="margin-top: var(--space-2); margin-right: var(--space-4);">ĐĂNG KÍ NGAY</a>
-                    </div>
-                </div>
-                <div class="hero-img-wrap">
-                    <img src="assets/dv3/hero-coach.png" alt="Coach Loan Vũ Business Mastery" class="hero-img">
-                </div>
-            </div><!-- /.hero -->
-            </div><!-- /.container -->
-        </section>
-
-        <!-- Section 2: Pain Points -->
-        <section class="bm-section alt">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Bạn có đang đối diện với những vấn đề này?</h2>
-                    <div class="bm-divider"></div>
-                </div>
-                <div class="bm-grid-2">
-                    <div class="timeline-item" data-reveal>
-                        <span style="font-size:2rem; line-height:1; color:var(--bm-accent); font-weight:bold;">1</span>
-                        <div>
-                            <h4 style="color:#fff;">LỢI NHUẬN KHÔNG PHẢN ÁNH ĐÚNG CÔNG SỨC</h4>
-                            <p>Quán đông hơn, doanh thu cao hơn, nhưng tiền thực giữ lại không tương xứng.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item" data-reveal>
-                        <span style="font-size:2rem; line-height:1; color:var(--bm-accent); font-weight:bold;">2</span>
-                        <div>
-                            <h4 style="color:#fff;">VẬN HÀNH PHỤ THUỘC VÀO BẠN</h4>
-                            <p>Bạn rời quán một ngày là mọi thứ chao đảo. Nhân sự chưa đủ vững để tự vận hành.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item" data-reveal>
-                        <span style="font-size:2rem; line-height:1; color:var(--bm-accent); font-weight:bold;">3</span>
-                        <div>
-                            <h4 style="color:#fff;">MUỐN MỞ RỘNG NHƯNG CHƯA ĐỦ TỰ TIN</h4>
-                            <p>Bạn cân nhắc mở thêm chi nhánh hoặc nhân bản mô hình, nhưng lo nền móng chưa đủ chắc.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item" data-reveal>
-                        <span style="font-size:2rem; line-height:1; color:var(--bm-accent); font-weight:bold;">4</span>
-                        <div>
-                            <h4 style="color:#fff;">THIẾU NGƯỜI PHẢN BIỆN CHIẾN LƯỢC</h4>
-                            <p>Bạn không thiếu ý tưởng. Bạn thiếu một người đủ hiểu ngành để soi lại quyết định quan trọng trước khi bạn triển khai.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item" data-reveal style="grid-column: 1 / -1; max-width: 600px; margin-inline: auto;">
-                        <span style="font-size:2rem; line-height:1; color:var(--bm-accent); font-weight:bold;">5</span>
-                        <div>
-                            <h4 style="color:#fff;">CÔ ĐƠN Ở VAI TRÒ NGƯỜI CHỦ</h4>
-                            <p>Nhân viên không hiểu áp lực của bạn. Gia đình không hiểu bài toán tài chính của bạn. Bạn đang tự xoay xở một mình.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 3: Đối tượng -->
-        <section class="bm-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Ai nên tham gia?</h2>
-                    <div class="bm-divider"></div>
-                </div>
-                <div class="bm-grid-2">
-                    <div class="bm-card" data-reveal>
-                        <div class="bm-card-icon">🏪</div>
-                        <h4 style="color:var(--bm-gold); font-size:1.25rem;">CHỦ QUÁN ĐANG VẬN HÀNH 6–24 THÁNG</h4>
-                        <p>Bạn đã đi qua giai đoạn khởi động, nhưng đang cần tối ưu lợi nhuận và hệ thống hóa vận hành.</p>
-                    </div>
-                    <div class="bm-card" data-reveal>
-                        <div class="bm-card-icon">🧠</div>
-                        <h4 style="color:var(--bm-gold); font-size:1.25rem;">CHỦ QUÁN MUỐN NÂNG CẤP TƯ DUY LÃNH ĐẠO</h4>
-                        <p>Bạn không chỉ muốn "chạy quán", mà muốn trở thành người kiến tạo chiến lược dài hạn.</p>
-                    </div>
-                    <div class="bm-card" data-reveal>
-                        <div class="bm-card-icon">🚀</div>
-                        <h4 style="color:var(--bm-gold); font-size:1.25rem;">CHUẨN BỊ MỞ QUÁN VỚI QUY MÔ ĐẦU TƯ LỚN</h4>
-                        <p>Bạn muốn giảm thiểu rủi ro bằng một lộ trình cá nhân hóa và sự đồng hành 1:1 ngay từ đầu.</p>
-                    </div>
-                    <div class="bm-card" data-reveal>
-                        <div class="bm-card-icon">📈</div>
-                        <h4 style="color:var(--bm-gold); font-size:1.25rem;">CHỦ QUÁN MUỐN MỞ RỘNG HOẶC NHÂN BẢN</h4>
-                        <p>Bạn cần một kế hoạch tăng trưởng rõ ràng thay vì mở thêm theo cảm tính.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 4 & 5: Cách hoạt động -->
-        <section class="bm-section alt">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Chương trình hoạt động như thế nào?</h2>
-                    <div class="bm-divider"></div>
-                    <p style="text-align:center; margin-bottom:var(--space-8);"><span class="badge">Là chương trình coaching / mentoring 1-1</span></p>
-                </div>
-                
-                <div class="bm-grid-2">
-                    <div class="bm-card" style="border-top: 4px solid #8B1A1A;">
-                        <h3 style="color:#fff; margin-bottom:var(--space-4)">Không giống khoá học thông thường:</h3>
-                        <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:var(--space-2)">
-                            <li style="display:flex; gap:10px;"><span style="color:#8B1A1A">❌</span> Giao trình không đại trà</li>
-                            <li style="display:flex; gap:10px;"><span style="color:#8B1A1A">❌</span> Không nội dung cố định cho tất cả</li>
-                            <li style="display:flex; gap:10px;"><span style="color:#8B1A1A">❌</span> Không học chung theo lớp</li>
-                        </ul>
-                    </div>
-                    <div class="bm-card" style="border-top: 4px solid var(--bm-accent);">
-                        <h3 style="color:#fff; margin-bottom:var(--space-4)">Thay vào đó bạn nhận được:</h3>
-                        <ul style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:var(--space-2)">
-                            <li style="display:flex; gap:10px;"><span style="color:var(--bm-accent)">✓</span> Coach là cố vấn chuyên môn cho mô hình của bạn</li>
-                            <li style="display:flex; gap:10px;"><span style="color:var(--bm-accent)">✓</span> Tiếp cận toàn bộ tài liệu, form mẫu, hệ thống từ 15 năm kinh nghiệm</li>
-                            <li style="display:flex; gap:10px;"><span style="color:var(--bm-accent)">✓</span> Làm việc trực tiếp với coach (email / điện thoại / Zoom hàng tuần)</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div style="background: rgba(201,168,76,0.1); border: 1px solid var(--bm-gold); padding: var(--space-6); border-radius: var(--radius-lg); margin-top: var(--space-8); text-align: center;">
-                    <h4 style="margin-bottom: var(--space-4); color: var(--bm-gold);">Mỗi buổi làm việc tập trung trực tiếp vào:</h4>
-                    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-4);">
-                        <span class="badge" style="font-size:var(--text-sm);">Mô hình kinh doanh của bạn</span>
-                        <span class="badge" style="font-size:var(--text-sm);">Báo cáo tài chính thật</span>
-                        <span class="badge" style="font-size:var(--text-sm);">Menu thật</span>
-                        <span class="badge" style="font-size:var(--text-sm);">Nhân sự thật</span>
-                        <span class="badge" style="font-size:var(--text-sm);">Quyết định chiến lược thật</span>
-                    </div>
-                    <p style="margin-top: var(--space-6); font-style: italic; color: #fff;">Mục tiêu không phải học thêm kiến thức. Mục tiêu là mô hình của bạn vận hành tốt hơn sau từng tháng.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 6: Lợi ích -->
-        <section class="bm-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>3 giá trị bạn sẽ nhận được</h2>
-                    <div class="bm-divider"></div>
-                </div>
-                <div class="bm-grid-3">
-                    <div class="bm-card" data-reveal style="text-align:center;">
-                        <div style="font-size:4rem; line-height:1; color:var(--bm-gold); margin-bottom:var(--space-4); opacity:0.3; font-weight:bold;">1</div>
-                        <h4 style="color:#fff;">CHIẾN LƯỢC CÁ NHÂN HOÁ TUYỆT ĐỐI</h4>
-                        <p>Lộ trình 6 tháng hoặc 12 tháng được thiết kế riêng cho bạn. Ưu tiên đúng việc quan trọng nhất tại từng giai đoạn.</p>
-                    </div>
-                    <div class="bm-card" data-reveal style="text-align:center;">
-                        <div style="font-size:4rem; line-height:1; color:var(--bm-gold); margin-bottom:var(--space-4); opacity:0.3; font-weight:bold;">2</div>
-                        <h4 style="color:#fff;">TƯ DUY LÃNH ĐẠO CẤP ĐỘ NGƯỜI CHỦ</h4>
-                        <p>Bạn có người phản biện chiến lược, soi lại quyết định lớn và giúp bạn nhìn xa hơn vận hành hằng ngày.</p>
-                    </div>
-                    <div class="bm-card" data-reveal style="text-align:center;">
-                        <div style="font-size:4rem; line-height:1; color:var(--bm-gold); margin-bottom:var(--space-4); opacity:0.3; font-weight:bold;">3</div>
-                        <h4 style="color:#fff;">HỆ THỐNG VẬN HÀNH TRƯỞNG BỀN VỮNG</h4>
-                        <p>Từ cấu trúc chi phí, biên lợi nhuận đến phân quyền nhân sự – mọi thứ được thiết kế để bạn không còn bị cuốn 24/7.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 7: Kết quả -->
-        <section class="bm-section alt">
-            <div class="container" style="max-width:800px;">
-                <div class="section-header">
-                    <h2>Bạn sẽ nhận được gì trong quá trình đồng hành?</h2>
-                    <div class="bm-divider"></div>
-                </div>
-                
-                <div style="display:flex; flex-direction:column; gap:var(--space-4);">
-                    <div class="timeline-item" data-reveal>
-                        <span style="color:var(--bm-accent); font-size:1.5rem">✓</span>
-                        <p style="margin:0"><strong style="color:#fff;">Phân tích sâu</strong> cấu trúc chi phí & lợi nhuận</p>
-                    </div>
-                    <div class="timeline-item" data-reveal>
-                        <span style="color:var(--bm-accent); font-size:1.5rem">✓</span>
-                        <p style="margin:0"><strong style="color:#fff;">Thiết kế roadmap 6–12 tháng</strong> với KPI cụ thể</p>
-                    </div>
-                    <div class="timeline-item" data-reveal>
-                        <span style="color:var(--bm-accent); font-size:1.5rem">✓</span>
-                        <p style="margin:0"><strong style="color:#fff;">Tối ưu menu</strong> và hiệu suất từng nhóm sản phẩm</p>
-                    </div>
-                    <div class="timeline-item" data-reveal>
-                        <span style="color:var(--bm-accent); font-size:1.5rem">✓</span>
-                        <p style="margin:0"><strong style="color:#fff;">Thiết lập hệ thống phân quyền</strong> & KPI nhân sự</p>
-                    </div>
-                    <div class="timeline-item" data-reveal>
-                        <span style="color:var(--bm-accent); font-size:1.5rem">✓</span>
-                        <p style="margin:0"><strong style="color:#fff;">Chuẩn hóa quy trình vận hành</strong> theo thực tế mô hình</p>
-                    </div>
-                    <div class="timeline-item" data-reveal>
-                        <span style="color:var(--bm-accent); font-size:1.5rem">✓</span>
-                        <p style="margin:0"><strong style="color:#fff;">Hỗ trợ ra quyết định</strong> mở rộng hoặc tái cấu trúc</p>
-                    </div>
-                </div>
-                
-                <p style="text-align:center; margin-top:var(--space-6); font-style:italic; color:var(--bm-gold);">* Ngoài buổi coaching hàng tuần, bạn luôn được khuyến khích hỗ trợ trao đổi trực tiếp ngay khi có tình huống quan trọng phát sinh.</p>
-            </div>
-        </section>
-
-        <!-- Section 8: So sánh -->
-        <section class="bm-section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Khác biệt với Business to Freedom</h2>
-                    <div class="bm-divider"></div>
-                </div>
-                <div style="overflow-x:auto;">
-                    <table style="width:100%; min-width:600px; border-collapse:collapse; color:#fff;">
-                        <thead>
-                            <tr>
-                                <th style="padding:var(--space-4); border-bottom:1px solid var(--bm-border); color:#94A3B8; text-align:left; width:20%;"></th>
-                                <th style="padding:var(--space-4); border-bottom:1px solid var(--bm-border); color:#E87722; text-align:left; width:40%;">BUSINESS to FREEDOM</th>
-                                <th style="padding:var(--space-4); border-bottom:1px solid var(--bm-border); color:var(--bm-gold); text-align:left; width:40%;">BUSINESS MASTERY</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td style="padding:var(--space-4); border-bottom:1px solid rgba(255,255,255,0.05); font-weight:600; color:#94A3B8;">Thời gian</td>
-                                <td style="padding:var(--space-4); border-bottom:1px solid rgba(255,255,255,0.05);">Khoá học nhóm 10 tuần</td>
-                                <td style="padding:var(--space-4); border-bottom:1px solid rgba(255,255,255,0.05); font-weight:600; background:rgba(201,168,76,0.05)">Chương trình cá nhân 1:1 chuyên sâu</td>
-                            </tr>
-                            <tr>
-                                <td style="padding:var(--space-4); border-bottom:1px solid rgba(255,255,255,0.05); font-weight:600; color:#94A3B8;">Nội dung</td>
-                                <td style="padding:var(--space-4); border-bottom:1px solid rgba(255,255,255,0.05); opacity:0.8;">Đào sâu vào từng chữ P, xây dựng kế hoạch tài chính, thiết kế menu, chọn mặt bằng, xây dựng đội ngũ, thiết lập SOP, nắm vững chỉ số lợi nhuận</td>
-                                <td style="padding:var(--space-4); border-bottom:1px solid rgba(255,255,255,0.05); font-weight:600; background:rgba(201,168,76,0.05)">Mọi nội dung được cá nhân hoá theo chính mô hình của bạn</td>
-                            </tr>
-                            <tr>
-                                <td style="padding:var(--space-4); border-bottom:1px solid rgba(255,255,255,0.05); font-weight:600; color:#94A3B8;">Mục đích</td>
-                                <td style="padding:var(--space-4); border-bottom:1px solid rgba(255,255,255,0.05); opacity:0.8;">Giúp bạn xây nền móng vững chắc</td>
-                                <td style="padding:var(--space-4); border-bottom:1px solid rgba(255,255,255,0.05); font-weight:600; background:rgba(201,168,76,0.05)">Giúp bạn tối ưu, mở rộng và nâng cấp chiến lược dài hạn</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section 9-10: Pricing & CTA -->
-        <section class="bm-section alt">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Thời lượng và Hình thức</h2>
-                    <div class="bm-divider"></div>
-                    <p style="text-align:center;">Coaching 1:1 online qua Zoom · 1 buổi / tuần</p>
-                </div>
-
-                <div class="pricing-grid">
-                    <div class="pricing-card" data-reveal>
-                        <h3 style="color:#fff;">3 Tháng</h3>
-                        <p style="color:#94A3B8; font-size:var(--text-sm); margin-bottom:var(--space-4);">Thiết lập nền móng và xử lý điểm nóng</p>
-                        <div style="font-size:2rem; font-weight:bold; color:var(--bm-gold); margin-bottom:var(--space-6);">60.000.000<span style="font-size:1rem; opacity:0.6;">đ</span></div>
-                        <a href="lien-he.html" class="btn-gold" style="width:100%;">Tư vấn lộ trình</a>
-                    </div>
-                    
-                    <div class="pricing-card featured" data-reveal>
-                        <h3 style="color:#fff;">6 Tháng</h3>
-                        <p style="color:#94A3B8; font-size:var(--text-sm); margin-bottom:var(--space-4);">Tối ưu hệ thống & Tăng trưởng</p>
-                        <div style="font-size:2.5rem; font-weight:bold; color:var(--bm-gold); margin-bottom:var(--space-6);">100.000.000<span style="font-size:1rem; opacity:0.6;">đ</span></div>
-                        <a href="lien-he.html" class="btn btn-primary" style="width:100%;">Tư vấn lộ trình</a>
-                    </div>
-
-                    <div class="pricing-card" data-reveal>
-                        <h3 style="color:#fff;">12 Tháng</h3>
-                        <p style="color:#94A3B8; font-size:var(--text-sm); margin-bottom:var(--space-4);">Scale-up & Làm chủ hoàn toàn</p>
-                        <div style="font-size:2rem; font-weight:bold; color:var(--bm-gold); margin-bottom:var(--space-6);">180.000.000<span style="font-size:1rem; opacity:0.6;">đ</span></div>
-                        <a href="lien-he.html" class="btn-gold" style="width:100%;">Tư vấn lộ trình</a>
-                    </div>
-                </div>
-
-                <div style="text-align:center; margin-top:var(--space-8);">
-                    <p style="color:var(--bm-gold); font-size:var(--text-lg); font-style:italic;">* Đặc biệt: Chỉ nhận tối đa 5 học viên mỗi năm để đảm bảo chất lượng đồng hành sâu sát.</p>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <site-footer></site-footer>
-
-    <!-- Sticky CTA -->
-    <div class="sticky-cta" role="banner" aria-label="Đăng ký tư vấn">
-        <div class="sticky-cta-info">
-            <span class="sticky-cta-title">✨ Business Mastery – Coaching 1:1 Chiến Lược Dài Hạn</span>
-            <span class="sticky-cta-meta">🎁 Buổi tư vấn 1:1 miễn phí trị giá $200 &nbsp;·&nbsp; Chương trình cá nhân hóa 6 hoặc 12 tháng &nbsp;·&nbsp; Chỉ 5 học viên/năm</span>
-        </div>
-        <a href="lien-he.html" class="btn btn-primary" style="white-space:nowrap; padding: 8px 24px;">Liên hệ ngay</a>
+  <!-- ══ Sticky CTA Bar ══ -->
+  <div class="sticky-cta">
+    <div class="sticky-cta-info">
+      <div class="sticky-cta-dot"></div>
+      <p class="sticky-cta-title">Business Mastery – Coaching 1:1</p>
     </div>
+    <a href="lien-he.html" class="btn btn--accent btn--sm">Liên hệ ngay</a>
+  </div>
 
-    <!-- Scripts -->
-    <script src="js/components.js"></script>
-    <script src="js/main.js"></script>
+  <!-- ══ Header ══ -->
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="nav-logo">Edina <span>Trâm</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links">
+        <a href="index.html">Trang chủ</a>
+        <a href="index.html#services">Dịch vụ</a>
+        <a href="dich-vu-1.html">Passion to Profit</a>
+        <a href="dich-vu-2.html">Business to Freedom</a>
+        <a href="dich-vu-3.html" class="active">Business Mastery</a>
+        <span class="nav-cta">
+          <a href="lien-he.html" class="btn btn--accent">Đặt lịch Tư vấn</a>
+        </span>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Decorative glow blobs (extra prominent) -->
+    <div class="glow-blob glow-blob--gold glow-blob--1" aria-hidden="true"></div>
+    <div class="glow-blob glow-blob--emerald glow-blob--2" aria-hidden="true"></div>
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 1 — HERO
+         ══════════════════════════════════════════════════════ -->
+    <section class="srv-hero">
+      <div class="container">
+        <div class="srv-hero-grid">
+          <div class="srv-hero-content" data-reveal>
+            <span class="badge badge--gold">COACHING 1:1 CHIẾN LƯỢC DÀI HẠN</span>
+            <h1>BUSINESS<br><span>MASTERY</span></h1>
+            <p class="srv-hero-tagline">Khai vấn chiến lược 1:1 cho doanh nhân F&B</p>
+            <p class="srv-hero-desc">
+              Chương trình coaching cá nhân hoá cao cấp nhất, nơi bạn được đồng hành 1:1 cùng Coach Edina Trâm
+              để giải quyết các bài toán chiến lược riêng biệt của doanh nghiệp, từ mở rộng quy mô, tối ưu hệ thống
+              đến xây dựng thương hiệu bền vững trong ngành F&B.
+            </p>
+            <div class="gift-badge">
+              🎁 Tặng buổi tư vấn chiến lược $200 cho 3 khách đăng ký sớm nhất
+            </div>
+            <a href="lien-he.html" class="btn btn--accent btn--lg">ĐĂNG KÝ TƯ VẤN 1:1</a>
+          </div>
+          <div class="srv-hero-img" data-reveal>
+            <img src="assets/dv3/hero-coach.png" alt="Coach Edina Trâm – Business Mastery" loading="lazy" />
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator" aria-hidden="true">Khám phá</div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 2 — PAIN POINTS
+         ══════════════════════════════════════════════════════ -->
+    <section class="srv-section srv-section--alt">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="badge badge--gold">THÁCH THỨC</span>
+          <h2>Bạn đang đối mặt với những bài toán này?</h2>
+          <div class="divider"></div>
+          <p>Khi doanh nghiệp đã vượt qua giai đoạn khởi sự, những thách thức mới ở tầm chiến lược bắt đầu xuất
+            hiện.</p>
+        </div>
+
+        <div class="pain-grid" data-reveal-stagger>
+          <div class="pain-card" data-reveal>
+            <div class="pain-num">01</div>
+            <h3>DOANH THU CHẠM TRẦN</h3>
+            <p>Bạn đã có doanh thu ổn, nhưng không thể tăng trưởng thêm. Mọi nỗ lực dường như chỉ giữ nguyên
+              hiện trạng mà không tạo ra đột phá đáng kể nào.</p>
+          </div>
+          <div class="pain-card" data-reveal>
+            <div class="pain-num">02</div>
+            <h3>HỆ THỐNG KHÔNG SCALE ĐƯỢC</h3>
+            <p>Mở thêm chi nhánh nhưng lợi nhuận không tăng tương xứng. Quy trình vận hành phụ thuộc quá nhiều vào
+              bạn, không thể nhân bản.</p>
+          </div>
+          <div class="pain-card" data-reveal>
+            <div class="pain-num">03</div>
+            <h3>TEAM QUẢN LÝ YẾU</h3>
+            <p>Đội ngũ giỏi chuyên môn nhưng thiếu tư duy quản trị. Bạn là người duy nhất ra quyết định và thường
+              xuyên phải "chữa cháy" liên tục.</p>
+          </div>
+          <div class="pain-card" data-reveal>
+            <div class="pain-num">04</div>
+            <h3>THƯƠNG HIỆU MỜ NHẠT</h3>
+            <p>Giữa thị trường F&B ngày càng cạnh tranh, thương hiệu của bạn thiếu điểm khác biệt rõ ràng.
+              Khách hàng đến rồi đi mà không gắn bó lâu dài.</p>
+          </div>
+          <div class="pain-card pain-card--full" data-reveal>
+            <div class="pain-num">05</div>
+            <h3>CHỦ DOANH NGHIỆP CÔ ĐƠN</h3>
+            <p>Bạn không có ai để trao đổi ở cùng tầm. Những quyết định lớn – mở rộng, nhượng quyền, tái cấu trúc –
+              bạn phải tự mình gánh vác. Bạn cần một người đồng hành chiến lược, không phải thêm nhân viên.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 3 — TARGET AUDIENCE
+         ══════════════════════════════════════════════════════ -->
+    <section class="srv-section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="badge badge--gold">DÀNH CHO AI</span>
+          <h2>Business Mastery dành cho bạn nếu…</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="target-grid" data-reveal-stagger>
+          <div class="target-card target-card--icon" data-reveal>
+            <div class="target-icon">🏢</div>
+            <h3>Chủ doanh nghiệp F&B đã vận hành 2+ năm</h3>
+            <p>Bạn đã có doanh thu ổn định, đội ngũ vận hành, nhưng đang tìm kiếm <strong>bước nhảy tiếp
+                theo</strong> để mở rộng quy mô hoặc tối ưu lợi nhuận.</p>
+          </div>
+          <div class="target-card target-card--icon" data-reveal>
+            <div class="target-icon">📈</div>
+            <h3>Người muốn mở rộng chuỗi / nhượng quyền</h3>
+            <p>Bạn đang cân nhắc mở thêm chi nhánh, nhượng quyền hoặc xây dựng hệ thống <strong>vận hành không phụ
+                thuộc bản thân</strong>.</p>
+          </div>
+          <div class="target-card target-card--icon" data-reveal>
+            <div class="target-icon">🎯</div>
+            <h3>Lãnh đạo muốn nâng tầm chiến lược</h3>
+            <p>Bạn cần một <strong>không gian chiến lược riêng tư</strong> để suy nghĩ sâu, đặt câu hỏi đúng và có
+              người đồng hành đủ tầm phản biện.</p>
+          </div>
+          <div class="target-card target-card--icon" data-reveal>
+            <div class="target-icon">⚡</div>
+            <h3>Doanh nhân muốn vừa kinh doanh, vừa sống</h3>
+            <p>Bạn đã mệt mỏi khi kinh doanh "ăn" hết cuộc sống. Bạn muốn <strong>tái thiết kế doanh
+                nghiệp</strong> để có lợi nhuận VÀ tự do thời gian.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 4 — METHOD / APPROACH
+         ══════════════════════════════════════════════════════ -->
+    <section class="srv-section srv-section--alt">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="badge badge--gold">PHƯƠNG PHÁP</span>
+          <h2>Coaching 1:1 khác gì khoá học nhóm?</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="method-layout" data-reveal>
+          <!-- Negative column -->
+          <div class="method-col method-col--negative">
+            <h3>❌ Khoá học nhóm thông thường</h3>
+            <ul class="method-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b32d2e" stroke-width="2">
+                  <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+                <span>Nội dung chung, không giải quyết vấn đề riêng của bạn</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b32d2e" stroke-width="2">
+                  <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+                <span>Kiến thức nhiều nhưng không biết áp dụng vào đâu</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b32d2e" stroke-width="2">
+                  <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+                <span>Thiếu cam kết follow-up và đo lường kết quả</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b32d2e" stroke-width="2">
+                  <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+                <span>Không có không gian riêng tư để chia sẻ vấn đề nhạy cảm</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b32d2e" stroke-width="2">
+                  <path d="M18 6L6 18M6 6l12 12" />
+                </svg>
+                <span>Kết thúc khoá học là hết đồng hành</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Positive column -->
+          <div class="method-col method-col--positive">
+            <h3>✅ Coaching 1:1 Business Mastery</h3>
+            <ul class="method-list">
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#014F3D" stroke-width="2">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                <span>100% cá nhân hoá theo bài toán doanh nghiệp của bạn</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#014F3D" stroke-width="2">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                <span>Giải pháp có thể triển khai ngay sau mỗi buổi coaching</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#014F3D" stroke-width="2">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                <span>Follow-up liên tục, đo lường bằng KPIs rõ ràng</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#014F3D" stroke-width="2">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                <span>Không gian bảo mật tuyệt đối – chỉ bạn và Coach</span>
+              </li>
+              <li>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#014F3D" stroke-width="2">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                <span>Đồng hành dài hạn 3–12 tháng, phát triển bền vững</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Focus Badges -->
+        <div style="text-align: center; margin-top: var(--space-12);" data-reveal>
+          <h3 style="margin-bottom: var(--space-2);">Các lĩnh vực khai vấn trọng tâm</h3>
+          <div class="divider"></div>
+        </div>
+        <div class="focus-badge-row" data-reveal>
+          <span class="focus-badge">Chiến lược Tăng trưởng</span>
+          <span class="focus-badge">Mở rộng Chuỗi</span>
+          <span class="focus-badge">Xây dựng Đội ngũ</span>
+          <span class="focus-badge">Tối ưu Vận hành</span>
+          <span class="focus-badge">Branding & Marketing</span>
+          <span class="focus-badge">Quản trị Tài chính</span>
+          <span class="focus-badge">Phát triển Lãnh đạo</span>
+          <span class="focus-badge">Work-Life Harmony</span>
+        </div>
+
+        <p style="text-align: center; font-size: var(--text-sm); font-style: italic; color: var(--color-fg-muted); margin-top: var(--space-6); max-width: 600px; margin-inline: auto;"
+          data-reveal>
+          * Mỗi chương trình coaching được thiết kế riêng dựa trên nhu cầu thực tế và mục tiêu kinh doanh cụ thể của
+          bạn. Không có hai chương trình giống nhau.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 5 — VALUES & DELIVERABLES
+         ══════════════════════════════════════════════════════ -->
+    <section class="srv-section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="badge badge--gold">GIÁ TRỊ</span>
+          <h2>3 giá trị cốt lõi bạn nhận được</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="value-grid" data-reveal-stagger>
+          <div class="value-card" data-reveal>
+            <div class="value-num">01</div>
+            <h3>CLARITY – SỰ RÕ RÀNG</h3>
+            <p>Bạn sẽ có bức tranh toàn cảnh về doanh nghiệp – biết chính xác đâu là nút thắt, đâu là đòn bẩy tăng
+              trưởng, và đâu là bước đi tiếp theo cần ưu tiên.</p>
+          </div>
+          <div class="value-card" data-reveal>
+            <div class="value-num">02</div>
+            <h3>STRATEGY – CHIẾN LƯỢC</h3>
+            <p>Không chỉ biết "cần làm gì" mà còn có lộ trình "làm như thế nào" với kế hoạch hành động chi tiết,
+              KPIs đo lường rõ ràng và timeline thực tế.</p>
+          </div>
+          <div class="value-card" data-reveal>
+            <div class="value-num">03</div>
+            <h3>TRANSFORMATION – CHUYỂN HOÁ</h3>
+            <p>Không chỉ thay đổi doanh nghiệp mà thay đổi chính bạn – từ tư duy "người thợ" sang tư duy "nhà lãnh
+              đạo", từ làm việc TRONG doanh nghiệp sang làm việc TRÊN doanh nghiệp.</p>
+          </div>
+        </div>
+
+        <!-- Deliverables -->
+        <div style="text-align: center; margin-top: var(--space-16);" data-reveal>
+          <h3 style="margin-bottom: var(--space-2);">Bạn sẽ nhận được cụ thể</h3>
+          <div class="divider"></div>
+        </div>
+
+        <div class="deliv-grid" style="margin-top: var(--space-8);" data-reveal-stagger>
+          <div class="deliv-card" data-reveal>
+            <h3>🎯 Buổi coaching 1:1 mỗi tuần</h3>
+            <p>60–90 phút/buổi với Coach Edina Trâm. Tập trung giải quyết bài toán cụ thể của bạn trong tuần đó.</p>
+          </div>
+          <div class="deliv-card" data-reveal>
+            <h3>📋 Bản chiến lược cá nhân hoá</h3>
+            <p>Kế hoạch hành động chi tiết, được thiết kế riêng với KPIs, timeline và milestones cho doanh nghiệp bạn.
+            </p>
+          </div>
+          <div class="deliv-card" data-reveal>
+            <h3>📞 Hỗ trợ qua chat không giới hạn</h3>
+            <p>Gặp vấn đề gấp? Nhắn tin cho Coach bất cứ lúc nào. Cam kết phản hồi trong vòng 24h làm việc.</p>
+          </div>
+          <div class="deliv-card" data-reveal>
+            <h3>📊 Bộ công cụ quản trị F&B</h3>
+            <p>Template tài chính, quy trình vận hành, checklist quản lý, bảng theo dõi KPIs – sẵn sàng áp dụng.</p>
+          </div>
+          <div class="deliv-card" data-reveal>
+            <h3>🔒 Quyền truy cập khoá B2F</h3>
+            <p>Nhận miễn phí toàn bộ nội dung khoá Business to Freedom (trị giá 15.000.000 VNĐ) làm kiến thức nền
+              tảng.</p>
+          </div>
+          <div class="deliv-card" data-reveal>
+            <h3>🤝 Cộng đồng Mastermind</h3>
+            <p>Kết nối với các chủ doanh nghiệp F&B khác trong mạng lưới Business Mastery – chia sẻ, học hỏi và hợp
+              tác.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 6 — COMPARE & PRICING
+         ══════════════════════════════════════════════════════ -->
+    <section class="srv-section srv-section--alt">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="badge badge--gold">SO SÁNH & ĐẦU TƯ</span>
+          <h2>Chọn gói phù hợp với bạn</h2>
+          <div class="divider"></div>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="compare-table-wrap" data-reveal style="margin-bottom: var(--space-16);">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Tiêu chí</th>
+                <th>Business to Freedom</th>
+                <th class="highlight-col">Business Mastery</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Hình thức</td>
+                <td>Khoá học nhóm online</td>
+                <td class="highlight-col"><strong>Coaching 1:1 riêng tư</strong></td>
+              </tr>
+              <tr>
+                <td>Thời lượng</td>
+                <td>10 tuần cố định</td>
+                <td class="highlight-col"><strong>3 – 12 tháng linh hoạt</strong></td>
+              </tr>
+              <tr>
+                <td>Nội dung</td>
+                <td>Chương trình có sẵn</td>
+                <td class="highlight-col"><strong>100% cá nhân hoá</strong></td>
+              </tr>
+              <tr>
+                <td>Đối tượng</td>
+                <td>Mới kinh doanh / startup</td>
+                <td class="highlight-col"><strong>Chủ DN đã vận hành 2+ năm</strong></td>
+              </tr>
+              <tr>
+                <td>Hỗ trợ</td>
+                <td>Trong giờ học + nhóm</td>
+                <td class="highlight-col"><strong>Chat 24/7 + Gọi khẩn cấp</strong></td>
+              </tr>
+              <tr>
+                <td>Follow-up</td>
+                <td>Bài tập nhóm</td>
+                <td class="highlight-col"><strong>KPIs & Accountability cá nhân</strong></td>
+              </tr>
+              <tr>
+                <td>Mức đầu tư</td>
+                <td>15.000.000 VNĐ</td>
+                <td class="highlight-col"><strong>Từ 60.000.000 VNĐ</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Pricing Cards -->
+        <div class="plans-grid" data-reveal-stagger>
+          <!-- 3 months -->
+          <div class="plan-card" data-reveal>
+            <h3 class="plan-duration">3 Tháng</h3>
+            <p class="plan-subtitle">Trải nghiệm & Khám phá</p>
+            <ul class="plan-features">
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                <span>12 buổi coaching 1:1</span>
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                <span>Bản chiến lược 90 ngày</span>
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                <span>Hỗ trợ chat trong giờ hành chính</span>
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                <span>Bộ công cụ quản trị F&B</span>
+              </li>
+            </ul>
+            <div class="plan-price-wrap">
+              <span class="plan-price">60.000.000 VNĐ</span>
+            </div>
+          </div>
+
+          <!-- 6 months (featured) -->
+          <div class="plan-card plan-card--featured" data-reveal>
+            <div class="plan-badge">Phổ biến nhất</div>
+            <h3 class="plan-duration">6 Tháng</h3>
+            <p class="plan-subtitle">Chuyển hoá & Tăng trưởng</p>
+            <ul class="plan-features">
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                <span>24 buổi coaching 1:1</span>
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                <span>Chiến lược 6 tháng toàn diện</span>
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                <span>Chat không giới hạn + Gọi khẩn cấp</span>
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                <span>Truy cập khoá B2F miễn phí</span>
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                <span>Cộng đồng Mastermind</span>
+              </li>
+            </ul>
+            <div class="plan-price-wrap">
+              <span class="plan-price">100.000.000 VNĐ</span>
+            </div>
+          </div>
+
+          <!-- 12 months -->
+          <div class="plan-card" data-reveal>
+            <h3 class="plan-duration">12 Tháng</h3>
+            <p class="plan-subtitle">Bền vững & Nhân rộng</p>
+            <ul class="plan-features">
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                <span>48 buổi coaching 1:1</span>
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                <span>Chiến lược dài hạn toàn diện</span>
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                <span>Chat & Gọi không giới hạn</span>
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                <span>Truy cập khoá B2F + Tất cả công cụ</span>
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                <span>Mastermind VIP + 2 buổi on-site</span>
+              </li>
+              <li>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <path d="M20 6L9 17l-5-5" />
+                </svg>
+                <span>Ưu tiên slot coaching vĩnh viễn</span>
+              </li>
+            </ul>
+            <div class="plan-price-wrap">
+              <span class="plan-price">180.000.000 VNĐ</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="capacity-note" data-reveal>
+          ⚡ Chương trình Business Mastery chỉ nhận tối đa <strong>5 khách hàng</strong> đồng thời để đảm bảo chất
+          lượng đồng hành tuyệt đối.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- ══════════════════════════════════════════════════════
+         SECTION 7 — CTA FINAL
+         ══════════════════════════════════════════════════════ -->
+    <section class="srv-cta-final">
+      <div class="container" data-reveal>
+        <span class="badge badge--dark">BUSINESS MASTERY</span>
+        <h2>Bắt đầu thiết lập tương lai bền vững cho thương hiệu F&B của bạn</h2>
+        <p>Đặt lịch trao đổi 30 phút miễn phí với Coach Edina Trâm để cùng đánh giá hiện trạng doanh nghiệp và
+          xác định liệu Business Mastery có phù hợp với bạn.</p>
+        <a href="lien-he.html" class="btn btn--accent btn--lg">ĐẶT LỊCH TƯ VẤN MIỄN PHÍ</a>
+        <p class="cta-note">🔒 Mọi thông tin được bảo mật tuyệt đối. Không ràng buộc.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══ Footer ══ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-logo">Edina <span>Trâm</span></div>
+          <p class="footer-tagline">Dẫn lối bình an, khai mở nội lực. Đồng hành cùng bạn trên hành trình kiến tạo cuộc
+            sống chất lượng.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Về Edina</h4>
+          <div class="footer-links">
+            <a href="#">Câu chuyện của tôi</a>
+            <a href="#">Giá trị & Triết lý</a>
+            <a href="#">Chứng chỉ & Đào tạo</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Dịch vụ</h4>
+          <div class="footer-links">
+            <a href="dich-vu-1.html">Passion to Profit</a>
+            <a href="dich-vu-2.html">Business to Freedom</a>
+            <a href="dich-vu-3.html">Business Mastery</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Kết nối</h4>
+          <div class="footer-links">
+            <a href="lien-he.html">Liên hệ</a>
+            <a href="mailto:coachtram@gmail.com">coachtram@gmail.com</a>
+            <a href="tel:0901234567">0901 234 567</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Edina Trâm. All rights reserved.</span>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg width="18" height="18" fill="none" stroke="currentColor"
+              stroke-width="2" viewBox="0 0 24 24">
+              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+            </svg></a>
+          <a href="#" aria-label="Instagram"><svg width="18" height="18" fill="none" stroke="currentColor"
+              stroke-width="2" viewBox="0 0 24 24">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg></a>
+          <a href="#" aria-label="YouTube"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"
+              viewBox="0 0 24 24">
+              <path
+                d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z">
+              </path>
+              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+            </svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll-to-top -->
+  <button class="scroll-top-btn" aria-label="Cuộn lên đầu trang">↑</button>
+
+  <script src="js/main.js" defer></script>
 </body>
+
 </html>
