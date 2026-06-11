@@ -1,422 +1,391 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coach Loan Vũ – Coaching & Phát triển sự nghiệp F&B</title>
-    <meta name="description" content="Đồng hành cùng chủ quán F&B trên mọi chặng đường: Từ Đam mê đến Lợi nhuận, Từ Lợi nhuận đến Tự do và Làm chủ sự nghiệp F&B.">
-    <link rel="stylesheet" href="css/style.css?v=2">
-    <style>
-        /* ── Homepage Theme ── */
-        :root {
-            /* Service Colors reference */
-            --c-dv1: #CC0000; /* Red */
-            --c-dv2: #E87722; /* Orange */
-            --c-dv3: #C9A84C; /* Gold */
-            --home-bg: #0a0a0a;
-            --home-card: rgba(255,255,255,0.03);
-            --home-border: rgba(255,255,255,0.08);
-            --gold-accent: #C9A84C;
-        }
-
-        body { 
-            background: var(--home-bg); 
-            color: #CBD5E1; 
-        }
-
-        h1, h2, h3, h4 { color: #fff; }
-        
-        .site-header { 
-            background: rgba(10,10,10,0.95); 
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--home-border); 
-            position: fixed; top: 0; width: 100%; z-index: 1000;
-        }
-        
-        .nav-logo, .nav-logo span { color: var(--gold-accent); }
-        .nav-links a { color: #CBD5E1; }
-        .nav-links a.active, .nav-links a:hover { color: var(--gold-accent); }
-
-        .btn-gold {
-            background: var(--gold-accent);
-            color: #000;
-            padding: var(--space-3) var(--space-6);
-            border-radius: var(--radius-full);
-            font-weight: 600;
-            display: inline-block;
-            transition: all var(--transition);
-        }
-        .btn-gold:hover { background: #E6C86C; transform: translateY(-2px); }
-
-        .btn-outline {
-            border: 1px solid var(--gold-accent);
-            color: var(--gold-accent);
-            padding: var(--space-3) var(--space-6);
-            border-radius: var(--radius-full);
-            font-weight: 600;
-            display: inline-block;
-            background: transparent;
-            transition: all var(--transition);
-        }
-        .btn-outline:hover { background: rgba(201,168,76,0.1); }
-
-        .section-title { text-align: center; margin-bottom: var(--space-12); }
-        .section-title h2 { font-size: clamp(2rem, 4vw, 3rem); font-family: var(--font-heading); color: var(--gold-accent); margin-bottom: var(--space-4); }
-        .section-title p { color: #94A3B8; font-size: var(--text-lg); max-width: 600px; margin-inline: auto; }
-
-        /* Helpers */
-        .home-section { padding-block: var(--space-24) var(--space-20); overflow: hidden; }
-        .home-section.alt { background: linear-gradient(180deg, #050505 0%, #0a0a0a 100%); }
-        .home-divider { width: 60px; height: 3px; background: var(--gold-accent); margin-inline: auto; margin-block: var(--space-4); opacity: 0.8; }
-
-        /* ── SECTION 1: HERO ── */
-        .hero {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: var(--space-8);
-            align-items: center;
-            min-height: 90vh;
-            padding-top: 100px; /* offset header */
-        }
-        .hero-content h1 { 
-            font-family: var(--font-heading);
-            font-size: clamp(2.5rem, 5vw, 4.5rem); 
-            line-height: 1.1; 
-            margin-bottom: var(--space-6); 
-            background: linear-gradient(to right, #F5A623, #C9A84C);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .hero-tagline { font-size: var(--text-xl); color: #E2E8F0; margin-bottom: var(--space-6); line-height: 1.6; }
-        .hero-img-wrap { text-align: right; position: relative; }
-        .hero-img { max-height: 700px; object-fit: contain; mask-image: linear-gradient(to bottom, black 80%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%); }
-        .hero-bg-blob {
-            position: absolute; width: 400px; height: 400px; background: var(--gold-accent); 
-            border-radius: 50%; filter: blur(100px); opacity: 0.15; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: -1;
-        }
-
-        /* ── SECTION 2: SERVICES ── */
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: var(--space-6);
-        }
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.3fr;
-            gap: var(--space-12);
-            align-items: center;
-        }
-        .about-img-wrap { position: relative; }
-        .about-img {
-            width: 100%; max-width: 420px;
-            border-radius: var(--radius-lg);
-            object-fit: cover;
-            border: 1px solid var(--home-border);
-        }
-        .about-img-badge {
-            position: absolute; bottom: 20px; left: -20px;
-            background: var(--gold-accent); color: #000;
-            font-weight: 700; font-size: var(--text-sm);
-            padding: var(--space-2) var(--space-4);
-            border-radius: var(--radius-md);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-        }
-        .about-badge-row { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-bottom: var(--space-6); }
-        .about-badge { background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.25); color: var(--gold-accent); padding: 4px 12px; border-radius: var(--radius-full); font-size: var(--text-sm); font-weight: 600; }
-        .about-name { font-size: clamp(2rem,4vw,3rem); font-family: var(--font-heading); color: #fff; margin-bottom: var(--space-2); }
-        .about-title { color: var(--gold-accent); font-size: var(--text-lg); margin-bottom: var(--space-6); }
-        .about-bio { color: #94A3B8; line-height: 1.8; margin-bottom: var(--space-8); }
-        .stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--space-4); }
-        .stat-card { background: var(--home-card); border: 1px solid var(--home-border); border-radius: var(--radius-md); padding: var(--space-4) var(--space-3); text-align: center; transition: border-color 0.3s; }
-        .stat-card:hover { border-color: rgba(201,168,76,0.4); }
-        .stat-num { font-family: var(--font-heading); font-size: var(--text-3xl); color: var(--gold-accent); font-weight: 700; line-height: 1; margin-bottom: 4px; }
-        .stat-label { font-size: var(--text-xs); color: #64748B; text-transform: uppercase; letter-spacing: 0.05em; }
-        @media(max-width:768px) {
-            .about-grid { grid-template-columns: 1fr; }
-            .about-img-wrap { display: none; }
-            .stat-grid { grid-template-columns: repeat(2, 1fr); gap: var(--space-6) var(--space-4); }
-            .hero-content h1 { font-size: clamp(2rem, 8vw, 3rem); }
-            .srv-num { font-size: 6rem; opacity: 0.05; }
-            .book-section .btn-gold, .book-section .btn-outline { width: 100%; text-align: center; }
-            .book-section div[style*="display:flex"] { flex-direction: column; }
-        }
-        .srv-card {
-            background: var(--home-card);
-            border: 1px solid var(--home-border);
-            border-radius: var(--radius-lg);
-            padding: var(--space-8);
-            display: flex; flex-direction: column;
-            transition: all var(--transition);
-            position: relative; overflow: hidden;
-            text-align: left;
-        }
-        .srv-card:hover { transform: translateY(-8px); border-color: rgba(255,255,255,0.2); }
-        .srv-num { font-family: var(--font-heading); font-size: 3rem; color: rgba(255,255,255,0.05); position: absolute; top: 20px; right: 20px; line-height: 1; }
-        .srv-card h3 { font-size: 1.75rem; margin-bottom: var(--space-2); margin-top: var(--space-8); }
-        .srv-card p { flex-grow: 1; color: #94A3B8; margin-bottom: var(--space-6); }
-        
-        /* Service Themes */
-        .srv-card.c-p2p { border-top: 4px solid var(--c-dv1); }
-        .srv-card.c-p2p h3 { color: var(--c-dv1); }
-        .srv-card.c-b2f { border-top: 4px solid var(--c-dv2); }
-        .srv-card.c-b2f h3 { color: var(--c-dv2); }
-        .srv-card.c-bm { border-top: 4px solid var(--c-dv3); }
-        .srv-card.c-bm h3 { color: var(--c-dv3); }
-
-        /* ── SECTION 3: BOOK ── */
-        .book-section {
-            background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
-            border-top: 1px solid var(--home-border);
-            border-bottom: 1px solid var(--home-border);
-            padding-block: var(--space-20);
-        }
-        .book-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: var(--space-12);
-            align-items: center;
-        }
-        .book-img-wrap { text-align: center; }
-        /* Placeholder for book */
-        .book-mockup {
-            width: 300px; height: 420px; background: #222; border: 2px solid var(--gold-accent); 
-            border-radius: 4px; box-shadow: -20px 20px 30px rgba(0,0,0,0.5);
-            display: flex; align-items: center; justify-content: center; flex-direction: column;
-            color: var(--gold-accent); margin: 0 auto;
-        }
-
-        /* ── SECTION 4: TESTIMONIALS ── */
-        .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6); }
-        .testi-card { background: var(--home-card); border: 1px solid var(--home-border); padding: var(--space-8); border-radius: var(--radius-lg); }
-        .testi-card p { font-style: italic; color: #E2E8F0; margin-bottom: var(--space-6); }
-        .testi-author { display: flex; align-items: center; gap: var(--space-4); border-top: 1px solid var(--home-border); padding-top: var(--space-4); }
-        .testi-avatar { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
-        .testi-author h4 { font-size: var(--text-base); margin: 0; color: var(--gold-accent); }
-        .testi-author span { font-size: var(--text-sm); color: #94A3B8; }
-
-        /* ── SECTION 5: CONTACT & ECOSYSTEM ── */
-        .eco-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-6); }
-        .eco-card {
-            background: var(--home-card); border: 1px solid var(--home-border); border-radius: var(--radius-lg);
-            padding: var(--space-8); text-align: center; transition: all var(--transition);
-            display: flex; flex-direction: column; align-items: center; justify-content: center;
-        }
-        .eco-card:hover { background: rgba(255,255,255,0.06); transform: translateY(-4px); }
-        .eco-icon { font-size: 2.5rem; margin-bottom: var(--space-4); color: var(--gold-accent); }
-
-        @media (max-width: 992px) {
-            .hero, .book-grid { grid-template-columns: 1fr; text-align: center; }
-            .hero-img-wrap { text-align: center; }
-            .hero-img { max-height: 500px; }
-            .service-grid, .testi-grid { grid-template-columns: 1fr; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Coach Edina Trâm – Đồng hành cùng bạn tìm lại sự rõ ràng trong tâm trí, tự tin trong hành động và sống một cuộc đời đúng với giá trị của chính mình. Coaching & Phát triển sự nghiệp F&B.">
+  <title>Coach Edina Trâm – Coaching & Phát triển sự nghiệp F&B</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-    <!-- Header -->
-    <site-header></site-header>
+  <!-- ═══ HEADER ═══ -->
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="nav-logo">Edina <span>Trâm</span></a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links">
+        <a href="index.html" class="active">Trang chủ</a>
+        <a href="index.html#services">Dịch vụ</a>
+        <a href="dich-vu-1.html">Passion to Profit</a>
+        <a href="dich-vu-2.html">Business to Freedom</a>
+        <a href="dich-vu-3.html">Business Mastery</a>
+        <span class="nav-cta">
+          <a href="lien-he.html" class="btn btn--accent">Đặt lịch Tư vấn</a>
+        </span>
+      </nav>
+    </div>
+  </header>
 
-    <main>
-        <!-- SECTION 1: HERO -->
-        <section class="home-section" style="padding-top:0;">
-            <div class="container hero">
-                <div class="hero-content" data-reveal>
-                    <span style="color:var(--gold-accent); font-weight:600; letter-spacing:2px; text-transform:uppercase; font-size:var(--text-sm)">F&B Startup Coach, ICF PCC</span>
-                    <h1>Từ Đam mê đến Lợi nhuận,<br>Và Làm Chủ Nền Móng Tự Do.</h1>
-                    <p class="hero-tagline">Hơn 15 năm kinh nghiệm. Đồng hành cùng chủ quán F&B trên mọi chặng đường phát triển: từ ý tưởng ban đầu đến tối ưu vận hành và mở rộng hệ thống.</p>
-                    <div style="display:flex; gap:16px; flex-wrap:wrap;">
-                        <a href="#services" class="btn-gold">Khám phá dịch vụ</a>
-                        <a href="lien-he.html" class="btn-outline">Tư vấn 1:1 miễn phí</a>
-                    </div>
-                </div>
-                <div class="hero-img-wrap" data-reveal>
-                    <div class="hero-bg-blob"></div>
-                    <img src="assets/dv3/hero-coach.png" alt="Coach Loan Vũ" class="hero-img" loading="lazy">
-                </div>
+  <main>
+
+    <!-- ═══ GLOW BLOBS ═══ -->
+    <div class="glow-blob glow-blob--gold glow-blob--1" aria-hidden="true"></div>
+    <div class="glow-blob glow-blob--emerald glow-blob--2" aria-hidden="true"></div>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         1. HERO SECTION
+         ═══════════════════════════════════════════════════════ -->
+    <section class="home-hero">
+      <div class="container">
+        <div class="home-hero-grid">
+
+          <!-- Content -->
+          <div class="home-hero-content" data-reveal>
+            <span class="badge badge--gold">COACHING · MINDFULNESS · TRANSFORMATION</span>
+            <h1>Dẫn lối bình an,<br>khai mở <em>nội lực.</em></h1>
+            <p class="home-hero-desc">Đồng hành cùng bạn tìm lại sự rõ ràng trong tâm trí, tự tin trong hành động và sống một cuộc đời đúng với giá trị của chính mình.</p>
+            <div class="home-hero-ctas">
+              <a href="#services" class="btn btn--primary btn--lg">Khám phá dịch vụ</a>
+              <a href="lien-he.html" class="btn btn--outline btn--lg">Tư vấn 1:1 miễn phí</a>
             </div>
-        </section>
 
-        <!-- SECTION 2: SERVICES ECOSYSTEM -->
-        <section id="services" class="home-section alt">
-            <div class="container">
-                <div class="section-title" data-reveal>
-                    <h2>Hệ Sinh Thái Dịch Vụ</h2>
-                    <div class="home-divider"></div>
-                    <p>Lộ trình hoàn chỉnh được thiết kế để giải quyết chính xác bài toán của bạn ở từng giai đoạn phát triển mảng F&B.</p>
-                </div>
-                
-                <div class="service-grid">
-                    <!-- DV1 -->
-                    <div class="srv-card c-p2p" data-reveal>
-                        <div class="srv-num">01</div>
-                        <h3>Passion to Profit</h3>
-                        <p>Dành cho người chuẩn bị khởi nghiệp hoặc mới mở quán muốn học cách hệ thống hoá và hiểu vai trò cốt lõi. Khoá học tập trung cấp tốc 2 ngày.</p>
-                        <a href="dich-vu-1.html" style="color: var(--c-dv1); font-weight:600;">Tìm hiểu chi tiết →</a>
-                    </div>
-                    <!-- DV2 -->
-                    <div class="srv-card c-b2f" data-reveal>
-                        <div class="srv-num">02</div>
-                        <h3>Business to Freedom</h3>
-                        <p>Dành cho chủ quán muốn thoát khỏi vận hành 24/7. Chương trình nhóm thực chiến kéo dài 10 tuần với quy trình SOP, kế toán và nhân sự rõ ràng.</p>
-                        <a href="dich-vu-2.html" style="color: var(--c-dv2); font-weight:600;">Tìm hiểu chi tiết →</a>
-                    </div>
-                    <!-- DV3 -->
-                    <div class="srv-card c-bm" data-reveal>
-                        <div class="srv-num">03</div>
-                        <h3>Business Mastery</h3>
-                        <p>Coaching 1:1 cao cấp, giải quyết trực tiếp bài toán chiến lược mở rộng. Đồng hành từ 6-12 tháng, riêng biệt hoá theo mô hình của bạn.</p>
-                        <a href="dich-vu-3.html" style="color: var(--c-dv3); font-weight:600;">Tìm hiểu chi tiết →</a>
-                    </div>
-                </div>
+            <!-- Hero Values Strip -->
+            <div class="home-hero-values">
+              <div class="home-hero-value">
+                <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 21C12 21 4 14.5 4 9a4 4 0 018 0 4 4 0 018 0c0 5.5-8 12-8 12z"/></svg>
+                <strong>Lắng Nghe Sâu Sắc</strong>
+                <span>Thấu hiểu từ bên trong</span>
+              </div>
+              <div class="home-hero-value">
+                <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                <strong>Khai Mở Nội Lực</strong>
+                <span>Khơi dậy tiềm năng</span>
+              </div>
+              <div class="home-hero-value">
+                <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                <strong>Đồng Hành Từ Tê</strong>
+                <span>Bước qua giới hạn</span>
+              </div>
             </div>
-        </section>
+          </div>
 
-        <!-- SECTION 3: ABOUT COACH -->
-        <section class="home-section">
-            <div class="container">
-                <div class="about-grid">
-                    <div class="about-img-wrap" data-reveal>
-                        <img src="assets/dv1/hero-coach.png" alt="Coach Vũ Kiều Loan" class="about-img" loading="lazy">
-                        <span class="about-img-badge">ICF PCC Coach</span>
-                    </div>
-                    <div data-reveal>
-                        <div class="about-badge-row">
-                            <span class="about-badge">F&amp;B Coach</span>
-                            <span class="about-badge">ICF PCC</span>
-                            <span class="about-badge">Tác giả sách</span>
-                            <span class="about-badge">Chủ nhà hàng</span>
-                        </div>
-                        <h2 class="about-name">Vũ Kiều Loan</h2>
-                        <p class="about-title">Người đồng hành chiến lược cho chủ quán F&amp;B Việt</p>
-                        <p class="about-bio">Hơn 16 năm trong ngành F&amp;B &amp; Hospitality tại Mỹ và Việt Nam. 10 năm khởi nghiệp, đồng sáng lập &amp; điều hành <strong style="color:#fff">S&amp;L's Diner</strong> – chuỗi nhà hàng Mỹ tại Hà Nội. ICF PCC Coach quốc tế, Top 80 người Việt đạt chứng nhận cao nhất của ICF (2025). Tác giả cuốn sách truyền cảm hứng <em style="color:var(--gold-accent)">Ánh Sáng Của Ước Mơ</em>.</p>
-                        <div class="stat-grid">
-                            <div class="stat-card">
-                                <div class="stat-num">16+</div>
-                                <div class="stat-label">Năm kinh nghiệm F&amp;B</div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-num">50+</div>
-                                <div class="stat-label">Chủ quán đồng hành</div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-num">1.000</div>
-                                <div class="stat-label">Cuốn sách đã bán</div>
-                            </div>
-                            <div class="stat-card">
-                                <div class="stat-num">3</div>
-                                <div class="stat-label">Chương trình Coaching</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+          <!-- Hero Image -->
+          <div class="home-hero-img" data-reveal="right">
+            <img src="assets/dv3/hero-coach.png" alt="Coach Edina Trâm" loading="lazy" width="600" height="680">
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="scroll-indicator">Cuộn xuống</div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         2. SERVICES SECTION
+         ═══════════════════════════════════════════════════════ -->
+    <section id="services" class="section section--alt">
+      <div class="container">
+
+        <div class="section-header" data-reveal>
+          <span class="badge">Hệ sinh thái dịch vụ</span>
+          <h2>Ba chương trình chuyển hóa</h2>
+          <div class="divider"></div>
+          <p>Mỗi chương trình được thiết kế riêng biệt, phục vụ từng giai đoạn trên hành trình phát triển của bạn — từ đam mê cá nhân đến tự do tài chính.</p>
+        </div>
+
+        <div class="srv-grid" data-reveal-stagger>
+
+          <!-- P2P -->
+          <div class="srv-card srv-card--p2p">
+            <div class="srv-num">01</div>
+            <h3>Passion to Profit</h3>
+            <div class="srv-sub">Workshop 2 ngày</div>
+            <p>Chuyển hóa đam mê thành mô hình kinh doanh có lợi nhuận. Tìm ra lợi thế cạnh tranh, xây dựng nền tảng vững chắc và bắt đầu hành trình khởi nghiệp đầy tự tin.</p>
+            <a href="dich-vu-1.html" class="btn btn--primary btn--sm">Tìm hiểu thêm →</a>
+          </div>
+
+          <!-- B2F -->
+          <div class="srv-card srv-card--b2f">
+            <div class="srv-num">02</div>
+            <h3>Business to Freedom</h3>
+            <div class="srv-sub">Khoá học 10 tuần</div>
+            <p>Mở rộng quy mô doanh nghiệp, xây dựng hệ thống vận hành tự động và tạo ra cuộc sống tự do mà bạn hằng mơ ước — không cần phải hy sinh sức khỏe hay gia đình.</p>
+            <a href="dich-vu-2.html" class="btn btn--primary btn--sm">Tìm hiểu thêm →</a>
+          </div>
+
+          <!-- BM -->
+          <div class="srv-card srv-card--bm">
+            <div class="srv-num">03</div>
+            <h3>Business Mastery</h3>
+            <div class="srv-sub">Coaching 1:1 chiến lược</div>
+            <p>Chương trình coaching cá nhân hóa dành cho doanh nhân muốn làm chủ mọi khía cạnh — từ chiến lược kinh doanh, lãnh đạo đội ngũ đến phát triển bản thân.</p>
+            <a href="dich-vu-3.html" class="btn btn--primary btn--sm">Tìm hiểu thêm →</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         3. ABOUT SECTION
+         ═══════════════════════════════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <div class="about-grid">
+
+          <!-- Image -->
+          <div class="about-img-wrap" data-reveal="left">
+            <img src="assets/dv1/hero-coach.png" alt="Coach Edina Trâm" loading="lazy" width="520" height="640">
+            <div class="about-badge">ICF PCC Coach</div>
+          </div>
+
+          <!-- Content -->
+          <div class="about-content" data-reveal="right">
+            <span class="badge">Người đồng hành</span>
+            <h2>Chân thực. Thấu hiểu.<br>Truyền cảm hứng.</h2>
+            <div class="divider divider--left"></div>
+            <div class="about-name">Edina Trâm</div>
+            <p class="about-bio">Với hơn 16 năm kinh nghiệm trong ngành F&B và hành trình phát triển bản thân không ngừng, tôi tin rằng mỗi người đều sở hữu một nguồn nội lực phi thường. Sứ mệnh của tôi là đồng hành cùng bạn khơi dậy tiềm năng ấy, để bạn sống một cuộc đời ý nghĩa và trọn vẹn.</p>
+            <div class="about-credentials">
+              <span class="badge badge--gold">ICF PCC</span>
+              <span class="badge badge--gold">16+ Năm Kinh Nghiệm</span>
+              <span class="badge badge--gold">F&B Expert</span>
+              <span class="badge badge--gold">50+ Doanh Nghiệp</span>
             </div>
-        </section>
 
-        <!-- SECTION 4: BOOK -->
-        <section class="book-section">
-            <div class="container book-grid">
-                <div class="book-img-wrap" data-reveal>
-                    <img src="assets/book-mockup.png" alt="Ánh Sáng Của Ước Mơ – Tác giả Vũ Kiều Loan" style="width:100%; max-width:320px; border-radius:var(--radius-md); box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 40px rgba(201,168,76,0.1); display:block; margin:auto;" loading="lazy">
-                </div>
-                <div data-reveal>
-                    <span style="font-size:var(--text-sm); color:var(--gold-accent); font-weight:600; letter-spacing:2px; text-transform:uppercase;">SÁCH CỦA COACH LOAN VŨ</span>
-                    <h2 style="font-size:clamp(1.75rem,3vw,2.5rem); margin:var(--space-2) 0 var(--space-4); color:#fff; font-family:var(--font-heading);">Ánh Sáng Của Ước Mơ</h2>
-                    <p style="font-size:var(--text-lg); line-height:1.6; color:#E2E8F0; margin-bottom:var(--space-4);">Cuốn sách truyền cảm hứng về hành trình chuyển hoá từ người đi làm thuê đến người làm chủ nhà hàng – ghi lại những vấp ngã, bài học và sức mạnh nội tâm giúp người trẻ bước vào con đường khởi nghiệp tự tin hơn.</p>
-                    <p style="color:#94A3B8; margin-bottom:var(--space-6);">Đã truyền cảm hứng cho hơn <strong style="color:var(--gold-accent)">1.000 người trẻ</strong> trong hành trình khởi nghiệp F&amp;B.</p>
-                    <div style="display:flex; gap:16px; flex-wrap:wrap;">
-                        <a href="#" class="btn-gold">Mua Sách Ngay</a>
-                        <a href="#" class="btn-outline">Đọc thử câu chuyện</a>
-                    </div>
-                </div>
+            <!-- Stats -->
+            <div class="stat-grid" data-reveal-stagger>
+              <div class="stat-card">
+                <div class="stat-num" data-count="16" data-suffix="+">0</div>
+                <div class="stat-label">Năm kinh nghiệm</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-num" data-count="50" data-suffix="+">0</div>
+                <div class="stat-label">Doanh nghiệp đồng hành</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-num" data-count="1000" data-suffix="+">0</div>
+                <div class="stat-label">Cuốn sách đã đọc</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-num" data-count="3">0</div>
+                <div class="stat-label">Chương trình chuyển hóa</div>
+              </div>
             </div>
-        </section>
+          </div>
 
-        <!-- SECTION 4: TESTIMONIALS -->
-        <section class="home-section alt">
-            <div class="container">
-                <div class="section-title" data-reveal>
-                    <h2>Trải nghiệm chuyển hoá</h2>
-                    <div class="home-divider"></div>
-                    <p>Lắng nghe những học viên đã xây dựng thành công bộ quy trình chuyên nghiệp cho quán của họ.</p>
-                </div>
-                
-                <div class="testi-grid">
-                    <div class="testi-card" data-reveal>
-                        <p>"Mọi thứ không còn mơ hồ. Mình biết cái gì đang thiếu và cần thay đổi. Thay đổi đầu tiên là áp dụng các quy trình chuẩn cho quán."</p>
-                        <div class="testi-author">
-                            <img src="assets/dv2/t1-caolan.png" alt="Cao Lan" class="testi-avatar" loading="lazy">
-                            <div>
-                                <h4>Cao Lan</h4>
-                                <span>Chủ nhà hàng thật Việt ở Paris</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testi-card" data-reveal>
-                        <p>"Bước tiến của em là vận hành được quán và để dành được lợi nhuận. Mọi thứ đang vận hành đúng như mong muốn và em rất tự hào."</p>
-                        <div class="testi-author">
-                            <img src="assets/dv2/t1-thanhnga.png" alt="Thanh Nga" class="testi-avatar" loading="lazy">
-                            <div>
-                                <h4>Thanh Nga</h4>
-                                <span>Chủ quán trà tại Bảo Lộc</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testi-card" data-reveal>
-                        <p>"Khoá học là bản đồ để dù mình đang làm gì thì cũng có thể đối chiếu. Dù kinh doanh bao lâu, mình vẫn cần soi lại để tìm hướng đi đúng."</p>
-                        <div class="testi-author">
-                            <img src="assets/dv2/t1-phamhieu.png" alt="Phạm Hiếu" class="testi-avatar" loading="lazy">
-                            <div>
-                                <h4>Phạm Hiếu</h4>
-                                <span>Chủ cafe Việt ở Virginia, Mỹ</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         4. BOOK SECTION
+         ═══════════════════════════════════════════════════════ -->
+    <section class="section book-section">
+      <div class="container">
+        <div class="book-grid">
+
+          <!-- Book Image -->
+          <div class="book-img" data-reveal="left">
+            <img src="assets/book-mockup.png" alt="Sách Ánh Sáng Của Ước Mơ – Edina Trâm" loading="lazy" width="340" height="420">
+          </div>
+
+          <!-- Book Content -->
+          <div class="book-content" data-reveal="right">
+            <span class="badge badge--dark">Sách mới</span>
+            <h2>Ánh Sáng Của Ước Mơ</h2>
+            <p>Cuốn sách chia sẻ hành trình chuyển hóa cá nhân và những bài học quý giá trên con đường kiến tạo cuộc sống ý nghĩa. Một nguồn cảm hứng cho bất kỳ ai đang tìm kiếm sự rõ ràng và mục đích sống.</p>
+            <div class="book-ctas">
+              <a href="#" class="btn btn--accent btn--lg">Đặt sách ngay</a>
+              <a href="#" class="btn btn--outline-light btn--lg">Xem thêm</a>
             </div>
-        </section>
+          </div>
 
-        <!-- SECTION 5: Kênh Kết Nối -->
-        <section class="home-section">
-            <div class="container">
-                <div class="section-title" data-reveal>
-                    <h2>Kết nối đa kênh</h2>
-                    <div class="home-divider"></div>
-                    <p>Theo dõi và gia nhập cộng đồng chung đam mê khởi nghiệp và vận hành thương hiệu F&B.</p>
-                </div>
-                
-                <div class="eco-grid">
-                    <a href="#" class="eco-card" data-reveal style="text-decoration:none;">
-                        <div class="eco-icon">📘</div>
-                        <h3 style="color:#fff;">Facebook</h3>
-                        <p style="color:#94A3B8; margin-top:var(--space-2); font-size:var(--text-sm);">Cộng đồng hỗ trợ & chia sẻ</p>
-                    </a>
-                    <a href="#" class="eco-card" data-reveal style="text-decoration:none;">
-                        <div class="eco-icon">📺</div>
-                        <h3 style="color:#fff;">YouTube</h3>
-                        <p style="color:#94A3B8; margin-top:var(--space-2); font-size:var(--text-sm);">Nhận định & hướng dẫn thực chiến</p>
-                    </a>
-                    <a href="#" class="eco-card" data-reveal style="text-decoration:none;">
-                        <div class="eco-icon">📧</div>
-                        <h3 style="color:#fff;">Newsletter</h3>
-                        <p style="color:#94A3B8; margin-top:var(--space-2); font-size:var(--text-sm);">Insight kinh doanh qua Substack</p>
-                    </a>
-                    <a href="#" class="eco-card" data-reveal style="text-decoration:none;">
-                        <div class="eco-icon">🍽️</div>
-                        <h3 style="color:#fff;">S&L's Diner</h3>
-                        <p style="color:#94A3B8; margin-top:var(--space-2); font-size:var(--text-sm);">Cửa hàng thực chiến của Loan's team</p>
-                    </a>
-                </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         5. TESTIMONIALS SECTION
+         ═══════════════════════════════════════════════════════ -->
+    <section class="section section--alt">
+      <div class="container">
+
+        <div class="section-header" data-reveal>
+          <span class="badge">Khách hàng nói gì</span>
+          <h2>Hành trình chuyển hóa thật sự</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="testi-grid" data-reveal-stagger>
+
+          <!-- Testimonial 1 -->
+          <div class="testi-card">
+            <div class="testi-img-wrap">
+              <img class="testi-img" src="assets/dv2/t1-caolan.png" alt="Cao Lân" loading="lazy" width="320" height="400">
             </div>
-        </section>
-    </main>
+            <div>
+              <div class="testi-name">Cao Lân</div>
+              <div class="testi-role">Chủ quán F&B</div>
+            </div>
+            <p class="testi-quote">Trước khi gặp chị Trâm, tôi gần như kiệt sức với việc vận hành quán. Sau chương trình coaching, tôi đã xây dựng được hệ thống, có thời gian cho gia đình và doanh thu tăng 40%.</p>
+          </div>
 
-    <!-- Footer -->
-    <site-footer></site-footer>
+          <!-- Testimonial 2 -->
+          <div class="testi-card">
+            <div class="testi-img-wrap">
+              <img class="testi-img" src="assets/dv2/t1-thanhnga.png" alt="Thanh Ngà" loading="lazy" width="320" height="400">
+            </div>
+            <div>
+              <div class="testi-name">Thanh Ngà</div>
+              <div class="testi-role">Startup Founder</div>
+            </div>
+            <p class="testi-quote">Chị Trâm không chỉ coaching về kinh doanh mà còn giúp tôi tìm lại chính mình. Tôi học được cách lắng nghe bản thân, đưa ra quyết định sáng suốt và sống đúng với giá trị cốt lõi.</p>
+          </div>
 
-    <!-- Scripts -->
-    <script src="js/components.js"></script>
-    <script src="js/main.js"></script>
+          <!-- Testimonial 3 -->
+          <div class="testi-card">
+            <div class="testi-img-wrap">
+              <img class="testi-img" src="assets/dv2/t1-phamhieu.png" alt="Phạm Hiếu" loading="lazy" width="320" height="400">
+            </div>
+            <div>
+              <div class="testi-name">Phạm Hiếu</div>
+              <div class="testi-role">Giám đốc vận hành</div>
+            </div>
+            <p class="testi-quote">Business Mastery đã thay đổi hoàn toàn cách tôi lãnh đạo đội ngũ. Từ một người quản lý áp lực, tôi trở thành nhà lãnh đạo truyền cảm hứng, và đội ngũ cũng phát triển vượt bậc.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         6. MULTI-CHANNEL SECTION
+         ═══════════════════════════════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+
+        <div class="section-header" data-reveal>
+          <span class="badge">Kết nối đa kênh</span>
+          <h2>Đi cùng Edina trên mọi nền tảng</h2>
+          <div class="divider"></div>
+        </div>
+
+        <div class="eco-grid" data-reveal-stagger>
+
+          <!-- Facebook -->
+          <div class="eco-card">
+            <div class="eco-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </div>
+            <h3>Facebook</h3>
+            <p>Cộng đồng chia sẻ kiến thức, cảm hứng và kết nối hàng ngày cùng hàng nghìn doanh nhân.</p>
+          </div>
+
+          <!-- YouTube -->
+          <div class="eco-card">
+            <div class="eco-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+            </div>
+            <h3>YouTube</h3>
+            <p>Video chia sẻ chuyên sâu về coaching, mindfulness và phát triển bản thân cho doanh nhân.</p>
+          </div>
+
+          <!-- Newsletter -->
+          <div class="eco-card">
+            <div class="eco-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <h3>Newsletter</h3>
+            <p>Nhận bài viết chuyên sâu, tài nguyên miễn phí và cập nhật mới nhất mỗi tuần qua email.</p>
+          </div>
+
+          <!-- Edina Workspace -->
+          <div class="eco-card">
+            <div class="eco-icon">
+              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+            <h3>Edina Workspace</h3>
+            <p>Không gian làm việc và học tập trực tuyến dành riêng cho cộng đồng học viên Edina Trâm.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         7. CTA FINAL
+         ═══════════════════════════════════════════════════════ -->
+    <section class="cta-final section--dark">
+      <div class="container" data-reveal>
+        <span class="badge badge--dark">Bắt đầu hành trình</span>
+        <h2>Bạn đã sẵn sàng cho phiên bản<br>tuyệt vời nhất?</h2>
+        <p>Đặt lịch tư vấn miễn phí để cùng tôi tìm ra chương trình phù hợp nhất cho hành trình chuyển hóa của bạn.</p>
+        <a href="lien-he.html" class="btn btn--accent btn--lg">Đặt lịch Tư vấn miễn phí</a>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div>
+          <div class="footer-logo">Edina <span>Trâm</span></div>
+          <p class="footer-tagline">Dẫn lối bình an, khai mở nội lực. Đồng hành cùng bạn trên hành trình kiến tạo cuộc sống chất lượng.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Về Edina</h4>
+          <div class="footer-links">
+            <a href="#">Câu chuyện của tôi</a>
+            <a href="#">Giá trị & Triết lý</a>
+            <a href="#">Chứng chỉ & Đào tạo</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Dịch vụ</h4>
+          <div class="footer-links">
+            <a href="dich-vu-1.html">Passion to Profit</a>
+            <a href="dich-vu-2.html">Business to Freedom</a>
+            <a href="dich-vu-3.html">Business Mastery</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Kết nối</h4>
+          <div class="footer-links">
+            <a href="lien-he.html">Liên hệ</a>
+            <a href="mailto:coachtram@gmail.com">coachtram@gmail.com</a>
+            <a href="tel:0901234567">0901 234 567</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Edina Trâm. All rights reserved.</span>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></a>
+          <a href="#" aria-label="Instagram"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+          <a href="#" aria-label="YouTube"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll-to-top -->
+  <button class="scroll-top-btn" aria-label="Cuộn lên đầu trang">↑</button>
+
+  <script src="js/main.js" defer></script>
 </body>
 </html>
