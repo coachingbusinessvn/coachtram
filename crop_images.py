@@ -6,8 +6,8 @@ from PIL import Image
 import os, sys
 sys.stdout.reconfigure(encoding='utf-8')
 
-SRC = r"c:\Users\huytv\Documents\C-Loan Vu\Dich vu 1 - Passion to Profit"
-DST = r"c:\Users\huytv\Documents\C-Loan Vu\assets\dv1"
+SRC = "./Dich vu 1 - Passion to Profit"
+DST = "./assets/dv1"
 os.makedirs(DST, exist_ok=True)
 
 # ─── Helper ───────────────────────────────────────────────────

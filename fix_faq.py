@@ -1,6 +1,6 @@
 import re
 
-path = r'c:\Users\huytv\Documents\C-Loan Vu\dich-vu-1.html'
+path = 'dich-vu-1.html'
 with open(path, 'r', encoding='utf-8') as f:
     content = f.read()
 

@@ -4,7 +4,7 @@ import re
 files = ['index.html', 'dich-vu-1.html', 'dich-vu-2.html', 'dich-vu-3.html', 'lien-he.html']
 
 for f in files:
-    path = os.path.join(r'c:\Users\huytv\Documents\C-Loan Vu', f)
+    path = f
     if not os.path.exists(path): continue
     
     with open(path, 'r', encoding='utf-8') as file:
