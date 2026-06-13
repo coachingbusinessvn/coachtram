@@ -3,6 +3,13 @@
 Thumbs.db
 Desktop.ini
 
+# Claude Code (local/machine-specific)
+.claude/settings.local.json
+.claude/skills/
+
+# Headless-browser review scratch
+.review/
+
 # IDEs
 .vscode/
 .idea/
