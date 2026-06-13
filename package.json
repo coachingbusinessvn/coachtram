@@ -4,8 +4,8 @@
   "description": "Website cá nhân của Coach Edina Trâm – Professional Coach (ICF PCC).",
   "main": "tailwind.config.js",
   "scripts": {
-    "build:css": "tailwindcss -i ./css/input.css -o ./css/style.css",
-    "watch:css": "tailwindcss -i ./css/input.css -o ./css/style.css --watch"
+    "build:tailwind": "tailwindcss -i ./css/input.css -o ./css/tailwind.css",
+    "watch:tailwind": "tailwindcss -i ./css/input.css -o ./css/tailwind.css --watch"
   },
   "repository": {
     "type": "git",

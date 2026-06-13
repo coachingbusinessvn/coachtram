@@ -44,7 +44,9 @@ assets/                 ← Ảnh dùng chung (static site backup)
 
 ## Deploy
 
-Xem [`DEPLOY.md`](DEPLOY.md) — hướng dẫn triển khai theme lên server thật (import SQL snapshot hoặc cài mới thủ công), checklist sau deploy, và tối ưu production.
+Xem [`DEPLOY.md`](DEPLOY.md) — hướng dẫn triển khai theme lên server thật (plugin demo import hoặc cài mới thủ công), checklist sau deploy, và tối ưu production.
+
+> CSS production của theme là các file modular trong `wp-theme/edina-tram-v2/assets/css/`. Không cần chạy npm để deploy theme. Script Tailwind chỉ xuất file thử nghiệm `css/tailwind.css` và không ghi đè `css/style.css`.
 
 ## Design System
 
