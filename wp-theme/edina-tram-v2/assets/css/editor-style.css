@@ -1,0 +1,40 @@
+/* ═══════════════════════════════════════════════════════════
+   EDITOR STYLE — Edina Trâm V2
+   Applies brand fonts and base typography inside Gutenberg.
+   ═══════════════════════════════════════════════════════════ */
+
+/* Load brand webfonts inside the editor iframe — wp_enqueue_style
+   (frontend) does not reach the block editor, so import here. */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap');
+
+.editor-styles-wrapper {
+  font-family: 'Be Vietnam Pro', system-ui, -apple-system, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #0B1F19;
+  background-color: #FBF8F0;
+}
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+  font-family: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #005B45;
+}
+
+.editor-styles-wrapper a {
+  color: inherit;
+}
+.editor-styles-wrapper a:hover {
+  color: #C8A244;
+}
+
+.editor-styles-wrapper p {
+  color: #4A5B54;
+  line-height: 1.8;
+}
