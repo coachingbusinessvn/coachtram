@@ -50,7 +50,7 @@ $img = function ($key, $size = 'large') { return edt_img_url('dv3_' . $key, $siz
         </div>
         <?php $hero_img = $img('hero_image'); if ($hero_img) : ?>
           <div class="srv-hero-img" data-reveal>
-            <img src="<?php echo esc_url($hero_img); ?>" alt="<?php echo esc_attr($f('hero_tagline', 'Coach Edina Trâm – Business Mastery')); ?>" loading="lazy" />
+            <img src="<?php echo esc_url($hero_img); ?>" alt="<?php echo esc_attr($f('hero_tagline', 'Coach Edina Trâm – Business Mastery')); ?>" loading="eager" fetchpriority="high" />
           </div>
         <?php endif; ?>
       </div>

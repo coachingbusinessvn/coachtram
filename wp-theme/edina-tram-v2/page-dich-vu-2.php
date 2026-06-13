@@ -261,9 +261,9 @@ $contact_email = edt_option('contact_email', 'coachtram@gmail.com');
         </div>
         <div class="srv-hero-img" data-reveal="right">
           <?php if ($hero_image) : ?>
-            <img src="<?php echo esc_url($hero_image); ?>" alt="<?php echo esc_attr($coach_name . ' – Business to Freedom'); ?>" loading="eager">
+            <img src="<?php echo esc_url($hero_image); ?>" alt="<?php echo esc_attr($coach_name . ' – Business to Freedom'); ?>" loading="eager" fetchpriority="high">
           <?php else : ?>
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/placeholder-hero.png'); ?>" alt="<?php echo esc_attr($coach_name . ' – Business to Freedom'); ?>" loading="eager">
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/placeholder-hero.png'); ?>" alt="<?php echo esc_attr($coach_name . ' – Business to Freedom'); ?>" loading="eager" fetchpriority="high">
           <?php endif; ?>
         </div>
       </div>

@@ -21,21 +21,33 @@ add_action('after_setup_theme', function () {
 /* ============================================================
    2. ENQUEUE ASSETS
    ============================================================ */
+add_action('wp_head', function () {
+    echo '<link rel="preconnect" href="https://fonts.googleapis.com">' . "\n";
+    echo '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>' . "\n";
+}, 1);
+
 add_action('wp_enqueue_scripts', function () {
     $v = wp_get_theme()->get('Version');
     $uri = get_template_directory_uri();
 
-    // Google Fonts
+    // Google Fonts — canonical single request; preconnect output in wp_head (priority 1)
+    // Weights unified from design-system.css (removed its @import to avoid double-load)
     wp_enqueue_style('edt-fonts',
-        'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap',
+        'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap',
         [], null
     );
 
-    // Theme CSS
-    wp_enqueue_style('edt-style', $uri . '/assets/css/style.css', ['edt-fonts'], $v);
+    // Theme CSS — enqueued directly (avoids @import chain; allows HTTP/2 parallel fetch + WP cache-busting)
+    $css = $uri . '/assets/css';
+    wp_enqueue_style('edt-design-system', $css . '/design-system.css', ['edt-fonts'], $v);
+    wp_enqueue_style('edt-components',    $css . '/components.css',    ['edt-design-system'], $v);
+    wp_enqueue_style('edt-animations',    $css . '/animations.css',    ['edt-design-system'], $v);
+    wp_enqueue_style('edt-home',          $css . '/pages/home.css',    ['edt-components'], $v);
+    wp_enqueue_style('edt-service',       $css . '/pages/service.css', ['edt-components'], $v);
+    wp_enqueue_style('edt-contact',       $css . '/pages/contact.css', ['edt-components'], $v);
 
-    // Theme JS
-    wp_enqueue_script('edt-main', $uri . '/assets/js/main.js', [], $v, true);
+    // Theme JS — deferred so it never blocks rendering
+    wp_enqueue_script('edt-main', $uri . '/assets/js/main.js', [], $v, ['in_footer' => true, 'strategy' => 'defer']);
 });
 
 
@@ -161,8 +173,11 @@ function edt_option($key, $default = '') {
  */
 function edt_render_testimonials($term_slug, $max = 6) {
     $args = [
-        'post_type'      => 'edina_testimonial',
-        'posts_per_page' => $max,
+        'post_type'              => 'edina_testimonial',
+        'post_status'            => 'publish',
+        'posts_per_page'         => $max,
+        'no_found_rows'          => true,
+        'update_post_term_cache' => false,
     ];
     if (term_exists($term_slug, 'program_cat')) {
         $args['tax_query'] = [[
@@ -203,8 +218,11 @@ function edt_render_testimonials($term_slug, $max = 6) {
  */
 function edt_render_faqs($term_slug, $max = 10) {
     $args = [
-        'post_type'      => 'edina_faq',
-        'posts_per_page' => $max,
+        'post_type'              => 'edina_faq',
+        'post_status'            => 'publish',
+        'posts_per_page'         => $max,
+        'no_found_rows'          => true,
+        'update_post_term_cache' => false,
     ];
     if (term_exists($term_slug, 'program_cat')) {
         $args['tax_query'] = [[

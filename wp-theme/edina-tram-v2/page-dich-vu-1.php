@@ -90,9 +90,9 @@ $img = function($key, $size = 'large') { return edt_img_url($key, $size); };
         <div class="srv-hero-img" data-reveal>
           <?php $hero_img = $img('dv1_hero_image'); ?>
           <?php if ($hero_img) : ?>
-            <img src="<?php echo esc_url($hero_img); ?>" alt="<?php echo esc_attr($f('dv1_hero_tagline', 'Coach Edina Trâm – Passion to Profit Workshop')); ?>" loading="lazy" />
+            <img src="<?php echo esc_url($hero_img); ?>" alt="<?php echo esc_attr($f('dv1_hero_tagline', 'Coach Edina Trâm – Passion to Profit Workshop')); ?>" loading="eager" fetchpriority="high" />
           <?php else : ?>
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/placeholder.png'); ?>" alt="Coach Edina Trâm – Passion to Profit Workshop" loading="lazy" />
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/placeholder.png'); ?>" alt="Coach Edina Trâm – Passion to Profit Workshop" loading="eager" fetchpriority="high" />
           <?php endif; ?>
         </div>
       </div>

@@ -51,7 +51,7 @@ get_header();
             $hero_img = edt_img_url('home_hero_image', 'full');
             $hero_img_src = $hero_img ? $hero_img : get_template_directory_uri() . '/assets/images/hero-coach.png';
             ?>
-            <img src="<?php echo esc_url($hero_img_src); ?>" alt="<?php echo esc_attr(edt_field('home_hero_image_alt', null, 'Coach Edina Trâm')); ?>" loading="lazy" width="600" height="680">
+            <img src="<?php echo esc_url($hero_img_src); ?>" alt="<?php echo esc_attr(edt_field('home_hero_image_alt', null, 'Coach Edina Trâm')); ?>" loading="eager" fetchpriority="high" width="600" height="680">
           </div>
 
         </div>
