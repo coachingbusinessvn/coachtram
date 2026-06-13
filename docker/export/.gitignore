@@ -1,0 +1,2 @@
+# Bỏ qua file SQL export (không commit lên git)
+*.sql

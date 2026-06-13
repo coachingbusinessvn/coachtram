@@ -1,0 +1,4 @@
+# MySQL client config — dev only
+# Tắt SSL verification để WP-CLI kết nối được tới MySQL 8.0 trong Docker
+[client]
+ssl-mode=DISABLED
