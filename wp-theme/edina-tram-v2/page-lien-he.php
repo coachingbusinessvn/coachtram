@@ -14,9 +14,10 @@ $hero_desc  = edt_field('contact_hero_desc')  ?: 'Buổi tư vấn đầu tiên 
 $info_badge    = edt_field('contact_info_badge')    ?: 'Thông tin';
 $info_title    = edt_field('contact_info_title')    ?: 'Tôi muốn lắng nghe bạn';
 $info_desc     = edt_field('contact_info_desc')     ?: 'Đừng ngần ngại liên hệ qua bất kỳ kênh nào bạn thấy tiện nhất. Tôi sẽ phản hồi trong vòng 24 giờ.';
-$info_email    = edt_field('contact_info_email')    ?: edt_option('contact_email', 'coachtram@gmail.com');
-$info_phone    = edt_field('contact_info_phone')    ?: edt_option('contact_phone', '0901 234 567');
-$info_facebook = edt_field('contact_info_facebook') ?: edt_option('social_facebook', 'https://www.facebook.com/coachtram');
+$info_email    = edt_field('contact_info_email')    ?: edt_option('contact_email', 'lequynhtram@gmail.com');
+$info_phone    = edt_field('contact_info_phone')    ?: edt_option('contact_phone', '(+84) 88-9590-888');
+$info_facebook = edt_field('contact_info_facebook') ?: edt_option('social_facebook', 'https://www.facebook.com/edina.quynhtram');
+$info_website  = edt_field('contact_info_website')  ?: edt_option('social_website', 'https://edinatram.vn');
 $info_hours    = edt_field('contact_info_hours')    ?: 'Thứ 2 – Thứ 7, 8:00 – 21:00';
 
 // --- Form Card ---
@@ -26,7 +27,7 @@ $form_lead      = edt_field('contact_form_lead')      ?: 'Điền thông tin bê
 $form_note      = edt_field('contact_form_note')      ?: 'Tôi sẽ phản hồi trong vòng 24 giờ. Thông tin của bạn được bảo mật tuyệt đối.';
 
 // Extract display name from Facebook URL
-$fb_display = '/coachtram';
+$fb_display = '/edina.quynhtram';
 if ($info_facebook) {
     $fb_path = wp_parse_url($info_facebook, PHP_URL_PATH);
     if ($fb_path) {
@@ -100,6 +101,21 @@ if ($info_facebook) {
                 <div>
                   <p class="info-label">Facebook</p>
                   <p class="info-value"><a href="<?php echo esc_url($info_facebook); ?>" target="_blank" rel="noopener"><?php echo esc_html($fb_display); ?></a></p>
+                </div>
+              </div>
+
+              <!-- Website -->
+              <div class="info-item">
+                <div class="info-icon" aria-hidden="true">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="2" y1="12" x2="22" y2="12"/>
+                    <path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/>
+                  </svg>
+                </div>
+                <div>
+                  <p class="info-label">Website</p>
+                  <p class="info-value"><a href="<?php echo esc_url($info_website); ?>" target="_blank" rel="noopener"><?php echo esc_html(wp_parse_url($info_website, PHP_URL_HOST) ?: 'edinatram.vn'); ?></a></p>
                 </div>
               </div>
 

@@ -185,7 +185,7 @@ function edt_dv3_render($post) {
         2 => ['📋 Bản chiến lược cá nhân hoá', 'Kế hoạch hành động chi tiết, được thiết kế riêng với KPIs, timeline và milestones cho doanh nghiệp bạn.'],
         3 => ['📞 Hỗ trợ qua chat không giới hạn', 'Gặp vấn đề gấp? Nhắn tin cho Coach bất cứ lúc nào. Cam kết phản hồi trong vòng 24h làm việc.'],
         4 => ['📊 Bộ công cụ quản trị F&B', 'Template tài chính, quy trình vận hành, checklist quản lý, bảng theo dõi KPIs – sẵn sàng áp dụng.'],
-        5 => ['🔒 Quyền truy cập khoá B2F', 'Nhận miễn phí toàn bộ nội dung khoá Business to Freedom (trị giá 15.000.000 VNĐ) làm kiến thức nền tảng.'],
+        5 => ['🔒 Quyền truy cập khoá TINA', 'Nhận miễn phí toàn bộ nội dung khoá TINA Awakening (trị giá 15.000.000 VNĐ) làm kiến thức nền tảng.'],
         6 => ['🤝 Cộng đồng Mastermind', 'Kết nối với các chủ doanh nghiệp F&B khác trong mạng lưới Business Mastery – chia sẻ, học hỏi và hợp tác.'],
     ];
     for ($i = 1; $i <= 6; $i++) {
@@ -196,7 +196,7 @@ function edt_dv3_render($post) {
     }
 
     // Comparison table
-    echo '<h4 class="edt-section-title">📊 Bảng so sánh (B2F vs BM)</h4>';
+    echo '<h4 class="edt-section-title">📊 Bảng so sánh (TINA Awakening vs BM)</h4>';
     edt_text_field('_dv3_pricing_badge', 'Badge mục so sánh',  $g('pricing_badge', 'SO SÁNH & ĐẦU TƯ'));
     edt_text_field('_dv3_pricing_title', 'Tiêu đề mục so sánh', $g('pricing_title', 'Chọn gói phù hợp với bạn'));
 
@@ -210,7 +210,7 @@ function edt_dv3_render($post) {
         7 => ['Mức đầu tư', '15.000.000 VNĐ', 'Từ 60.000.000 VNĐ'],
     ];
     echo '<table class="widefat" style="max-width:800px;margin-bottom:20px;">';
-    echo '<thead><tr><th>#</th><th>Tiêu chí</th><th>Business to Freedom</th><th>Business Mastery</th></tr></thead><tbody>';
+    echo '<thead><tr><th>#</th><th>Tiêu chí</th><th>TINA Awakening</th><th>Business Mastery</th></tr></thead><tbody>';
     for ($i = 1; $i <= 7; $i++) {
         echo '<tr>';
         echo '<td>' . $i . '</td>';

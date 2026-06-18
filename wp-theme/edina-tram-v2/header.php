@@ -48,7 +48,7 @@
           ['url' => home_url('/'),            'label' => 'Trang chủ',          'active' => $is_home],
           ['url' => home_url('/#services'),   'label' => 'Dịch vụ',            'active' => false],
           ['url' => home_url('/dich-vu-1/'),  'label' => 'Passion to Profit',   'active' => is_page('dich-vu-1')],
-          ['url' => home_url('/dich-vu-2/'),  'label' => 'Business to Freedom', 'active' => is_page('dich-vu-2')],
+          ['url' => home_url('/dich-vu-2/'),  'label' => 'TINA Awakening',      'active' => is_page('dich-vu-2')],
           ['url' => home_url('/dich-vu-3/'),  'label' => 'Business Mastery',    'active' => is_page('dich-vu-3')],
       ];
       foreach ($pages as $p) :
@@ -71,8 +71,3 @@
   </div>
 </header>
 
-<main>
-
-  <!-- Decorative glow blobs -->
-  <div class="glow-blob glow-blob--gold glow-blob--1" aria-hidden="true"></div>
-  <div class="glow-blob glow-blob--emerald glow-blob--2" aria-hidden="true"></div>

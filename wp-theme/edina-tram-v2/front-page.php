@@ -8,6 +8,10 @@ get_header();
 
   <main>
 
+    <!-- ═══ GLOW BLOBS ═══ -->
+    <div class="glow-blob glow-blob--gold glow-blob--1" aria-hidden="true"></div>
+    <div class="glow-blob glow-blob--emerald glow-blob--2" aria-hidden="true"></div>
+
     <!-- ═══════════════════════════════════════════════════════
          1. HERO SECTION
          ═══════════════════════════════════════════════════════ -->
@@ -49,7 +53,7 @@ get_header();
           <div class="home-hero-img" data-reveal="right">
             <?php
             $hero_img = edt_img_url('home_hero_image', 'full');
-            $hero_img_src = $hero_img ? $hero_img : get_template_directory_uri() . '/assets/images/hero-coach.png';
+            $hero_img_src = $hero_img ? $hero_img : get_template_directory_uri() . '/assets/images/coach-tram-hero.png';
             ?>
             <img src="<?php echo esc_url($hero_img_src); ?>" alt="<?php echo esc_attr(edt_field('home_hero_image_alt', null, 'Coach Edina Trâm')); ?>" loading="eager" fetchpriority="high" width="600" height="680">
           </div>
@@ -89,9 +93,9 @@ get_header();
           <!-- B2F -->
           <div class="srv-card srv-card--b2f">
             <div class="srv-num"><?php echo esc_html(edt_field('home_srv2_num', null, '02')); ?></div>
-            <h3><?php echo esc_html(edt_field('home_srv2_title', null, 'Business to Freedom')); ?></h3>
-            <div class="srv-sub"><?php echo esc_html(edt_field('home_srv2_subtitle', null, 'Khoá học 10 tuần')); ?></div>
-            <p><?php echo esc_html(edt_field('home_srv2_desc', null, 'Mở rộng quy mô doanh nghiệp, xây dựng hệ thống vận hành tự động và tạo ra cuộc sống tự do mà bạn hằng mơ ước — không cần phải hy sinh sức khỏe hay gia đình.')); ?></p>
+            <h3><?php echo esc_html(edt_field('home_srv2_title', null, 'TINA Awakening')); ?></h3>
+            <div class="srv-sub"><?php echo esc_html(edt_field('home_srv2_subtitle', null, '90 ngày chuyển hoá 1:1')); ?></div>
+            <p><?php echo esc_html(edt_field('home_srv2_desc', null, 'Hành trình Coaching & Mentoring 1:1 giúp bạn tìm lại sự rõ ràng, tự tin làm chủ và kết nối sâu với chính mình qua 12 module chuyển hoá.')); ?></p>
             <a href="<?php echo esc_url(edt_field('home_srv2_url', null, '/dich-vu-2')); ?>" class="btn btn--primary btn--sm"><?php echo esc_html(edt_field('home_srv2_cta', null, 'Tìm hiểu thêm →')); ?></a>
           </div>
 
@@ -112,7 +116,7 @@ get_header();
     <!-- ═══════════════════════════════════════════════════════
          3. ABOUT SECTION
          ═══════════════════════════════════════════════════════ -->
-    <section class="section">
+    <section class="section" id="about">
       <div class="container">
         <div class="about-grid">
 
@@ -120,10 +124,10 @@ get_header();
           <div class="about-img-wrap" data-reveal="left">
             <?php
             $about_img = edt_img_url('home_about_image', 'large');
-            $about_img_src = $about_img ? $about_img : get_template_directory_uri() . '/assets/images/about-coach.png';
+            $about_img_src = $about_img ? $about_img : get_template_directory_uri() . '/assets/images/coach-tram.JPG';
             ?>
             <img src="<?php echo esc_url($about_img_src); ?>" alt="<?php echo esc_attr(edt_field('home_about_image_alt', null, 'Coach Edina Trâm')); ?>" loading="lazy" width="520" height="640">
-            <div class="about-badge"><?php echo esc_html(edt_field('home_about_badge_overlay', null, 'ICF PCC Coach')); ?></div>
+            <div class="about-badge"><?php echo esc_html(edt_field('home_about_badge_overlay', null, 'Tâm lý · Khai vấn')); ?></div>
           </div>
 
           <!-- Content -->
@@ -132,31 +136,31 @@ get_header();
             <h2><?php echo wp_kses_post(edt_field('home_about_title', null, 'Chân thực. Thấu hiểu.<br>Truyền cảm hứng.')); ?></h2>
             <div class="divider divider--left"></div>
             <div class="about-name"><?php echo esc_html(edt_field('home_about_name', null, 'Edina Trâm')); ?></div>
-            <p class="about-bio"><?php echo wp_kses_post(edt_field('home_about_bio', null, 'Với hơn 16 năm kinh nghiệm trong ngành F&B và hành trình phát triển bản thân không ngừng, tôi tin rằng mỗi người đều sở hữu một nguồn nội lực phi thường. Sứ mệnh của tôi là đồng hành cùng bạn khơi dậy tiềm năng ấy, để bạn sống một cuộc đời ý nghĩa và trọn vẹn.')); ?></p>
+            <p class="about-bio"><?php echo wp_kses_post(edt_field('home_about_bio', null, 'Edina Trâm là người đồng hành tại giao điểm của Tâm lý học, Khai vấn, Tâm linh và Tài chính. Với nền tảng học thuật, trải nghiệm sống qua nhiều quốc gia và hành trình chuyển hoá cá nhân sâu sắc, Trâm giúp bạn nhìn rõ chính mình, phục hồi nội lực và kiến tạo một đời sống vững vàng cả Đời lẫn Đạo.')); ?></p>
             <div class="about-credentials">
-              <span class="badge badge--gold"><?php echo esc_html(edt_field('home_about_cred1', null, 'ICF PCC')); ?></span>
-              <span class="badge badge--gold"><?php echo esc_html(edt_field('home_about_cred2', null, '16+ Năm Kinh Nghiệm')); ?></span>
-              <span class="badge badge--gold"><?php echo esc_html(edt_field('home_about_cred3', null, 'F&B Expert')); ?></span>
-              <span class="badge badge--gold"><?php echo esc_html(edt_field('home_about_cred4', null, '50+ Doanh Nghiệp')); ?></span>
+              <span class="badge badge--gold"><?php echo esc_html(edt_field('home_about_cred1', null, 'Thạc sỹ Tâm lý học')); ?></span>
+              <span class="badge badge--gold"><?php echo esc_html(edt_field('home_about_cred2', null, 'ICF ACC')); ?></span>
+              <span class="badge badge--gold"><?php echo esc_html(edt_field('home_about_cred3', null, 'Thạc sỹ Tài chính')); ?></span>
+              <span class="badge badge--gold"><?php echo esc_html(edt_field('home_about_cred4', null, 'Tâm linh & Thiền định')); ?></span>
             </div>
 
             <!-- Stats -->
             <div class="stat-grid" data-reveal-stagger>
               <div class="stat-card">
-                <div class="stat-num" data-count="<?php echo esc_attr(edt_field('home_about_stat1_num', null, '16')); ?>" data-suffix="<?php echo esc_attr(edt_field('home_about_stat1_suffix', null, '+')); ?>">0</div>
-                <div class="stat-label"><?php echo esc_html(edt_field('home_about_stat1_label', null, 'Năm kinh nghiệm')); ?></div>
+                <div class="stat-num" data-count="<?php echo esc_attr(edt_field('home_about_stat1_num', null, '20')); ?>" data-suffix="<?php echo esc_attr(edt_field('home_about_stat1_suffix', null, '+')); ?>">0</div>
+                <div class="stat-label"><?php echo esc_html(edt_field('home_about_stat1_label', null, 'Năm sống & làm việc quốc tế')); ?></div>
               </div>
               <div class="stat-card">
-                <div class="stat-num" data-count="<?php echo esc_attr(edt_field('home_about_stat2_num', null, '50')); ?>" data-suffix="<?php echo esc_attr(edt_field('home_about_stat2_suffix', null, '+')); ?>">0</div>
-                <div class="stat-label"><?php echo esc_html(edt_field('home_about_stat2_label', null, 'Doanh nghiệp đồng hành')); ?></div>
+                <div class="stat-num" data-count="<?php echo esc_attr(edt_field('home_about_stat2_num', null, '4')); ?>" data-suffix="<?php echo esc_attr(edt_field('home_about_stat2_suffix', null, '')); ?>">0</div>
+                <div class="stat-label"><?php echo esc_html(edt_field('home_about_stat2_label', null, 'Quốc gia đã sinh sống')); ?></div>
               </div>
               <div class="stat-card">
-                <div class="stat-num" data-count="<?php echo esc_attr(edt_field('home_about_stat3_num', null, '1000')); ?>" data-suffix="<?php echo esc_attr(edt_field('home_about_stat3_suffix', null, '+')); ?>">0</div>
-                <div class="stat-label"><?php echo esc_html(edt_field('home_about_stat3_label', null, 'Cuốn sách đã đọc')); ?></div>
+                <div class="stat-num" data-count="<?php echo esc_attr(edt_field('home_about_stat3_num', null, '3')); ?>" data-suffix="<?php echo esc_attr(edt_field('home_about_stat3_suffix', null, '')); ?>">0</div>
+                <div class="stat-label"><?php echo esc_html(edt_field('home_about_stat3_label', null, 'Ngôn ngữ sử dụng')); ?></div>
               </div>
               <div class="stat-card">
-                <div class="stat-num" data-count="<?php echo esc_attr(edt_field('home_about_stat4_num', null, '3')); ?>" data-suffix="<?php echo esc_attr(edt_field('home_about_stat4_suffix', null, '')); ?>">0</div>
-                <div class="stat-label"><?php echo esc_html(edt_field('home_about_stat4_label', null, 'Chương trình chuyển hóa')); ?></div>
+                <div class="stat-num" data-count="<?php echo esc_attr(edt_field('home_about_stat4_num', null, '15')); ?>" data-suffix="<?php echo esc_attr(edt_field('home_about_stat4_suffix', null, '+')); ?>">0</div>
+                <div class="stat-label"><?php echo esc_html(edt_field('home_about_stat4_label', null, 'Năm thực hành tâm linh')); ?></div>
               </div>
             </div>
           </div>

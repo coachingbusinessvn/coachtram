@@ -22,7 +22,7 @@ $img = function($key, $size = 'large') { return edt_img_url($key, $size); };
             <span class="sticky-cta-meta"><?php echo esc_html($f('dv1_sticky_meta', '22–23/03/2026 · 2 ngày cuối tuần · 499.000 VNĐ')); ?></span>
         </div>
     </div>
-    <a href="<?php echo esc_url($f('dv1_sticky_cta_url', 'https://zalo.me/0901234567')); ?>" class="btn btn--accent btn--sm"><?php echo esc_html($f('dv1_sticky_cta_label', 'Đăng Ký Ngay')); ?></a>
+    <a href="<?php echo esc_url($f('dv1_sticky_cta_url', edt_option('contact_zalo', 'https://zalo.me/84889590888'))); ?>" class="btn btn--accent btn--sm"><?php echo esc_html($f('dv1_sticky_cta_label', 'Đăng Ký Ngay')); ?></a>
 </div>
 
 
@@ -80,10 +80,10 @@ $img = function($key, $size = 'large') { return edt_img_url($key, $size); };
             </div>
           </div>
 
-          <a href="<?php echo esc_url($f('dv1_hero_cta_url', 'https://zalo.me/0901234567')); ?>" class="btn btn--primary btn--lg"><?php echo esc_html($f('dv1_hero_cta_label', 'Đăng Ký Ngay →')); ?></a>
+          <a href="<?php echo esc_url($f('dv1_hero_cta_url', edt_option('contact_zalo', 'https://zalo.me/84889590888'))); ?>" class="btn btn--primary btn--lg"><?php echo esc_html($f('dv1_hero_cta_label', 'Đăng Ký Ngay →')); ?></a>
 
           <p class="scholarship-note" style="font-size:var(--text-sm);color:var(--color-fg-muted);margin-top:var(--space-3);">
-            <?php echo wp_kses_post($f('dv1_hero_scholarship', '🎓 <strong style="color:var(--color-primary)">Học bổng 50%</strong> dành cho sinh viên &amp; người mới bắt đầu. <a href="https://zalo.me/0901234567" style="color:var(--royal-gold);text-decoration:underline;">Liên hệ để biết thêm</a>')); ?>
+            <?php echo wp_kses_post($f('dv1_hero_scholarship', '🎓 <strong style="color:var(--color-primary)">Học bổng 50%</strong> dành cho sinh viên &amp; người mới bắt đầu. <a href="' . esc_url(edt_option('contact_zalo', 'https://zalo.me/84889590888')) . '" style="color:var(--royal-gold);text-decoration:underline;">Liên hệ để biết thêm</a>')); ?>
           </p>
         </div>
 
@@ -92,7 +92,7 @@ $img = function($key, $size = 'large') { return edt_img_url($key, $size); };
           <?php if ($hero_img) : ?>
             <img src="<?php echo esc_url($hero_img); ?>" alt="<?php echo esc_attr($f('dv1_hero_tagline', 'Coach Edina Trâm – Passion to Profit Workshop')); ?>" loading="eager" fetchpriority="high" />
           <?php else : ?>
-            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/placeholder.png'); ?>" alt="Coach Edina Trâm – Passion to Profit Workshop" loading="eager" fetchpriority="high" />
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/coach-tram-hero.png'); ?>" alt="Coach Edina Trâm – Passion to Profit Workshop" loading="eager" fetchpriority="high" />
           <?php endif; ?>
         </div>
       </div>
@@ -107,6 +107,15 @@ $img = function($key, $size = 'large') { return edt_img_url($key, $size); };
           <h2><?php echo esc_html($f('dv1_cred_title', 'Người đồng hành thực chiến')); ?></h2>
           <div class="divider"></div>
           <p><?php echo esc_html($f('dv1_cred_desc', 'Edina Trâm không chỉ chia sẻ lý thuyết – cô ấy đã sống, trải nghiệm và xây dựng từ con số không.')); ?></p>
+        </div>
+
+        <?php $cred_img = $img('dv1_cred_image'); ?>
+        <div class="instructor-img" style="max-width:720px;margin-inline:auto;margin-bottom:var(--space-10);">
+          <?php if ($cred_img) : ?>
+            <img src="<?php echo esc_url($cred_img); ?>" alt="<?php echo esc_attr($f('dv1_cred_image_alt', 'Coach Edina Trâm trên sân khấu')); ?>" loading="lazy" />
+          <?php else : ?>
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/coach-tram.JPG'); ?>" alt="Coach Edina Trâm trên sân khấu" loading="lazy" />
+          <?php endif; ?>
         </div>
 
         <div class="stat-grid" data-reveal-stagger>
@@ -138,6 +147,7 @@ $img = function($key, $size = 'large') { return edt_img_url($key, $size); };
           <span class="badge"><?php echo esc_html($f('dv1_target_badge', 'DÀNH CHO AI')); ?></span>
           <h2><?php echo esc_html($f('dv1_target_title', 'Ai sẽ phù hợp với workshop này?')); ?></h2>
           <div class="divider"></div>
+          <p><?php echo esc_html($f('dv1_target_desc', 'Workshop dành cho những ai sẵn sàng bước ra khỏi vùng an toàn và bắt đầu hành trình kiến tạo cuộc sống theo cách riêng.')); ?></p>
         </div>
 
         <div class="target-grid" data-reveal-stagger>
@@ -176,6 +186,7 @@ $img = function($key, $size = 'large') { return edt_img_url($key, $size); };
           <span class="badge badge--gold"><?php echo esc_html($f('dv1_benefit_badge', 'GIÁ TRỊ NHẬN ĐƯỢC')); ?></span>
           <h2><?php echo esc_html($f('dv1_benefit_title', 'Bạn sẽ đạt được gì sau 2 ngày?')); ?></h2>
           <div class="divider"></div>
+          <p><?php echo esc_html($f('dv1_benefit_desc', 'Không chỉ kiến thức – bạn sẽ có bản kế hoạch hành động cụ thể để bắt đầu ngay sau workshop.')); ?></p>
         </div>
 
         <div class="benefit-grid" data-reveal-stagger>
@@ -216,6 +227,7 @@ $img = function($key, $size = 'large') { return edt_img_url($key, $size); };
           <span class="badge"><?php echo esc_html($f('dv1_mod_badge', 'NỘI DUNG WORKSHOP')); ?></span>
           <h2><?php echo esc_html($f('dv1_mod_title', 'Nội dung chi tiết')); ?></h2>
           <div class="divider"></div>
+          <p><?php echo esc_html($f('dv1_mod_desc', '3 module được thiết kế theo trình tự logic: từ hiểu bản thân → xây dựng mô hình → hành động ngay.')); ?></p>
         </div>
 
         <div class="modules-list" data-reveal-stagger>
@@ -270,7 +282,7 @@ $img = function($key, $size = 'large') { return edt_img_url($key, $size); };
             <?php if ($inst_img) : ?>
               <img src="<?php echo esc_url($inst_img); ?>" alt="<?php echo esc_attr(edt_option('coach_name', 'Coach Edina Trâm')); ?>" loading="lazy" />
             <?php else : ?>
-              <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/placeholder.png'); ?>" alt="Coach Edina Trâm" loading="lazy" />
+              <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/coach-tram.JPG'); ?>" alt="Coach Edina Trâm" loading="lazy" />
             <?php endif; ?>
           </div>
           <div data-reveal>
@@ -357,11 +369,11 @@ $img = function($key, $size = 'large') { return edt_img_url($key, $size); };
         <p style="max-width:560px;">
           <?php echo esc_html($f('dv1_cta_desc', 'Chỉ 2 ngày, bạn sẽ có tất cả những gì cần thiết để biến đam mê thành lợi nhuận. Hãy để Coach Edina Trâm đồng hành cùng bạn trên hành trình này.')); ?>
         </p>
-        <a href="<?php echo esc_url($f('dv1_cta_url', 'https://zalo.me/0901234567')); ?>" class="btn btn--accent btn--lg"><?php echo esc_html($f('dv1_cta_label', 'Đăng Ký Workshop Ngay →')); ?></a>
+        <a href="<?php echo esc_url($f('dv1_cta_url', edt_option('contact_zalo', 'https://zalo.me/84889590888'))); ?>" class="btn btn--accent btn--lg"><?php echo esc_html($f('dv1_cta_label', 'Đăng Ký Workshop Ngay →')); ?></a>
         <p class="cta-note">
           <?php
-          $cta_phone = $f('dv1_cta_phone', '0901 234 567');
-          $cta_phone_raw = preg_replace('/\s+/', '', $cta_phone);
+          $cta_phone = $f('dv1_cta_phone', edt_option('contact_phone', '(+84) 88-9590-888'));
+          $cta_phone_raw = preg_replace('/[^0-9+]/', '', $cta_phone);
           ?>
           Hoặc gọi hotline: <a href="tel:<?php echo esc_attr($cta_phone_raw); ?>" style="color:var(--champagne-glow);"><?php echo esc_html($cta_phone); ?></a> để được tư vấn trực tiếp.
         </p>

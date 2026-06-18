@@ -47,7 +47,7 @@ function edt_render_dv1_metabox($post) {
     edt_text_field('_dv1_sticky_title', 'Tiêu đề', $f('dv1_sticky_title', 'Passion to Profit – Workshop'));
     edt_text_field('_dv1_sticky_meta', 'Thông tin phụ', $f('dv1_sticky_meta', '22–23/03/2026 · 2 ngày cuối tuần · 499.000 VNĐ'));
     edt_text_field('_dv1_sticky_cta_label', 'Nút CTA — Nhãn', $f('dv1_sticky_cta_label', 'Đăng Ký Ngay'));
-    edt_url_field('_dv1_sticky_cta_url', 'Nút CTA — Link', $f('dv1_sticky_cta_url', 'https://zalo.me/0901234567'));
+    edt_url_field('_dv1_sticky_cta_url', 'Nút CTA — Link', $f('dv1_sticky_cta_url', edt_option('contact_zalo', 'https://zalo.me/84889590888')));
     edt_close_tab();
 
 
@@ -62,8 +62,8 @@ function edt_render_dv1_metabox($post) {
     edt_text_field('_dv1_hero_price', 'Giá', $f('dv1_hero_price', '499.000 VNĐ'));
     edt_datetime_field('_dv1_hero_countdown', 'Countdown đến', $f('dv1_hero_countdown', '2026-03-22T09:00:00'), 'Định dạng: YYYY-MM-DDTHH:MM:SS');
     edt_text_field('_dv1_hero_cta_label', 'Nút CTA — Nhãn', $f('dv1_hero_cta_label', 'Đăng Ký Ngay →'));
-    edt_url_field('_dv1_hero_cta_url', 'Nút CTA — Link', $f('dv1_hero_cta_url', 'https://zalo.me/0901234567'));
-    edt_editor_field('_dv1_hero_scholarship', 'Ghi chú học bổng (HTML)', $f('dv1_hero_scholarship', '🎓 <strong style="color:var(--color-primary)">Học bổng 50%</strong> dành cho sinh viên &amp; người mới bắt đầu. <a href="https://zalo.me/0901234567" style="color:var(--royal-gold);text-decoration:underline;">Liên hệ để biết thêm</a>'), 'Cho phép HTML cho link và định dạng.');
+    edt_url_field('_dv1_hero_cta_url', 'Nút CTA — Link', $f('dv1_hero_cta_url', edt_option('contact_zalo', 'https://zalo.me/84889590888')));
+    edt_editor_field('_dv1_hero_scholarship', 'Ghi chú học bổng (HTML)', $f('dv1_hero_scholarship', '🎓 <strong style="color:var(--color-primary)">Học bổng 50%</strong> dành cho sinh viên &amp; người mới bắt đầu. <a href="https://zalo.me/84889590888" style="color:var(--royal-gold);text-decoration:underline;">Liên hệ để biết thêm</a>'), 'Cho phép HTML cho link và định dạng.');
     edt_image_field('_dv1_hero_image', 'Ảnh Hero', $img_val('dv1_hero_image'));
     edt_close_tab();
 
@@ -216,8 +216,8 @@ function edt_render_dv1_metabox($post) {
     edt_editor_field('_dv1_cta_title', 'Tiêu đề (HTML)', $f('dv1_cta_title', 'Đừng chờ đến khi "sẵn sàng" –<br>hãy bắt đầu và trở nên sẵn sàng.'), 'Cho phép HTML: <br>');
     edt_textarea_field('_dv1_cta_desc', 'Mô tả', $f('dv1_cta_desc', 'Chỉ 2 ngày, bạn sẽ có tất cả những gì cần thiết để biến đam mê thành lợi nhuận. Hãy để Coach Edina Trâm đồng hành cùng bạn trên hành trình này.'));
     edt_text_field('_dv1_cta_label', 'Nút CTA — Nhãn', $f('dv1_cta_label', 'Đăng Ký Workshop Ngay →'));
-    edt_url_field('_dv1_cta_url', 'Nút CTA — Link', $f('dv1_cta_url', 'https://zalo.me/0901234567'));
-    edt_text_field('_dv1_cta_phone', 'Số điện thoại', $f('dv1_cta_phone', '0901 234 567'));
+    edt_url_field('_dv1_cta_url', 'Nút CTA — Link', $f('dv1_cta_url', edt_option('contact_zalo', 'https://zalo.me/84889590888')));
+    edt_text_field('_dv1_cta_phone', 'Số điện thoại', $f('dv1_cta_phone', edt_option('contact_phone', '(+84) 88-9590-888')));
     edt_close_tab();
 }
 

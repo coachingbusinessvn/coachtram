@@ -7,8 +7,50 @@
 get_header(); ?>
 
 <style>
-  :root { --page-accent: #014F3D; }
-  body { padding-bottom: 80px; }
+  /* ── Premium Emerald Depth theme for DV3 ── */
+  html, body { overflow-x: hidden; max-width: 100%; }
+
+  :root {
+    --page-accent: #014F3D;
+    --page-accent-dark: #012E24;
+    --page-accent-rgb: 1, 79, 61;
+    --bm-gold: #C8A244;
+    --bm-card: #FFFFFF;
+    --bm-border: #DED3B8;
+    --bm-glow: rgba(1, 79, 61, 0.06);
+  }
+
+  body { background: var(--color-bg); color: var(--color-fg); padding-bottom: 80px; }
+
+  /* Extra prominent glow blobs for BM */
+  .glow-blob--1 { width: 600px; height: 600px; top: 5%; left: -10%; opacity: 0.45; }
+  .glow-blob--2 { width: 500px; height: 500px; top: 35%; right: -8%; opacity: 0.35; }
+
+  /* ── Premium section divider ── */
+  .bm-divider {
+    width: 60px; height: 3px;
+    background: linear-gradient(90deg, var(--page-accent), var(--bm-gold));
+    margin-block: var(--space-4); border-radius: var(--radius-full);
+  }
+  .section-header .bm-divider { margin-inline: auto; }
+
+  /* ── Plan features list ── */
+  .plan-features { display: flex; flex-direction: column; gap: var(--space-3); margin-block: var(--space-6); flex: 1; }
+  .plan-features li { display: flex; gap: var(--space-2); font-size: var(--text-sm); align-items: flex-start; line-height: 1.6; }
+  .plan-features li svg { flex-shrink: 0; margin-top: 3px; color: var(--bm-gold); }
+
+  /* ── Capacity note ── */
+  .capacity-note { text-align: center; margin-top: var(--space-8); font-size: var(--text-sm); font-style: italic; color: var(--bm-gold); }
+
+  /* ── Responsive ── */
+  @media (max-width: 768px) {
+    body { padding-bottom: 100px; }
+    .srv-hero h1 { font-size: clamp(2.2rem, 8vw, 3rem); }
+  }
+  @media (max-width: 480px) {
+    .container { padding-inline: var(--space-4); }
+    .srv-section, .srv-section--alt { padding-inline: var(--space-4); }
+  }
 </style>
 
 <?php
@@ -48,11 +90,14 @@ $img = function ($key, $size = 'large') { return edt_img_url('dv3_' . $key, $siz
           <?php endif; ?>
           <a href="<?php echo esc_url($f('hero_cta_url', '/lien-he')); ?>" class="btn btn--accent btn--lg"><?php echo esc_html($f('hero_cta_label', 'ĐĂNG KÝ TƯ VẤN 1:1')); ?></a>
         </div>
-        <?php $hero_img = $img('hero_image'); if ($hero_img) : ?>
+        <?php $hero_img = $img('hero_image'); ?>
           <div class="srv-hero-img" data-reveal>
+          <?php if ($hero_img) : ?>
             <img src="<?php echo esc_url($hero_img); ?>" alt="<?php echo esc_attr($f('hero_tagline', 'Coach Edina Trâm – Business Mastery')); ?>" loading="eager" fetchpriority="high" />
+          <?php else : ?>
+            <img src="<?php echo esc_url(get_template_directory_uri() . '/assets/images/coach-tram-hero.png'); ?>" alt="Coach Edina Trâm – Business Mastery" loading="eager" fetchpriority="high" />
+          <?php endif; ?>
           </div>
-        <?php endif; ?>
       </div>
     </div>
     <div class="scroll-indicator" aria-hidden="true">Khám phá</div>
@@ -268,7 +313,7 @@ $img = function ($key, $size = 'large') { return edt_img_url('dv3_' . $key, $siz
           2 => ['📋 Bản chiến lược cá nhân hoá', 'Kế hoạch hành động chi tiết, được thiết kế riêng với KPIs, timeline và milestones cho doanh nghiệp bạn.'],
           3 => ['📞 Hỗ trợ qua chat không giới hạn', 'Gặp vấn đề gấp? Nhắn tin cho Coach bất cứ lúc nào. Cam kết phản hồi trong vòng 24h làm việc.'],
           4 => ['📊 Bộ công cụ quản trị F&B', 'Template tài chính, quy trình vận hành, checklist quản lý, bảng theo dõi KPIs – sẵn sàng áp dụng.'],
-          5 => ['🔒 Quyền truy cập khoá B2F', 'Nhận miễn phí toàn bộ nội dung khoá Business to Freedom (trị giá 15.000.000 VNĐ) làm kiến thức nền tảng.'],
+          5 => ['🔒 Quyền truy cập khoá TINA', 'Nhận miễn phí toàn bộ nội dung khoá TINA Awakening (trị giá 15.000.000 VNĐ) làm kiến thức nền tảng.'],
           6 => ['🤝 Cộng đồng Mastermind', 'Kết nối với các chủ doanh nghiệp F&B khác trong mạng lưới Business Mastery – chia sẻ, học hỏi và hợp tác.'],
         ];
         for ($i = 1; $i <= 6; $i++) :
@@ -302,7 +347,7 @@ $img = function ($key, $size = 'large') { return edt_img_url('dv3_' . $key, $siz
           <thead>
             <tr>
               <th>Tiêu chí</th>
-              <th>Business to Freedom</th>
+              <th>TINA Awakening</th>
               <th class="highlight-col">Business Mastery</th>
             </tr>
           </thead>

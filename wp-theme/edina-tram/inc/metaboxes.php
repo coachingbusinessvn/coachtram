@@ -507,7 +507,7 @@ function edt_render_settings_page() {
     // Save options
     if (isset($_POST['edt_save_options']) && check_admin_referer('edt_options_nonce', 'edt_options_nonce_field')) {
         // Sanitize and save each option with the appropriate sanitizer
-        $text_keys = ['edt_menu_cta_label', 'edt_footer_copyright', 'edt_social_email'];
+        $text_keys = ['edt_menu_cta_label', 'edt_footer_copyright', 'edt_social_email', 'edt_social_phone'];
         foreach ($text_keys as $key) {
             if (isset($_POST[$key])) {
                 update_option($key, sanitize_text_field(wp_unslash($_POST[$key])));
@@ -595,7 +595,7 @@ function edt_render_settings_page() {
                         <h2>Thông tin Footer & Mạng xã hội</h2>
                         <div class="edt-field-row">
                             <label for="edt_footer_tagline">Mô tả ngắn Footer</label>
-                            <textarea name="edt_footer_tagline" id="edt_footer_tagline"><?php echo esc_textarea(get_option('edt_footer_tagline', 'Edina Trâm là Professional Coach chuyên nghiệp (ICF PCC). Đồng hành cùng chủ doanh nghiệp xây dựng kinh doanh bền vững và cân bằng cuộc sống tinh tế.')); ?></textarea>
+                            <textarea name="edt_footer_tagline" id="edt_footer_tagline"><?php echo esc_textarea(get_option('edt_footer_tagline', 'Edina Trâm đồng hành tại giao điểm của Tâm lý học, Khai vấn, Tâm linh và Tài chính, giúp bạn tìm lại sự rõ ràng, nội lực và kết nối sâu với chính mình.')); ?></textarea>
                         </div>
                         <div class="edt-field-row">
                             <label for="edt_footer_copyright">Copyright</label>
@@ -604,19 +604,23 @@ function edt_render_settings_page() {
                         <h3>Liên kết liên hệ & Mạng xã hội</h3>
                         <div class="edt-field-row">
                             <label for="edt_social_email">Email</label>
-                            <input type="text" name="edt_social_email" id="edt_social_email" value="<?php echo esc_attr(get_option('edt_social_email', 'coachtram@gmail.com')); ?>" />
+                            <input type="text" name="edt_social_email" id="edt_social_email" value="<?php echo esc_attr(get_option('edt_social_email', 'lequynhtram@gmail.com')); ?>" />
+                        </div>
+                        <div class="edt-field-row">
+                            <label for="edt_social_phone">Số điện thoại / Zalo</label>
+                            <input type="text" name="edt_social_phone" id="edt_social_phone" value="<?php echo esc_attr(get_option('edt_social_phone', '(+84) 88-9590-888')); ?>" />
                         </div>
                         <div class="edt-field-row">
                             <label for="edt_social_website">Website</label>
-                            <input type="text" name="edt_social_website" id="edt_social_website" value="<?php echo esc_attr(get_option('edt_social_website', 'https://www.coachtram.com')); ?>" />
+                            <input type="text" name="edt_social_website" id="edt_social_website" value="<?php echo esc_attr(get_option('edt_social_website', 'https://edinatram.vn')); ?>" />
                         </div>
                         <div class="edt-field-row">
                             <label for="edt_social_facebook">Facebook</label>
-                            <input type="text" name="edt_social_facebook" id="edt_social_facebook" value="<?php echo esc_attr(get_option('edt_social_facebook', 'https://www.facebook.com/coachtram')); ?>" />
+                            <input type="text" name="edt_social_facebook" id="edt_social_facebook" value="<?php echo esc_attr(get_option('edt_social_facebook', 'https://www.facebook.com/edina.quynhtram')); ?>" />
                         </div>
                         <div class="edt-field-row">
                             <label for="edt_social_instagram">Instagram</label>
-                            <input type="text" name="edt_social_instagram" id="edt_social_instagram" value="<?php echo esc_attr(get_option('edt_social_instagram', 'https://www.instagram.com/coachtram')); ?>" />
+                            <input type="text" name="edt_social_instagram" id="edt_social_instagram" value="<?php echo esc_attr(get_option('edt_social_instagram', '')); ?>" />
                         </div>
                     </div>
                 </div>
@@ -664,11 +668,11 @@ add_action('add_meta_boxes', function () {
         );
     }
 
-    // 6.3 Business to Freedom (Service 2)
+    // 6.3 TINA Awakening (Service 2)
     if ($template === 'page-business-to-freedom.php') {
         add_meta_box(
             'edt_b2f_metabox',
-            __('Quản lý Nội dung Business to Freedom', 'edina-tram'),
+            __('Quản lý Nội dung TINA Awakening', 'edina-tram'),
             'edt_render_b2f_metabox',
             'page',
             'normal',
@@ -834,7 +838,7 @@ function edt_render_homepage_metabox($post) {
                 <?php edt_render_svg_preview('About Coach', 'Giới thiệu thông tin tiểu sử, chứng chỉ và số liệu thống kê.', 'split'); ?>
                 <?php edt_render_image_field('about_image', $about_image, 'Hình ảnh bên trái'); ?>
                 <div class="edt-field-row">
-                    <label for="about_badge_image">Nhãn nổi bật trên ảnh (Ví dụ: ICF PCC Coach)</label>
+                    <label for="about_badge_image">Nhãn nổi bật trên ảnh (Ví dụ: Tâm lý · Khai vấn)</label>
                     <input type="text" name="about_badge_image" id="about_badge_image" value="<?php echo esc_attr($about_badge_image); ?>" />
                 </div>
                 <div class="edt-field-row">
@@ -1175,7 +1179,7 @@ function edt_render_p2p_metabox($post) {
 }
 
 /**
- * 7.3 Business to Freedom Metabox
+ * 7.3 TINA Awakening Metabox
  */
 function edt_render_b2f_metabox($post) {
     wp_nonce_field('edt_metabox_nonce', 'edt_metabox_nonce_field');
@@ -1602,7 +1606,7 @@ function edt_render_bm_metabox($post) {
             <!-- Tab: Pricing -->
             <div class="edt-tab-panel" id="edt-tab-pricing">
                 <?php edt_render_svg_preview('Compare & Pricing', 'Bảng so sánh chương trình và 3 gói dịch vụ (3, 6, 12 tháng).', 'grid-3'); ?>
-                <h3>Bảng so sánh với Business to Freedom</h3>
+                <h3>Bảng so sánh với TINA Awakening</h3>
                 <?php
                 edt_render_repeater($post->ID, 'edt_dv3_compare_rows', [
                     'row_label' => ['label' => 'Tiêu chí', 'type' => 'text'],
@@ -1696,8 +1700,8 @@ function edt_render_contact_metabox($post) {
                 <?php
                 edt_render_repeater($post->ID, 'edt_contact_items', [
                     'item_label' => ['label' => 'Tên liên hệ (ví dụ: Email)', 'type' => 'text'],
-                    'item_val'   => ['label' => 'Giá trị hiển thị (ví dụ: coachtram@gmail.com)', 'type' => 'text'],
-                    'item_link'  => ['label' => 'Đường dẫn click (ví dụ: mailto:coachtram@gmail.com)', 'type' => 'text'],
+                    'item_val'   => ['label' => 'Giá trị hiển thị (ví dụ: lequynhtram@gmail.com)', 'type' => 'text'],
+                    'item_link'  => ['label' => 'Đường dẫn click (ví dụ: mailto:lequynhtram@gmail.com)', 'type' => 'text'],
                     'item_svg'   => ['label' => 'SVG Code icon', 'type' => 'textarea']
                 ]);
                 ?>

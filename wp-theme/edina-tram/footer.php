@@ -29,7 +29,7 @@
                     </div>
                     <p class="footer-tagline" style="max-width:320px; line-height:1.6; opacity:0.8;">
                         <?php
-                        $footer_tagline = get_option('edt_footer_tagline', 'Edina Trâm là Professional Coach chuyên nghiệp (ICF PCC). Đồng hành cùng chủ doanh nghiệp xây dựng kinh doanh bền vững và cân bằng cuộc sống tinh tế.');
+                        $footer_tagline = get_option('edt_footer_tagline', 'Edina Trâm đồng hành tại giao điểm của Tâm lý học, Khai vấn, Tâm linh và Tài chính, giúp bạn tìm lại sự rõ ràng, nội lực và kết nối sâu với chính mình.');
                         echo esc_html($footer_tagline);
                         ?>
                     </p>
@@ -40,7 +40,7 @@
                     <h4 class="footer-links-title"><?php esc_html_e('Dịch vụ', 'edina-tram'); ?></h4>
                     <ul class="footer-links">
                         <li><a href="<?php echo esc_url(home_url('/passion-to-profit/')); ?>">Passion to Profit</a></li>
-                        <li><a href="<?php echo esc_url(home_url('/business-to-freedom/')); ?>">Business to Freedom</a></li>
+                        <li><a href="<?php echo esc_url(home_url('/business-to-freedom/')); ?>">TINA Awakening</a></li>
                         <li><a href="<?php echo esc_url(home_url('/business-mastery/')); ?>">Business Mastery</a></li>
                     </ul>
                 </div>
@@ -50,16 +50,20 @@
                     <h4 class="footer-links-title"><?php esc_html_e('Liên hệ', 'edina-tram'); ?></h4>
                     <ul class="footer-links">
                         <?php
-                        $email = get_option('edt_social_email', 'coachtram@gmail.com');
-                        $fb = get_option('edt_social_facebook', 'https://www.facebook.com/coachtram');
-                        $ig = get_option('edt_social_instagram', 'https://www.instagram.com/coachtram');
-                        $web = get_option('edt_social_website', 'https://www.coachtram.com');
+                        $email = get_option('edt_social_email', 'lequynhtram@gmail.com');
+                        $fb = get_option('edt_social_facebook', 'https://www.facebook.com/edina.quynhtram');
+                        $phone = get_option('edt_social_phone', '(+84) 88-9590-888');
+                        $ig = get_option('edt_social_instagram', '');
+                        $web = get_option('edt_social_website', 'https://edinatram.vn');
                         
                         if ($email): ?>
                             <li><a href="mailto:<?php echo sanitize_email($email); ?>"><?php echo esc_html($email); ?></a></li>
                         <?php endif;
+                        if ($phone): ?>
+                            <li><a href="tel:<?php echo esc_attr(preg_replace('/[^0-9+]/', '', $phone)); ?>"><?php echo esc_html($phone); ?></a></li>
+                        <?php endif;
                         if ($web): ?>
-                            <li><a href="<?php echo esc_url($web); ?>" target="_blank" rel="noopener">coachtram.com</a></li>
+                            <li><a href="<?php echo esc_url($web); ?>" target="_blank" rel="noopener">edinatram.vn</a></li>
                         <?php endif;
                         if ($fb): ?>
                             <li><a href="<?php echo esc_url($fb); ?>" target="_blank" rel="noopener">Facebook</a></li>

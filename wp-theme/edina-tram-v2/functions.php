@@ -267,3 +267,4 @@ require_once get_template_directory() . '/inc/metaboxes-dv1.php';
 require_once get_template_directory() . '/inc/metaboxes-dv2.php';
 require_once get_template_directory() . '/inc/metaboxes-dv3.php';
 require_once get_template_directory() . '/inc/metaboxes-contact.php';
+require_once get_template_directory() . '/inc/demo-import.php';

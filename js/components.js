@@ -13,7 +13,7 @@ class SiteHeader extends HTMLElement {
                     <a href="index.html" class="${activePage === 'index.html' ? 'active' : ''}">Trang chủ</a>
                     <a href="index.html#services">Dịch vụ</a>
                     <a href="dich-vu-1.html" class="${activePage === 'dich-vu-1.html' ? 'active' : ''}">Passion to Profit</a>
-                    <a href="dich-vu-2.html" class="${activePage === 'dich-vu-2.html' ? 'active' : ''}">Business to Freedom</a>
+                    <a href="dich-vu-2.html" class="${activePage === 'dich-vu-2.html' ? 'active' : ''}">TINA Awakening</a>
                     <a href="dich-vu-3.html" class="${activePage === 'dich-vu-3.html' ? 'active' : ''}">Business Mastery</a>
                     <a href="lien-he.html" class="btn btn-primary" style="background:var(--color-accent, #C8A244); color:#fff;">Thảo luận chiến lược</a>
                 </nav>
@@ -32,23 +32,23 @@ class SiteFooter extends HTMLElement {
                 <div class="footer-inner" style="border-top: 1px solid var(--home-border, rgba(255,255,255,0.08)); padding-top: var(--space-8);">
                     <div>
                         <div class="footer-logo">Edina <span>Trâm</span></div>
-                        <p class="footer-tagline" style="max-width:320px; line-height:1.6; opacity:0.8;">Edina Trâm là Professional Coach chuyên nghiệp (ICF PCC). Đồng hành cùng chủ doanh nghiệp xây dựng kinh doanh bền vững và cân bằng cuộc sống tinh tế.</p>
+                        <p class="footer-tagline" style="max-width:320px; line-height:1.6; opacity:0.8;">Edina Trâm đồng hành tại giao điểm của Tâm lý học, Khai vấn, Tâm linh và Tài chính, giúp bạn tìm lại sự rõ ràng, nội lực và kết nối sâu với chính mình.</p>
                     </div>
                     <div>
                         <h4 class="footer-links-title">Dịch vụ</h4>
                         <ul class="footer-links">
                             <li><a href="dich-vu-1.html">Passion to Profit</a></li>
-                            <li><a href="dich-vu-2.html">Business to Freedom</a></li>
+                            <li><a href="dich-vu-2.html">TINA Awakening</a></li>
                             <li><a href="dich-vu-3.html">Business Mastery</a></li>
                         </ul>
                     </div>
                     <div>
                         <h4 class="footer-links-title">Liên hệ</h4>
                         <ul class="footer-links">
-                            <li><a href="mailto:coachtram@gmail.com">coachtram@gmail.com</a></li>
-                            <li><a href="https://www.coachtram.com" target="_blank" rel="noopener">coachtram.com</a></li>
-                            <li><a href="https://www.facebook.com/coachtram" target="_blank" rel="noopener">Facebook</a></li>
-                            <li><a href="https://www.instagram.com/coachtram" target="_blank" rel="noopener">Instagram</a></li>
+                            <li><a href="mailto:lequynhtram@gmail.com">lequynhtram@gmail.com</a></li>
+                            <li><a href="tel:+84889590888">(+84) 88-9590-888</a></li>
+                            <li><a href="https://edinatram.vn" target="_blank" rel="noopener">edinatram.vn</a></li>
+                            <li><a href="https://www.facebook.com/edina.quynhtram" target="_blank" rel="noopener">Facebook</a></li>
                         </ul>
                     </div>
                 </div>

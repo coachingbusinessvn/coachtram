@@ -37,7 +37,7 @@ function edt_render_settings_page() {
             }
         }
         // URL fields — must use esc_url_raw to block javascript: and data: protocols
-        $url_fields = ['header_cta_url', 'social_facebook', 'social_instagram', 'social_youtube', 'social_website'];
+        $url_fields = ['header_cta_url', 'social_facebook', 'social_instagram', 'social_youtube', 'social_website', 'contact_zalo'];
         foreach ($url_fields as $f) {
             if (isset($_POST['edt_' . $f])) {
                 update_option('edt_' . $f, esc_url_raw(wp_unslash($_POST['edt_' . $f])));
@@ -90,18 +90,19 @@ function edt_render_settings_page() {
 
             // --- TAB: Contact ---
             edt_open_tab('edt-g-contact');
-            edt_text_field('edt_contact_email', 'Email', get_option('edt_contact_email', 'coachtram@gmail.com'));
-            edt_text_field('edt_contact_phone', 'Số điện thoại', get_option('edt_contact_phone', '0901 234 567'));
-            edt_url_field('edt_social_facebook', 'Facebook URL', get_option('edt_social_facebook', ''));
+            edt_text_field('edt_contact_email', 'Email', get_option('edt_contact_email', 'lequynhtram@gmail.com'));
+            edt_text_field('edt_contact_phone', 'Số điện thoại', get_option('edt_contact_phone', '(+84) 88-9590-888'));
+            edt_url_field('edt_social_facebook', 'Facebook URL', get_option('edt_social_facebook', 'https://www.facebook.com/edina.quynhtram'));
             edt_url_field('edt_social_instagram', 'Instagram URL', get_option('edt_social_instagram', ''));
             edt_url_field('edt_social_youtube', 'YouTube URL', get_option('edt_social_youtube', ''));
-            edt_url_field('edt_social_website', 'Website URL', get_option('edt_social_website', ''));
+            edt_url_field('edt_social_website', 'Website URL', get_option('edt_social_website', 'https://edinatram.vn'));
+            edt_url_field('edt_contact_zalo', 'Zalo/WhatsApp URL', get_option('edt_contact_zalo', 'https://zalo.me/84889590888'));
             edt_close_tab();
 
             // --- TAB: Coach ---
             edt_open_tab('edt-g-coach');
             edt_text_field('edt_coach_name', 'Tên Coach', get_option('edt_coach_name', 'Edina Trâm'));
-            edt_text_field('edt_coach_title', 'Chức danh', get_option('edt_coach_title', 'F&B Startup Coach · ICF PCC'));
+            edt_text_field('edt_coach_title', 'Chức danh', get_option('edt_coach_title', 'Tham vấn Tâm lý · Khai vấn cuộc sống · Tài chính · Tâm linh'));
             edt_editor_field('edt_coach_bio', 'Giới thiệu ngắn', get_option('edt_coach_bio', ''), 'Nội dung giới thiệu Coach hiển thị ở mục Giảng viên.');
             edt_close_tab();
             ?>

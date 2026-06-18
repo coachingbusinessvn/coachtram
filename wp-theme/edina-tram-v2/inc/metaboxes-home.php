@@ -104,7 +104,7 @@ function edt_home_metabox_render($post) {
 
     $srv_defaults = [
         1 => ['01', 'Passion to Profit', 'Workshop 2 ngày', 'Chuyển hóa đam mê thành mô hình kinh doanh có lợi nhuận. Tìm ra lợi thế cạnh tranh, xây dựng nền tảng vững chắc và bắt đầu hành trình khởi nghiệp đầy tự tin.', '/dich-vu-1', 'Tìm hiểu thêm →'],
-        2 => ['02', 'Business to Freedom', 'Khoá học 10 tuần', 'Mở rộng quy mô doanh nghiệp, xây dựng hệ thống vận hành tự động và tạo ra cuộc sống tự do mà bạn hằng mơ ước — không cần phải hy sinh sức khỏe hay gia đình.', '/dich-vu-2', 'Tìm hiểu thêm →'],
+        2 => ['02', 'TINA Awakening', '90 ngày chuyển hoá 1:1', 'Hành trình Coaching & Mentoring 1:1 giúp bạn tìm lại sự rõ ràng, tự tin làm chủ và kết nối sâu với chính mình qua 12 module chuyển hoá.', '/dich-vu-2', 'Tìm hiểu thêm →'],
         3 => ['03', 'Business Mastery', 'Coaching 1:1 chiến lược', 'Chương trình coaching cá nhân hóa dành cho doanh nhân muốn làm chủ mọi khía cạnh — từ chiến lược kinh doanh, lãnh đạo đội ngũ đến phát triển bản thân.', '/dich-vu-3', 'Tìm hiểu thêm →'],
     ];
 
@@ -131,26 +131,26 @@ function edt_home_metabox_render($post) {
     echo '<h3 class="edt-section-title">Ảnh & Badge overlay</h3>';
     edt_image_field('_home_about_image', 'Ảnh Coach', $m('home_about_image', ''), 'Kích thước khuyến nghị: 520×640px');
     edt_text_field('_home_about_image_alt', 'Alt text ảnh', $m('home_about_image_alt', 'Coach Edina Trâm'));
-    edt_text_field('_home_about_badge_overlay', 'Badge phủ lên ảnh', $m('home_about_badge_overlay', 'ICF PCC Coach'));
+    edt_text_field('_home_about_badge_overlay', 'Badge phủ lên ảnh', $m('home_about_badge_overlay', 'Tâm lý · Khai vấn'));
 
     echo '<h3 class="edt-section-title">Nội dung</h3>';
     edt_text_field('_home_about_badge', 'Badge', $m('home_about_badge', 'Người đồng hành'));
     edt_editor_field('_home_about_title', 'Tiêu đề (H2)', $m('home_about_title', 'Chân thực. Thấu hiểu.<br>Truyền cảm hứng.'), 'Hỗ trợ HTML: <br>, <em>, <strong>');
     edt_text_field('_home_about_name', 'Tên Coach', $m('home_about_name', 'Edina Trâm'));
-    edt_editor_field('_home_about_bio', 'Giới thiệu (Bio)', $m('home_about_bio', 'Với hơn 16 năm kinh nghiệm trong ngành F&B và hành trình phát triển bản thân không ngừng, tôi tin rằng mỗi người đều sở hữu một nguồn nội lực phi thường. Sứ mệnh của tôi là đồng hành cùng bạn khơi dậy tiềm năng ấy, để bạn sống một cuộc đời ý nghĩa và trọn vẹn.'), 'Nội dung giới thiệu Coach, có thể dùng HTML.');
+    edt_editor_field('_home_about_bio', 'Giới thiệu (Bio)', $m('home_about_bio', 'Edina Trâm là người đồng hành tại giao điểm của Tâm lý học, Khai vấn, Tâm linh và Tài chính. Với nền tảng học thuật, trải nghiệm sống qua nhiều quốc gia và hành trình chuyển hoá cá nhân sâu sắc, Trâm giúp bạn nhìn rõ chính mình, phục hồi nội lực và kiến tạo một đời sống vững vàng cả Đời lẫn Đạo.'), 'Nội dung giới thiệu Coach, có thể dùng HTML.');
 
     echo '<h3 class="edt-section-title">Chứng chỉ / Credential badges (4 mục)</h3>';
-    edt_text_field('_home_about_cred1', 'Badge 1', $m('home_about_cred1', 'ICF PCC'));
-    edt_text_field('_home_about_cred2', 'Badge 2', $m('home_about_cred2', '16+ Năm Kinh Nghiệm'));
-    edt_text_field('_home_about_cred3', 'Badge 3', $m('home_about_cred3', 'F&B Expert'));
-    edt_text_field('_home_about_cred4', 'Badge 4', $m('home_about_cred4', '50+ Doanh Nghiệp'));
+    edt_text_field('_home_about_cred1', 'Badge 1', $m('home_about_cred1', 'Thạc sỹ Tâm lý học'));
+    edt_text_field('_home_about_cred2', 'Badge 2', $m('home_about_cred2', 'ICF ACC'));
+    edt_text_field('_home_about_cred3', 'Badge 3', $m('home_about_cred3', 'Thạc sỹ Tài chính'));
+    edt_text_field('_home_about_cred4', 'Badge 4', $m('home_about_cred4', 'Tâm linh & Thiền định'));
 
     echo '<h3 class="edt-section-title">Thống kê (4 mục)</h3>';
     $stat_defaults = [
-        1 => ['16', '+', 'Năm kinh nghiệm'],
-        2 => ['50', '+', 'Doanh nghiệp đồng hành'],
-        3 => ['1000', '+', 'Cuốn sách đã đọc'],
-        4 => ['3', '', 'Chương trình chuyển hóa'],
+        1 => ['20', '+', 'Năm sống & làm việc quốc tế'],
+        2 => ['4', '', 'Quốc gia đã sinh sống'],
+        3 => ['3', '', 'Ngôn ngữ sử dụng'],
+        4 => ['15', '+', 'Năm thực hành tâm linh'],
     ];
     foreach ($stat_defaults as $i => $d) {
         echo '<div class="edt-group"><p class="edt-group-title">Thống kê ' . $i . '</p>';
