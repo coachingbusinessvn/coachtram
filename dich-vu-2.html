@@ -3,12 +3,280 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Business to Freedom – Coach Edina Trâm</title>
-  <meta name="description" content="Khoá học chuyên sâu 10 tuần online giúp bạn xây dựng hệ thống vận hành, thoát khỏi bán sức lao động và sống tự do cùng Coach Edina Trâm.">
+  <title>90 Ngày Chuyển Hoá TINA Awakening - Coach Edina Trâm</title>
+  <meta name="description" content="Chương trình Coaching & Mentoring 1:1 trong 90 ngày, 12 module, giúp bạn chuyển hoá nhận thức, phục hồi nội lực và kiến tạo một hướng đi mới cho cuộc đời.">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    :root { --page-accent: #005B45; }
+    :root {
+      --page-accent: #005B45;
+      --page-accent-rgb: 0, 91, 69;
+    }
+
     body { padding-bottom: 80px; }
+
+    .tina-hero-card {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: var(--space-3);
+      max-width: 560px;
+      margin-bottom: var(--space-6);
+    }
+
+    .tina-hero-stat {
+      background: var(--color-bg-alt);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-md);
+      padding: var(--space-4);
+    }
+
+    .tina-hero-stat span {
+      display: block;
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-fg-muted);
+      margin-bottom: var(--space-1);
+    }
+
+    .tina-hero-stat strong {
+      display: block;
+      font-size: var(--text-sm);
+      color: var(--color-fg);
+      line-height: 1.45;
+    }
+
+    .tina-visual {
+      background: #fff;
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .tina-visual img {
+      width: 100%;
+      max-height: 540px;
+      object-fit: contain;
+      mask-image: none;
+      -webkit-mask-image: none;
+    }
+
+    .tina-quote {
+      border-left: 4px solid var(--royal-gold);
+      background: rgba(200, 162, 68, 0.08);
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      padding: var(--space-5) var(--space-6);
+      margin-block: var(--space-6);
+    }
+
+    .tina-quote p {
+      color: var(--color-fg);
+      font-family: var(--font-heading);
+      font-size: var(--text-xl);
+      font-style: italic;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .tina-copy {
+      max-width: 820px;
+      margin-inline: auto;
+    }
+
+    .tina-copy p + p { margin-top: var(--space-4); }
+
+    .pain-num {
+      color: rgba(var(--page-accent-rgb), 0.18);
+      font-weight: 600;
+    }
+
+    .tina-sign-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--space-4);
+    }
+
+    .tina-sign-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      text-align: left;
+    }
+
+    .tina-sign-card h3 {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      font-weight: 700;
+      color: var(--page-accent);
+      margin-bottom: var(--space-2);
+    }
+
+    .tina-sign-card p {
+      font-size: var(--text-sm);
+      line-height: 1.7;
+    }
+
+    .tina-profile-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--space-3);
+      margin-top: var(--space-6);
+    }
+
+    .tina-profile-list li {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-md);
+      padding: var(--space-4);
+      color: rgba(255,255,255,0.86);
+      font-size: var(--text-sm);
+      line-height: 1.6;
+    }
+
+    .tina-stage {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+      margin-bottom: var(--space-6);
+      text-align: left;
+    }
+
+    .tina-stage-title {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+      align-items: center;
+      margin-bottom: var(--space-5);
+    }
+
+    .tina-stage-title span {
+      color: var(--royal-gold);
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+    }
+
+    .tina-stage-title h3 {
+      font-family: var(--font-body);
+      color: var(--page-accent);
+      font-size: var(--text-lg);
+      font-weight: 700;
+      margin: 0;
+    }
+
+    .tina-module-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--space-4);
+    }
+
+    .tina-module {
+      border-left: 3px solid var(--royal-gold);
+      padding-left: var(--space-4);
+    }
+
+    .tina-module strong {
+      display: block;
+      color: var(--color-fg);
+      margin-bottom: var(--space-1);
+      font-size: var(--text-sm);
+    }
+
+    .tina-module p {
+      font-size: var(--text-sm);
+      line-height: 1.65;
+    }
+
+    .offer-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: var(--space-6);
+      align-items: stretch;
+      margin-top: var(--space-8);
+    }
+
+    .offer-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+      text-align: left;
+      border-top: 4px solid var(--page-accent);
+    }
+
+    .offer-card--featured {
+      border-top-color: var(--royal-gold);
+      box-shadow: var(--shadow-gold);
+    }
+
+    .offer-label {
+      color: var(--royal-gold);
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+      margin-bottom: var(--space-3);
+    }
+
+    .offer-card h3 {
+      font-family: var(--font-body);
+      font-size: var(--text-lg);
+      font-weight: 700;
+      color: var(--page-accent);
+      margin-bottom: var(--space-3);
+    }
+
+    .offer-card p {
+      font-size: var(--text-sm);
+      line-height: 1.7;
+    }
+
+    .value-num {
+      color: rgba(var(--page-accent-rgb), 0.12);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .value-card h3,
+    .value-card p {
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-4);
+      justify-content: center;
+      margin-top: var(--space-6);
+      color: rgba(255,255,255,0.72);
+      font-size: var(--text-sm);
+    }
+
+    @media (max-width: 992px) {
+      .tina-hero-card,
+      .tina-sign-grid,
+      .tina-profile-list,
+      .tina-module-grid,
+      .offer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .tina-hero-card { margin-inline: auto; }
+      .tina-visual { max-width: 520px; margin-inline: auto; }
+    }
+
+    @media (max-width: 600px) {
+      .tina-hero-stat,
+      .tina-sign-card,
+      .offer-card,
+      .tina-stage {
+        padding: var(--space-5);
+      }
+    }
   </style>
 </head>
 <body>
@@ -17,10 +285,10 @@
   <div class="sticky-cta" role="banner" aria-label="Đăng ký nhanh">
     <div class="sticky-cta-dot"></div>
     <div class="sticky-cta-info">
-      <span class="sticky-cta-title">Business to Freedom – 10 tuần</span>
-      <span class="sticky-cta-meta">Khai giảng 27/03/2026 · Chỉ 10 chỗ</span>
+      <span class="sticky-cta-title">TINA Awakening - 90 ngày chuyển hoá</span>
+      <span class="sticky-cta-meta">Coaching & Mentoring 1:1 · 12 module</span>
     </div>
-    <a href="lien-he.html" class="btn btn--accent">Giữ Chỗ Ngay</a>
+    <a href="lien-he.html" class="btn btn--accent">Đặt Lịch Kết Nối</a>
   </div>
 
   <!-- ═══ HEADER ═══ -->
@@ -34,7 +302,7 @@
         <a href="index.html">Trang chủ</a>
         <a href="index.html#services">Dịch vụ</a>
         <a href="dich-vu-1.html">Passion to Profit</a>
-        <a href="dich-vu-2.html" class="active">Business to Freedom</a>
+        <a href="dich-vu-2.html" class="active">TINA Awakening</a>
         <a href="dich-vu-3.html">Business Mastery</a>
         <span class="nav-cta">
           <a href="lien-he.html" class="btn btn--accent">Đặt lịch Tư vấn</a>
@@ -50,415 +318,378 @@
     <div class="glow-blob glow-blob--emerald glow-blob--2" aria-hidden="true"></div>
 
     <!-- ═══ S1: HERO ═══ -->
-    <section class="srv-hero" aria-label="Giới thiệu khoá học">
+    <section class="srv-hero" aria-label="Giới thiệu chương trình TINA Awakening">
       <div class="container srv-hero-grid">
         <div class="srv-hero-content">
-          <span class="badge" style="margin-bottom: var(--space-4); display: inline-block;">KHOÁ HỌC 10 TUẦN</span>
-          <h1>BUSINESS<br>to <span>FREEDOM</span></h1>
-          <p class="srv-hero-tagline">Từ vận hành đến tự do — Xây dựng doanh nghiệp bền vững</p>
-          <p class="srv-hero-desc">Đam mê và Lợi nhuận là nền tảng, nhưng Tự do mới là đích đến. Hãy để chương trình 10 tuần Business to Freedom dẫn bạn đến nơi đó.</p>
+          <span class="badge" style="margin-bottom: var(--space-4); display: inline-block;">COACHING & MENTORING 1:1</span>
+          <h1>90 NGÀY<br>CHUYỂN HOÁ<br><span>TINA AWAKENING</span></h1>
+          <p class="srv-hero-tagline">T.I.N.A - Transformation Into New Awareness</p>
+          <p class="srv-hero-desc">Một hành trình 12 module dành cho những ai đang đi tìm một hướng đi mới cho cuộc đời mình: rõ hơn, vững hơn, và kết nối sâu hơn với chính bản thân.</p>
 
-          <!-- Hero info box -->
-          <div style="display: flex; flex-wrap: wrap; gap: var(--space-6); background: var(--color-bg-alt); padding: var(--space-5); border-radius: var(--radius-md); border-left: 4px solid var(--royal-gold); margin-bottom: var(--space-6);">
-            <div>
-              <div style="font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 1px; color: var(--color-fg-muted);">Lịch học</div>
-              <div style="font-weight: 700; color: var(--color-fg);">10 buổi · 3h/buổi</div>
+          <div class="tina-hero-card">
+            <div class="tina-hero-stat">
+              <span>Thời lượng</span>
+              <strong>90 ngày đồng hành</strong>
             </div>
-            <div>
-              <div style="font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 1px; color: var(--color-fg-muted);">Khai giảng</div>
-              <div style="font-weight: 700; color: var(--color-fg);">27/03 – 29/05/2026</div>
+            <div class="tina-hero-stat">
+              <span>Lộ trình</span>
+              <strong>12 module 1:1</strong>
             </div>
-            <div>
-              <div style="font-size: var(--text-xs); text-transform: uppercase; letter-spacing: 1px; color: var(--color-fg-muted);">Chi phí</div>
-              <div style="font-weight: 700; color: var(--royal-gold);">15.000.000 VNĐ</div>
+            <div class="tina-hero-stat">
+              <span>Trụ cột</span>
+              <strong>Clarity · Confidence · Connection</strong>
             </div>
           </div>
 
-          <p style="font-size: var(--text-sm); font-style: italic; color: var(--royal-gold); margin-bottom: var(--space-4);">* Khoá học chỉ nhận tối đa 10 học viên để đảm bảo chất lượng</p>
-
-          <!-- Countdown -->
-          <div class="countdown" data-target="2026-03-27T10:00:00" style="margin-bottom: var(--space-6);">
-            <div class="countdown-unit">
-              <div class="countdown-num countdown-num--days">00</div>
-              <div class="countdown-label">Ngày</div>
-            </div>
-            <div class="countdown-unit">
-              <div class="countdown-num countdown-num--hours">00</div>
-              <div class="countdown-label">Giờ</div>
-            </div>
-            <div class="countdown-unit">
-              <div class="countdown-num countdown-num--mins">00</div>
-              <div class="countdown-label">Phút</div>
-            </div>
-            <div class="countdown-unit">
-              <div class="countdown-num countdown-num--secs">00</div>
-              <div class="countdown-label">Giây</div>
-            </div>
-          </div>
-
-          <a href="lien-he.html" class="btn btn--primary btn--lg">ĐĂNG KÝ NGAY</a>
+          <a href="lien-he.html" class="btn btn--primary btn--lg">Bắt đầu phiên kết nối</a>
         </div>
         <div class="srv-hero-img">
-          <img src="assets/dv2/hero-coach.png" alt="Coach Edina Trâm – Business to Freedom" loading="eager">
+          <div class="tina-visual">
+            <img src="90-ngay-chuyen-hoa-TINA_awakening_v3_media/image1.png" alt="Tam giác chuyển hoá 3C TINA Awakening" loading="eager">
+          </div>
         </div>
       </div>
     </section>
 
+    <!-- ═══ S2: OPEN LETTER ═══ -->
+    <section class="srv-section--alt" aria-label="Thư ngỏ từ Edina Trâm">
+      <div class="container container--narrow">
+        <div class="section-header">
+          <span class="badge">Thư ngỏ</span>
+          <h2 style="margin-top: var(--space-4);">Cảm ơn bạn đã có mặt ở đây</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="tina-copy" data-reveal>
+          <p>Tôi không biết điều gì đã đưa bạn đến trang này - một đêm trằn trọc, một câu hỏi chưa có lời đáp, hay một khao khát thay đổi mà bạn còn chưa gọi thành tên. Nhưng tôi tin chắc một điều: bạn đang tìm kiếm điều gì đó lớn hơn hiện tại của mình. Một sự chuyển mình thật sự.</p>
+          <p>Và nếu bạn đã đọc đến đây, tôi tin bạn không chỉ muốn "dễ chịu hơn một chút". Bạn muốn kiến tạo một cuộc sống mới.</p>
+          <div class="tina-quote">
+            <p>Không có gì là ngẫu nhiên. Việc bạn dừng lại ở đây, đọc đến tận dòng này, đã là một nhân duyên đẹp.</p>
+          </div>
+          <p>Trâm xin được đón bạn bằng tất cả sự trân trọng. Tôi từng đứng đúng nơi bạn đang đứng, mang đúng những trăn trở bạn mang lúc này. Nên tôi hiểu - và tôi biết ơn vì bạn đã cho chúng ta cơ hội được kết nối.</p>
+          <p>Điều tôi mong mỏi là được trao lại phước lành mà chính Trâm đã may mắn nhận được trên hành trình của mình: sự hàn gắn và sáng tỏ cho những ai đang đi trong bóng tối mà vẫn khát khao một tia sáng ở cuối đường hầm.</p>
+        </div>
+      </div>
+    </section>
 
-    <!-- ═══ S2: PAIN POINTS ═══ -->
-    <section class="srv-section--alt" aria-label="Nỗi đau của chủ quán">
+    <!-- ═══ S3: WHY THIS JOURNEY ═══ -->
+    <section class="srv-section" aria-label="Lý do tạo ra hành trình TINA">
       <div class="container">
         <div class="section-header">
-          <span class="badge">Bạn có đang gặp phải?</span>
-          <h2 style="margin-top: var(--space-4);">Bạn có đang đối diện với những vấn đề này?</h2>
+          <span class="badge">Vì sao hành trình này ra đời?</span>
+          <h2 style="margin-top: var(--space-4);">Khi bế tắc cũ cứ quay lại</h2>
           <div class="divider"></div>
+          <p>Trước khi đọc tiếp, hãy dừng lại một nhịp và tự hỏi: vì sao mình cứ quay lại đúng chỗ bế tắc cũ dù đã cố gắng, đã trị liệu, đã chữa lành, đã đọc bao nhiêu sách?</p>
         </div>
         <div class="pain-grid" data-reveal-stagger>
           <div class="pain-card" data-reveal>
             <div class="pain-num">01</div>
-            <h3>ĐAM MÊ NHƯNG MƠ HỒ</h3>
-            <p>Bạn yêu ẩm thực, mơ một ngày có quán riêng. Nhưng khi bắt tay vào, bạn không biết viết kế hoạch ra sao, vốn bao nhiêu là đủ, và khách hàng mục tiêu thực sự là ai.</p>
+            <h3>Thành công nhưng mất kết nối</h3>
+            <p>Từ một người thành công theo chuẩn mực xã hội, Trâm đã đi qua hai lần phá sản, một cuộc hôn nhân đổ vỡ và ba năm suy sụp cả thể chất lẫn tinh thần.</p>
           </div>
           <div class="pain-card" data-reveal>
             <div class="pain-num">02</div>
-            <h3>DOANH THU BẤP BÊNH</h3>
-            <p>Quán của bạn có ngày đông khách, có ngày lại vắng hoe. Dù làm rất nhiều nhưng cuối tháng nhìn vào sổ sách thì lời lãi chẳng thấy đâu.</p>
+            <h3>Làm lại từ con số không</h3>
+            <p>Ở đáy sâu ấy, một sự thức tỉnh bắt đầu. Trâm từng bước dựng lại đời sống tài chính, sống Đời và Đạo song hành, rồi biến trải nghiệm ấy thành sứ mệnh phụng sự.</p>
           </div>
           <div class="pain-card" data-reveal>
             <div class="pain-num">03</div>
-            <h3>CHI PHÍ ĐỘI LÊN</h3>
-            <p>Tiền thuê mặt bằng, nhân sự, nguyên liệu... liên tục "ăn mòn" lợi nhuận. Bạn thấy dòng tiền chảy ra nhiều hơn chảy vào nhưng không rõ nguyên nhân.</p>
+            <h3>Không tự mò mẫm mãi</h3>
+            <p>Trâm học cách đứng trên vai người khổng lồ: đầu tư đúng vào người thầy, người khai vấn, người dẫn dắt để vực dậy nhanh hơn và tránh tổn hao nhiều công sức.</p>
           </div>
           <div class="pain-card" data-reveal>
             <div class="pain-num">04</div>
-            <h3>NHÂN SỰ BẤT ỔN</h3>
-            <p>Nhân viên mới vào rồi lại nghỉ. Bạn vừa đào tạo xong một người thì họ lại bỏ đi. Quán thiếu người, còn bạn thì kiệt sức vì phải làm tất cả mọi việc.</p>
+            <h3>Trở thành người đồng hành</h3>
+            <p>TINA Awakening ra đời để trở thành người đồng hành mà chính Trâm từng ao ước có được trong những ngày tăm tối nhất.</p>
           </div>
-          <div class="pain-card" data-reveal>
-            <div class="pain-num">05</div>
-            <h3>BỊ CUỐN 24/7</h3>
-            <p>Bạn giống như "nô lệ" của quán mình. Ngày nào cũng quần quật, không còn thời gian cho gia đình, bạn bè, hay cho chính bản thân.</p>
+        </div>
+        <div class="tina-quote" style="max-width: 860px; margin-inline: auto;">
+          <p>Tôi không giỏi hơn bạn. Tôi chỉ vấp ngã trước bạn.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ S4: WHY CRISIS RETURNS ═══ -->
+    <section class="srv-section--alt" aria-label="Vì sao khủng hoảng cứ quay lại">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge--gold">Gốc rễ chuyển hoá</span>
+          <h2 style="margin-top: var(--space-4);">Khủng hoảng quay lại không phải vì bạn yếu</h2>
+          <div class="divider"></div>
+          <p>Phần lớn giải pháp chỉ chữa phần ngọn: coaching ngắn hạn, trị liệu tách rời đời sống thật, chữa lành dừng ở cảm xúc. Nỗi đau quay lại vì nền tảng sống bên trong bạn chưa được tái cấu trúc.</p>
+        </div>
+        <div class="method-layout">
+          <div class="method-col method-col--negative" data-reveal>
+            <h3>Khi chỉ xử lý phần ngọn</h3>
+            <ul class="method-list">
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b32d2e" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg><span>Bạn thấy nhẹ đi một thời gian, rồi mọi thứ lặng lẽ trở về như cũ.</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b32d2e" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg><span>Bạn tự hỏi phải chăng mình chưa đủ cố gắng, chưa đủ kỷ luật, chưa đủ tốt.</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b32d2e" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg><span>Bạn học thêm rất nhiều nhưng vẫn không thoát khỏi vòng lặp cũ.</span></li>
+            </ul>
           </div>
-          <div class="pain-card" data-reveal>
-            <div class="pain-num">06</div>
-            <h3>THẤT BẠI VÀ HOANG MANG</h3>
-            <p>Có thể bạn đã từng đóng cửa một quán trước đây. Nỗi đau còn đó, và bạn vẫn tự hỏi: "Nếu mình làm lại lần nữa, liệu có khác không?"</p>
+          <div class="method-col method-col--positive" data-reveal>
+            <h3>TINA làm việc ở tầng sâu hơn</h3>
+            <ul class="method-list">
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--page-accent)" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Nhận thức được khai mở để bạn thật sự thấy rõ mình đang sống từ đâu.</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--page-accent)" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Hành vi được làm mới bằng công cụ thực hành, không chỉ bằng cảm hứng.</span></li>
+              <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--page-accent)" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Nghiệp lực và nhân cách sống được soi chiếu để chuyển hoá bền vững cả Đời lẫn Đạo.</span></li>
+            </ul>
           </div>
         </div>
       </div>
     </section>
 
-
-    <!-- ═══ S3: TARGET AUDIENCE ═══ -->
-    <section class="srv-section" aria-label="Đối tượng tham gia">
+    <!-- ═══ S5: TRUE TRANSFORMATION ═══ -->
+    <section class="srv-section" aria-label="Sáu dấu hiệu chuyển hoá thật sự">
       <div class="container">
         <div class="section-header">
-          <span class="badge">Dành cho bạn</span>
-          <h2 style="margin-top: var(--space-4);">Chương trình này dành cho bạn nếu</h2>
+          <span class="badge">Chuyển hoá thật sự</span>
+          <h2 style="margin-top: var(--space-4);">90 ngày này không phải một khoảnh khắc "à há"</h2>
+          <div class="divider"></div>
+          <p>Một chuyển hoá thật cần thời gian để ngấm, để sống, để trở thành chính con người bạn. TINA được thiết kế quanh sáu dấu hiệu chuyển hoá này.</p>
+        </div>
+        <div class="tina-sign-grid" data-reveal-stagger>
+          <div class="tina-sign-card" data-reveal><h3>01 · Là một quá trình</h3><p>Nó không xảy ra trong một buổi học truyền cảm hứng, mà cần thời gian để lắng xuống và trở thành nền tảng sống mới.</p></div>
+          <div class="tina-sign-card" data-reveal><h3>02 · Đến từ tự nhận thức</h3><p>Không ai thay đổi bạn từ bên ngoài. Vai trò của người đồng hành là giúp bạn nhìn rõ để chuyển hoá từ bên trong.</p></div>
+          <div class="tina-sign-card" data-reveal><h3>03 · Diễn ra âm thầm</h3><p>Những đổi thay quan trọng nhất thường không ồn ào, mà xảy ra ở nơi sâu kín chỉ bạn là người đầu tiên nhận ra.</p></div>
+          <div class="tina-sign-card" data-reveal><h3>04 · Được kích hoạt an toàn</h3><p>Chuyển hoá thường bắt đầu từ một cú chạm đủ sâu. Chương trình tạo ra những điểm chạm ấy trong một không gian nâng đỡ.</p></div>
+          <div class="tina-sign-card" data-reveal><h3>05 · Đòi hỏi dám tổn thương</h3><p>Bạn cần dám thành thật với chính mình về những điều khó chấp nhận nhất. Đó là cái giá, và cũng là cánh cửa.</p></div>
+          <div class="tina-sign-card" data-reveal><h3>06 · Là tấm vé một chiều</h3><p>Khi nền tảng tư duy đã khác, bạn không thể quay lại phiên bản cũ theo cách cũ nữa.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ S6: TARGET AUDIENCE ═══ -->
+    <section class="srv-section--alt" aria-label="Chương trình dành cho ai">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge--gold">Dành cho bạn</span>
+          <h2 style="margin-top: var(--space-4);">TINA Awakening dành cho bạn nếu</h2>
           <div class="divider"></div>
         </div>
-        <div class="target-grid" style="grid-template-columns: repeat(2, 1fr);" data-reveal-stagger>
+        <div class="target-grid" data-reveal-stagger>
           <div class="target-card" data-reveal>
             <div class="target-num">01</div>
-            <h3 style="font-family: var(--font-body); font-size: var(--text-base); font-weight: 700; margin-bottom: var(--space-2);">NGƯỜI CHUẨN BỊ KHỞI NGHIỆP F&amp;B</h3>
-            <p>Bạn có <strong>đam mê nhưng chưa bắt đầu</strong>. Bạn muốn đi bài bản ngay từ đầu, có bản đồ rõ ràng để tiết kiệm thời gian, tiền bạc.</p>
+            <h3 style="font-family: var(--font-body); font-size: var(--text-base); font-weight: 700; margin-bottom: var(--space-2);">ĐANG CHUYỂN MÌNH</h3>
+            <p>Bạn đang mất phương hướng, mất kết nối, hoặc mất niềm tin vào chính mình trong một giai đoạn quan trọng của đời sống.</p>
           </div>
           <div class="target-card" data-reveal>
             <div class="target-num">02</div>
-            <h3 style="font-family: var(--font-body); font-size: var(--text-base); font-weight: 700; margin-bottom: var(--space-2);">CHỦ QUÁN ĐANG VẬN HÀNH</h3>
-            <p>Bạn đã khởi sự kinh doanh, nhưng đang <strong>loay hoay với doanh thu, chi phí và nhân sự</strong>. Bạn muốn tìm một cách vận hành bài bản để quán ổn định, lợi nhuận rõ ràng.</p>
+            <h3 style="font-family: var(--font-body); font-size: var(--text-base); font-weight: 700; margin-bottom: var(--space-2);">ĐÃ THỬ NHIỀU CÁCH</h3>
+            <p>Bạn từng coaching, trị liệu hoặc chữa lành, nhưng cảm giác bình an không bền và bạn cứ quay lại điểm cũ.</p>
           </div>
           <div class="target-card" data-reveal>
             <div class="target-num">03</div>
-            <h3 style="font-family: var(--font-body); font-size: var(--text-base); font-weight: 700; margin-bottom: var(--space-2);">TỪNG THẤT BẠI &amp; MUỐN LÀM LẠI</h3>
-            <p>Bạn đã <strong>từng đóng cửa một quán</strong> nhưng vẫn đam mê khởi nghiệp với một lộ trình có hệ thống, với sự đồng hành của một coach thực chiến.</p>
+            <h3 style="font-family: var(--font-body); font-size: var(--text-base); font-weight: 700; margin-bottom: var(--space-2);">SẴN SÀNG NHÌN SÂU</h3>
+            <p>Bạn khao khát hiểu sâu chính mình và sẵn sàng nhìn thẳng vào những điều khó chấp nhận, thay vì tìm một viên thuốc thần kỳ.</p>
           </div>
-          <div class="target-card" data-reveal>
-            <div class="target-num">04</div>
-            <h3 style="font-family: var(--font-body); font-size: var(--text-base); font-weight: 700; margin-bottom: var(--space-2);">NGƯỜI KHAO KHÁT TỰ DO</h3>
-            <p>Bạn muốn <strong>xây dựng một mô hình kinh doanh có lợi nhuận bền vững</strong> để bạn vừa kinh doanh hiệu quả, vừa có một cuộc đời tự do.</p>
-          </div>
+        </div>
+        <div class="tina-quote" style="max-width: 860px; margin-inline: auto;">
+          <p>Chương trình này chưa dành cho bạn nếu bạn đang tìm một con đường tắt, một lời trấn an nhanh, hoặc mong người khác thay đổi cuộc đời giùm mình.</p>
         </div>
       </div>
     </section>
 
-
-    <!-- ═══ S4: BENEFITS – MMF ═══ -->
-    <section class="srv-section--alt" aria-label="3 trụ cột giá trị">
+    <!-- ═══ S7: BENEFITS / 3C ═══ -->
+    <section class="srv-section" aria-label="Tam giác chuyển hoá 3C">
       <div class="container">
         <div class="section-header">
-          <span class="badge badge--gold">Lợi ích</span>
-          <h2 style="margin-top: var(--space-4);">3 Trụ cột giá trị</h2>
+          <span class="badge">Tam giác chuyển hoá 3C</span>
+          <h2 style="margin-top: var(--space-4);">Ba trụ cột chữa lành ba nỗi đau cốt lõi</h2>
           <div class="divider"></div>
-          <p>Mỗi trụ cột giúp bạn xây dựng nền tảng vững chắc cho hành trình kinh doanh bền vững.</p>
+          <p>Toàn bộ hành trình được xây trên Clarity, Confidence và Connection - mỗi trụ cột nâng đỡ một tầng chuyển hoá của bạn.</p>
         </div>
         <div class="value-grid" data-reveal-stagger>
-          <div class="value-card" data-reveal style="text-align: center;">
-            <div style="font-family: var(--font-heading); font-size: 5rem; color: var(--page-accent); line-height: 1; margin-bottom: var(--space-4); opacity: 0.2;">M</div>
-            <h3 style="color: var(--page-accent);">MONEY – Tiền</h3>
-            <p>Bạn học cách xây dựng một mô hình kinh doanh có lợi nhuận rõ ràng. Biết quản lý chi phí, định giá đúng, kiểm soát Prime Cost, và tạo ra dòng tiền ổn định.</p>
+          <div class="value-card" data-reveal>
+            <div class="value-num">C</div>
+            <h3 style="color: var(--page-accent);">CLARITY - Sự thông suốt</h3>
+            <p>Một lộ trình rõ ràng giúp chữa lành nỗi đau mất phương hướng, để bạn biết mình đang ở đâu và thật sự muốn đi đâu.</p>
           </div>
-          <div class="value-card" data-reveal style="text-align: center;">
-            <div style="font-family: var(--font-heading); font-size: 5rem; color: var(--page-accent); line-height: 1; margin-bottom: var(--space-4); opacity: 0.2;">M</div>
-            <h3 style="color: var(--page-accent);">MEANING – Ý nghĩa</h3>
-            <p>Kinh doanh không chỉ là bán món ăn. Đó là hành trình bạn gửi gắm niềm đam mê, giá trị và dấu ấn cá nhân, để mỗi bữa ăn trở thành một trải nghiệm mang ý nghĩa.</p>
+          <div class="value-card" data-reveal>
+            <div class="value-num">C</div>
+            <h3 style="color: var(--page-accent);">CONFIDENCE - Tự tin làm chủ</h3>
+            <p>Phục hồi năng lực ra quyết định và sự vững vàng nội tâm, chữa lành sự mất mát niềm tin vào chính mình.</p>
           </div>
-          <div class="value-card" data-reveal style="text-align: center;">
-            <div style="font-family: var(--font-heading); font-size: 5rem; color: var(--page-accent); line-height: 1; margin-bottom: var(--space-4); opacity: 0.2;">F</div>
-            <h3 style="color: var(--page-accent);">FREEDOM – Tự do</h3>
-            <p>Không còn bị trói chặt 24/7 trong quán. Với kế hoạch, đội ngũ và quy trình rõ ràng, bạn có thể vừa vận hành kinh doanh, vừa tận hưởng tự do.</p>
+          <div class="value-card" data-reveal>
+            <div class="value-num">C</div>
+            <h3 style="color: var(--page-accent);">CONNECTION - Khơi dậy kết nối</h3>
+            <p>Kết nối lại với bản thân và người thân, chữa lành sự thiếu hoà hợp trong những mối quan hệ quan trọng.</p>
           </div>
         </div>
       </div>
     </section>
 
-
-    <!-- ═══ S5: DIFFERENTIATORS ═══ -->
-    <section class="srv-section" aria-label="Khác biệt của chương trình">
+    <!-- ═══ S8: CURRICULUM ═══ -->
+    <section class="srv-section--alt" aria-label="Lộ trình 12 module">
       <div class="container">
         <div class="section-header">
-          <span class="badge">Vì sao khác biệt?</span>
-          <h2 style="margin-top: var(--space-4);">Đây không phải khoá học thông thường</h2>
+          <span class="badge badge--gold">Lộ trình 90 ngày</span>
+          <h2 style="margin-top: var(--space-4);">12 module đi từ Quá khứ đến Hiện tại và Tương lai</h2>
           <div class="divider"></div>
-        </div>
-        <div class="method-layout">
-          <div class="method-col method-col--negative">
-            <h3>Không phải khoá học thông thường</h3>
-            <ul class="method-list">
-              <li>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b32d2e" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                <span>Không phải kiến thức lý thuyết sách vở, xa rời thực tế</span>
-              </li>
-              <li>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b32d2e" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                <span>Không phải lớp học đại trà hàng trăm người, không ai hỏi thăm ai</span>
-              </li>
-              <li>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b32d2e" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                <span>Không phải hứa hẹn thành công dễ dàng hay công thức "làm giàu nhanh"</span>
-              </li>
-              <li>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b32d2e" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-                <span>Không phải giảng dạy từ người chưa từng kinh doanh thực tế</span>
-              </li>
-            </ul>
-          </div>
-          <div class="method-col method-col--positive">
-            <h3>Thay vào đó, bạn nhận được</h3>
-            <ul class="method-list">
-              <li>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--page-accent)" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Kiến thức thực chiến từ 15+ năm kinh nghiệm F&amp;B tại Mỹ và Việt Nam</span>
-              </li>
-              <li>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--page-accent)" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Lớp học chỉ tối đa 10 người, được coaching sâu sát từng mô hình</span>
-              </li>
-              <li>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--page-accent)" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Bộ template chuẩn: P&amp;L, Menu Engineering, SOP, Lean Canvas</span>
-              </li>
-              <li>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--page-accent)" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                <span>Cộng đồng chủ quán F&amp;B đồng hành lâu dài sau khoá học</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ═══ S6: 10-WEEK CURRICULUM ═══ -->
-    <section class="srv-section--alt" aria-label="Lộ trình 10 tuần">
-      <div class="container container--narrow">
-        <div class="section-header">
-          <span class="badge badge--gold">Lộ trình</span>
-          <h2 style="margin-top: var(--space-4);">Hành trình 10 tuần</h2>
-          <div class="divider"></div>
-          <p>Mỗi tuần đi sâu vào một trụ cột trong khung chiến lược 5P để bạn xây dựng mô hình bền vững.</p>
+          <p>Hành trình bắt đầu bằng ổn định và yêu thương bản thân, rồi đi vào hiểu mình, phục hồi nội lực, hàn gắn quan hệ và phóng tầm nhìn cho tương lai.</p>
           <div class="focus-badge-row">
-            <span class="focus-badge">Purpose</span>
-            <span class="focus-badge">People</span>
-            <span class="focus-badge">Product</span>
-            <span class="focus-badge">Profit</span>
-            <span class="focus-badge">Peace</span>
+            <span class="focus-badge">Clarity</span>
+            <span class="focus-badge">Confidence</span>
+            <span class="focus-badge">Connection</span>
+            <span class="focus-badge">Integration</span>
           </div>
         </div>
-        <div class="timeline">
-          <div class="timeline-item" data-reveal>
-            <div class="timeline-week">Tuần 1</div>
-            <h3>Passion – Vai trò chủ doanh nghiệp</h3>
-            <p>Xác định rõ vai trò người chủ, vẽ bản đồ đam mê và kiểm tra mức độ sẵn sàng khởi nghiệp F&amp;B.</p>
+
+        <div class="tina-stage" data-reveal>
+          <div class="tina-stage-title">
+            <span>Giai đoạn 1 · Module 1-4</span>
+            <h3>Hiểu rõ chính mình · Clarity</h3>
           </div>
-          <div class="timeline-item" data-reveal>
-            <div class="timeline-week">Tuần 2</div>
-            <h3>Plan – Khởi điểm &amp; mô hình</h3>
-            <p>Lựa chọn mô hình kinh doanh phù hợp, phát triển ý tưởng từ đam mê thành kế hoạch cụ thể.</p>
+          <div class="tina-module-grid">
+            <div class="tina-module"><strong>Module 1 · Khởi đầu</strong><p>Làm rõ bạn đang ở đâu, thật sự muốn đi đâu và đặt ngọn hải đăng cho cả hành trình.</p></div>
+            <div class="tina-module"><strong>Module 2 · Yêu thương bản thân & chữa lành nội tâm</strong><p>Làm dịu giọng nói tự dằn vặt bên trong và học cách đối xử với chính mình bằng lòng trắc ẩn.</p></div>
+            <div class="tina-module"><strong>Module 3 · Giá trị cốt lõi & điểm mạnh</strong><p>Tìm lại bạn là ai khi gạt bỏ kỳ vọng của người khác: những giá trị và sức mạnh tự nhiên làm nên con người bạn.</p></div>
+            <div class="tina-module"><strong>Module 4 · Cá tính & bản đồ tính cách</strong><p>Soi chiếu qua Tử Vi, Nhân số học và công cụ Tâm lý học để hiểu cá tính, thế mạnh và điểm yếu.</p></div>
           </div>
-          <div class="timeline-item" data-reveal>
-            <div class="timeline-week">Tuần 3</div>
-            <h3>Plan – Kế hoạch tài chính</h3>
-            <p>Dự toán vốn đầu tư, tính toán điểm hoà vốn, xây dựng bản kế hoạch kinh doanh khả thi.</p>
+        </div>
+
+        <div class="tina-stage" data-reveal>
+          <div class="tina-stage-title">
+            <span>Giai đoạn 2 · Module 5-7</span>
+            <h3>Tự tin làm chủ · Confidence</h3>
           </div>
-          <div class="timeline-item" data-reveal>
-            <div class="timeline-week">Tuần 4</div>
-            <h3>Product – Thực đơn chiến lược</h3>
-            <p>Xây dựng menu, định giá từng món, thiết kế thực đơn để vừa thu hút khách vừa đảm bảo lợi nhuận.</p>
+          <div class="tina-module-grid">
+            <div class="tina-module"><strong>Module 5 · Tư duy làm chủ & khung đạo đức</strong><p>Dựng la bàn nội tâm, chuyển hoá Tham-Sân-Si thành Bi-Trí-Dũng để các quyết định có gốc rễ vững chắc.</p></div>
+            <div class="tina-module"><strong>Module 6 · Nghệ thuật ra quyết định</strong><p>Học cách đi qua những quyết định khó mà không còn dằn vặt, kết hợp trí tuệ phương Đông và công cụ phương Tây.</p></div>
+            <div class="tina-module"><strong>Module 7 · Ý nghĩa cuộc đời</strong><p>Hợp nhất đời sống thực tế và đời sống tinh thần, để Đời và Đạo cân bằng trong một cuộc sống có ý nghĩa.</p></div>
           </div>
-          <div class="timeline-item" data-reveal>
-            <div class="timeline-week">Tuần 5</div>
-            <h3>Product – Mặt bằng &amp; Trải nghiệm</h3>
-            <p>Chọn mặt bằng phù hợp, thiết kế trải nghiệm khách hàng độc đáo để tạo dấu ấn thương hiệu.</p>
+        </div>
+
+        <div class="tina-stage" data-reveal>
+          <div class="tina-stage-title">
+            <span>Giai đoạn 3 · Module 8-10</span>
+            <h3>Kết nối lại & phóng tầm nhìn · Connection</h3>
           </div>
-          <div class="timeline-item" data-reveal>
-            <div class="timeline-week">Tuần 6</div>
-            <h3>People – Năng lực &amp; mục tiêu</h3>
-            <p>Phân tích năng lực bản thân ở vai trò chủ doanh nghiệp, xác định mục tiêu phát triển.</p>
+          <div class="tina-module-grid">
+            <div class="tina-module"><strong>Module 8 · Chữa lành & ranh giới trong quan hệ</strong><p>Hàn gắn tổn thương trong các mối quan hệ thân mật và học cách thiết lập ranh giới lành mạnh.</p></div>
+            <div class="tina-module"><strong>Module 9 · Giao tiếp thật & bày tỏ nhu cầu</strong><p>Tập nói ra điều mình cần một cách rõ ràng, tự tin thông qua những bài thực hành nhập vai sống động.</p></div>
+            <div class="tina-module"><strong>Module 10 · Tầm nhìn 5-10 năm & mục tiêu 90 ngày</strong><p>Nhìn thấy phiên bản tương lai của mình và vạch những bước đầu tiên để biến nó thành hiện thực.</p></div>
           </div>
-          <div class="timeline-item" data-reveal>
-            <div class="timeline-week">Tuần 7</div>
-            <h3>People – Kế hoạch nhân sự</h3>
-            <p>Xây dựng JD, sơ đồ đội nhóm ban đầu và kế hoạch tuyển dụng – đào tạo nhân sự hiệu quả.</p>
+        </div>
+
+        <div class="tina-stage" data-reveal>
+          <div class="tina-stage-title">
+            <span>Khép lại & neo giữ · Module 11-12</span>
+            <h3>Integration</h3>
           </div>
-          <div class="timeline-item" data-reveal>
-            <div class="timeline-week">Tuần 8</div>
-            <h3>Process – Hệ thống SOP</h3>
-            <p>Thiết kế quy trình chuẩn FOH, BOH và toàn quán để nhân sự vận hành trơn tru, giảm thất thoát.</p>
-          </div>
-          <div class="timeline-item" data-reveal>
-            <div class="timeline-week">Tuần 9</div>
-            <h3>Profit – Chỉ số tài chính</h3>
-            <p>Nắm vững các chỉ số tài chính cốt lõi, công thức lợi nhuận, báo cáo P&amp;L và Menu Engineering.</p>
-          </div>
-          <div class="timeline-item" data-reveal>
-            <div class="timeline-week">Tuần 10</div>
-            <h3>Tổng kết &amp; Định hướng</h3>
-            <p>Thuyết trình thành quả 10 tuần, nhận phản hồi từ coach và cộng đồng, định hướng bước tiếp theo.</p>
+          <div class="tina-module-grid">
+            <div class="tina-module"><strong>Module 11 · Tổng kết & kế hoạch duy trì</strong><p>Đo lường chặng đường đã đi, neo giữ con người mới và lập kế hoạch để không trượt về lối cũ.</p></div>
+            <div class="tina-module"><strong>Module 12 · Module dự phòng linh hoạt</strong><p>Một module đệm để đào sâu điều bạn cần nhất, hoặc đồng hành cùng những gì mới nảy sinh trên đường.</p></div>
           </div>
         </div>
       </div>
     </section>
 
-
-    <!-- ═══ S7: TESTIMONIALS ═══ -->
-    <section class="srv-section" aria-label="Học viên chia sẻ">
+    <!-- ═══ S9: OUTCOMES AND GUARANTEE ═══ -->
+    <section class="srv-section" aria-label="Kết quả sau 90 ngày">
       <div class="container">
         <div class="section-header">
-          <span class="badge">Học viên nói gì</span>
-          <h2 style="margin-top: var(--space-4);">Học viên nói gì về Business to Freedom?</h2>
+          <span class="badge">Sau 90 ngày</span>
+          <h2 style="margin-top: var(--space-4);">Bạn mang theo một nền tảng sống mới</h2>
           <div class="divider"></div>
+        </div>
+        <div class="deliv-grid" data-reveal-stagger>
+          <div class="deliv-card" data-reveal>
+            <h3>Bình an không còn dễ vỡ</h3>
+            <p>Một sự bình an đến từ bên trong, không còn phải vay mượn từ bên ngoài.</p>
+          </div>
+          <div class="deliv-card" data-reveal>
+            <h3>Con đường sống rõ ràng</h3>
+            <p>Bạn biết mình muốn đi đâu, về đâu, và không còn loay hoay trong cảm giác mơ hồ.</p>
+          </div>
+          <div class="deliv-card" data-reveal>
+            <h3>Bộ công cụ tự đứng vững</h3>
+            <p>Bạn có công cụ để tự ra quyết định, tự làm dịu mình và tự đứng vững khi sóng gió quay lại.</p>
+          </div>
+        </div>
+        <div class="method-layout" style="margin-top: var(--space-8);">
+          <div class="method-col method-col--positive" data-reveal>
+            <h3>Cam kết của tôi</h3>
+            <p>Tôi tin vào giá trị của hành trình này, nên tôi muốn bạn bắt đầu mà không phải gánh rủi ro một mình.</p>
+            <div class="tina-quote" style="margin-bottom: 0;">
+              <p>Trong 30 ngày đầu tiên, nếu bạn thấy hành trình này không phù hợp, tôi sẽ hoàn lại toàn bộ học phí - không cần lý do.</p>
+            </div>
+          </div>
+          <div class="method-col" data-reveal>
+            <h3>Điều tôi cần ở bạn</h3>
+            <p>Hãy thật sự hiện diện. Hãy có mặt và làm việc với chính mình trong những buổi đồng hành. Phần còn lại, hãy để chúng tôi lo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ S10: TESTIMONIALS ═══ -->
+    <section class="srv-section--alt" aria-label="Khách hàng nói gì về Trâm">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge badge--gold">Khách hàng nói gì</span>
+          <h2 style="margin-top: var(--space-4);">Những chia sẻ sau hành trình đồng hành</h2>
+          <div class="divider"></div>
+          <p>Những lời chia sẻ dưới đây được trích từ các video và ghi âm phản hồi của khách hàng sau hành trình đồng hành cùng Trâm.</p>
         </div>
         <div class="testi-grid" data-reveal-stagger>
           <div class="testi-card" data-reveal>
-            <div class="testi-img-wrap">
-              <img src="assets/dv2/t1-caolan.png" class="testi-img" alt="Cao Lan – học viên Business to Freedom" loading="lazy">
-            </div>
             <div>
-              <p class="testi-name">Cao Lan</p>
-              <p class="testi-role">Chủ nhà hàng Việt ở Paris, Pháp</p>
-              <p class="testi-quote">Dù khoá học bắt đầu lúc 2h sáng theo giờ Pháp, chị vẫn thấy rất hào hứng. Giá trị nhất là mọi thứ không còn mơ hồ. Mình biết cái gì đang thiếu và cần thay đổi. Thay đổi đầu tiên chính là áp dụng các quy trình chuẩn cho quán.</p>
+              <p class="testi-name">Chị Hoàng Hương</p>
+              <p class="testi-role">1984 · Phó phòng Tín dụng khách hàng, Ngân hàng BIDV</p>
+              <p class="testi-quote">Tôi đã sống 40 năm, va chạm xã hội nhiều, nhưng hôm nay tôi mới thật sự sáng mắt ra. Trâm giúp tôi hiểu tam giác Bi - Trí - Dũng và soi thẳng vào đời mình. Một tháng trước, lúc bế tắc nhất, tôi đã cầu xin một quý nhân dẫn đường. Và Trâm đã xuất hiện.</p>
             </div>
           </div>
           <div class="testi-card" data-reveal>
-            <div class="testi-img-wrap">
-              <img src="assets/dv2/t1-thanhnga.png" class="testi-img" alt="Thanh Nga – học viên Business to Freedom" loading="lazy">
-            </div>
             <div>
-              <p class="testi-name">Thanh Nga</p>
-              <p class="testi-role">Chủ quán trà trái cây Bảo Lộc</p>
-              <p class="testi-quote">Bước tiến của em là vận hành được quán và để dành được lợi nhuận. Dù quán nhỏ, em đã bắt đầu bằng một kế hoạch kinh doanh hoàn chỉnh. Mọi thứ đang vận hành đúng như mong muốn.</p>
+              <p class="testi-name">Chị Minh Hương</p>
+              <p class="testi-role">1984 · Boston, Massachusetts</p>
+              <p class="testi-quote">Phiên coach với Trâm là một trong những trải nghiệm sâu nhất tôi từng có. Trâm giúp tôi chạm vào một ký ức tưởng đã quên từ lâu. Ở Trâm luôn có cảm giác an toàn, kiên nhẫn và không bao giờ phán xét.</p>
             </div>
           </div>
           <div class="testi-card" data-reveal>
-            <div class="testi-img-wrap">
-              <img src="assets/dv2/t1-phamhieu.png" class="testi-img" alt="Phạm Hiếu – học viên Business to Freedom" loading="lazy">
-            </div>
             <div>
-              <p class="testi-name">Phạm Hiếu</p>
-              <p class="testi-role">Chủ tiệm cafe Việt ở Virginia, Mỹ</p>
-              <p class="testi-quote">Khoá học chính là công cụ, là bản đồ để dù mình đang làm gì thì cũng có thể quay lại đối chiếu xem mình đã làm đúng hay chưa. Dù kinh doanh bao lâu, mình vẫn cần soi chiếu lại.</p>
-            </div>
-          </div>
-          <div class="testi-card" data-reveal>
-            <div class="testi-img-wrap">
-              <img src="assets/dv2/t1_lananh.png" class="testi-img" alt="Lan Anh – học viên Business to Freedom" loading="lazy">
-            </div>
-            <div>
-              <p class="testi-name">Lan Anh</p>
-              <p class="testi-role">Chủ quán cà phê TP HCM</p>
-              <p class="testi-quote">Đây là khóa học hiếm hoi giúp mình hiểu rõ từ ngày đầu cần chuẩn bị những gì. Trâm không chỉ dạy kiến thức mà còn đồng hành như một người thầy thực sự.</p>
-            </div>
-          </div>
-          <div class="testi-card" data-reveal>
-            <div class="testi-img-wrap">
-              <img src="assets/dv2/t1_lequyen.png" class="testi-img" alt="Lê Quyền – học viên Business to Freedom" loading="lazy">
-            </div>
-            <div>
-              <p class="testi-name">Lê Quyền</p>
-              <p class="testi-role">Chủ tiệc cưới Hà Nội</p>
-              <p class="testi-quote">Sự thay đổi lớn nhất sau khóa học là mình biết tại sao quán lời mà túi tiền vẫn cạn. Từ đó tôi kiểm soát được doanh thu và có kế hoạch mở rộng.</p>
-            </div>
-          </div>
-          <div class="testi-card" data-reveal>
-            <div class="testi-img-wrap">
-              <img src="assets/dv2/t1_phuongnabi.png" class="testi-img" alt="Phương Nabi – học viên Business to Freedom" loading="lazy">
-            </div>
-            <div>
-              <p class="testi-name">Phương Nabi</p>
-              <p class="testi-role">Chủ nhà hàng Fusion TP HCM</p>
-              <p class="testi-quote">Trâm giúp tôi thấy rõ mô hình thực sự đang hoạt động như thế nào, cà phê nào đang một mình gánh tổn thất. Chưa bao giờ được phân tích sâu như vậy.</p>
+              <p class="testi-name">Anh Lê Thế Hào</p>
+              <p class="testi-role">1993 · Dịch giả, TP. Hồ Chí Minh</p>
+              <p class="testi-quote">Hai điều giá trị nhất trong phiên: em nhìn rõ hơn đâu là phương tiện và đâu mới thật sự là cứu cánh của đời mình; và bài học "còn thở là còn gỡ". Em cảm nhận được một tình thương thiêng liêng trong đó.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-
-    <!-- ═══ S8: INSTRUCTOR ═══ -->
-    <section class="srv-section--dark" aria-label="Giảng viên">
+    <!-- ═══ S11: INSTRUCTOR ═══ -->
+    <section class="srv-section--dark" aria-label="Người đồng hành">
       <div class="container">
         <div class="instructor-layout">
           <div class="instructor-img" data-reveal style="border-color: var(--royal-gold); max-width: 420px; margin-inline: auto;">
-            <img src="assets/dv1/instructor_2.jpg" alt="Edina Trâm – Professional Coach, ICF PCC" loading="lazy" style="border-radius: var(--radius-lg);">
+            <img src="assets/dv1/instructor_2.jpg" alt="Edina Trâm - người đồng hành trong chương trình TINA Awakening" loading="lazy" style="border-radius: var(--radius-lg);">
           </div>
           <div data-reveal>
             <div class="section-header" style="text-align: left; margin-bottom: var(--space-6); max-width: none;">
-              <h2>Ai là người đồng hành cùng bạn?</h2>
+              <span class="badge badge--gold">Đôi nét về Edina Trâm</span>
+              <h2 style="margin-top: var(--space-4);">Thanh lịch, trí tuệ và ấm áp</h2>
               <div class="divider divider--left"></div>
             </div>
             <h3 class="instructor-name" style="color: #fff;">Edina Trâm</h3>
-            <p class="instructor-title" style="color: var(--champagne-glow);">F&amp;B Startup Coach · ICF PCC</p>
-            <div class="cred-list">
-              <div class="cred-item" style="background: rgba(255,255,255,0.06);">
-                <span class="cred-num">01</span>
-                <p style="color: rgba(255,255,255,0.9);">16 năm trong lĩnh vực kinh doanh &amp; Hospitality tại Mỹ và Việt Nam</p>
-              </div>
-              <div class="cred-item" style="background: rgba(255,255,255,0.06);">
-                <span class="cred-num">02</span>
-                <p style="color: rgba(255,255,255,0.9);">10 năm khởi nghiệp: Đồng sáng lập &amp; điều hành Edina Workspace – chuỗi nhà hàng Mỹ tại Hà Nội</p>
-              </div>
-              <div class="cred-item" style="background: rgba(255,255,255,0.06);">
-                <span class="cred-num">03</span>
-                <p style="color: rgba(255,255,255,0.9);">ICF PCC Coach: Top 80 người Việt đạt chứng nhận quốc tế Coach chuyên nghiệp. Đồng hành 50+ chủ doanh nghiệp</p>
-              </div>
-              <div class="cred-item" style="background: rgba(255,255,255,0.06);">
-                <span class="cred-num">04</span>
-                <p style="color: rgba(255,255,255,0.9);">Tác giả sách <em>Ánh sáng của ước mơ</em>, đã bán hơn 1.000 bản, truyền cảm hứng cho người trẻ khởi nghiệp</p>
-              </div>
-            </div>
+            <p class="instructor-title" style="color: var(--champagne-glow);">Tham vấn Tâm lý · Khai vấn cuộc sống · Tài chính · Tâm linh</p>
+            <p style="color: rgba(255,255,255,0.85);">Điều thú vị ở Trâm không nằm ở một vài tấm bằng, mà ở chỗ rất ít người hội tụ cả bốn thế giới: Tâm lý học, Khai vấn, Tâm linh và Tài chính cùng một lúc.</p>
+            <ul class="tina-profile-list">
+              <li>Thạc sỹ Tâm lý học - Đại học Sư phạm Hà Nội.</li>
+              <li>Thạc sỹ Tài chính Ngân hàng - University of Southampton, Anh Quốc.</li>
+              <li>ICF Associate Certified Coach (ACC) - International Coaching Federation.</li>
+              <li>ACCA - nhiều năm kinh nghiệm tài chính tại các doanh nghiệp.</li>
+              <li>Hơn 15 năm nghiên cứu và thực hành tâm linh, thiền định, Tử Vi và Nhân số học.</li>
+              <li>Hơn 20 năm sinh sống và làm việc tại Anh, Singapore, Na Uy và Việt Nam.</li>
+            </ul>
             <div class="social-links" style="margin-top: var(--space-6);">
-              <a href="https://www.facebook.com/coachtram" target="_blank" rel="noopener" aria-label="Facebook" style="border-color: rgba(255,255,255,0.15); color: rgba(255,255,255,0.7);">
+              <a href="https://www.facebook.com/edina.quynhtram" target="_blank" rel="noopener" aria-label="Facebook" style="border-color: rgba(255,255,255,0.15); color: rgba(255,255,255,0.7);">
                 <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg>
               </a>
-              <a href="https://www.instagram.com/coachtram" target="_blank" rel="noopener" aria-label="Instagram" style="border-color: rgba(255,255,255,0.15); color: rgba(255,255,255,0.7);">
-                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
-              </a>
-              <a href="https://www.coachtram.com" target="_blank" rel="noopener" aria-label="Website" style="border-color: rgba(255,255,255,0.15); color: rgba(255,255,255,0.7);">
-                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"></path></svg>
-              </a>
-              <a href="mailto:coachtram@gmail.com" aria-label="Email" style="border-color: rgba(255,255,255,0.15); color: rgba(255,255,255,0.7);">
+              <a href="mailto:lequynhtram@gmail.com" aria-label="Email" style="border-color: rgba(255,255,255,0.15); color: rgba(255,255,255,0.7);">
                 <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              </a>
+              <a href="https://edinatram.vn" target="_blank" rel="noopener" aria-label="Website" style="border-color: rgba(255,255,255,0.15); color: rgba(255,255,255,0.7);">
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"></path></svg>
               </a>
             </div>
           </div>
@@ -466,8 +697,31 @@
       </div>
     </section>
 
+    <!-- ═══ S12: NEXT JOURNEY / OFFER ═══ -->
+    <section class="srv-section" aria-label="Bắt đầu hành trình 90 ngày">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Bắt đầu như thế nào?</span>
+          <h2 style="margin-top: var(--space-4);">Bạn đã sẵn sàng bắt đầu 90 ngày của mình chưa?</h2>
+          <div class="divider"></div>
+          <p>Tôi dành riêng hai cách để bạn bước những bước đầu tiên mà chưa cần cam kết toàn bộ ngay.</p>
+        </div>
+        <div class="offer-grid" data-reveal-stagger>
+          <div class="offer-card" data-reveal>
+            <div class="offer-label">Lựa chọn 1 · Miễn phí</div>
+            <h3>Một phiên trải nghiệm 1:1</h3>
+            <p>Một buổi trò chuyện kết nối cùng tôi, hoàn toàn miễn phí, để bạn cảm nhận hành trình này có thật sự dành cho mình hay không.</p>
+          </div>
+          <div class="offer-card offer-card--featured" data-reveal>
+            <div class="offer-label">Lựa chọn 2 · Ưu đãi</div>
+            <h3>Ba phiên khám phá đầu tiên</h3>
+            <p>Ba phiên 1:1 đầu tiên với mức ưu đãi 3.000.000đ. Tặng kèm một e-book trị giá 500.000đ để bạn bắt đầu ngay.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- ═══ S9: FAQ ═══ -->
+    <!-- ═══ S13: FAQ ═══ -->
     <section class="srv-section--alt" aria-label="Câu hỏi thường gặp">
       <div class="container container--narrow">
         <div class="section-header">
@@ -478,69 +732,53 @@
         <div class="faq-list">
           <div class="faq-item" data-reveal>
             <button class="faq-q" aria-expanded="false">
-              <span>Chưa từng kinh doanh F&amp;B có học được không?</span>
+              <span>TINA Awakening có phải trị liệu tâm lý không?</span>
             </button>
-            <div class="faq-a"><div><div class="faq-a-inner">Có. Bạn sẽ đi qua lộ trình 5P hệ thống để hiểu ngành, lập kế hoạch bài bản từ số 0, tránh các sai lầm đắt giá ngay từ đầu.</div></div></div>
+            <div class="faq-a"><div><div class="faq-a-inner">Đây là hành trình Coaching & Mentoring 1:1 kết hợp nền tảng tâm lý học, khai vấn, tâm linh và đời sống thực tế. Chương trình không thay thế điều trị y khoa hay trị liệu lâm sàng khi bạn đang cần hỗ trợ chuyên môn y tế.</div></div></div>
           </div>
           <div class="faq-item" data-reveal>
             <button class="faq-q" aria-expanded="false">
-              <span>Đã khởi sự kinh doanh nhưng gặp khó khăn, tôi có cần học?</span>
+              <span>Tôi chưa biết vấn đề của mình là gì, có tham gia được không?</span>
             </button>
-            <div class="faq-a"><div><div class="faq-a-inner">Có. Bạn sẽ học cách rà soát lại toàn bộ, phân tích tài chính, tối ưu menu, quản lý nhân sự và xây dựng lại quy trình để quán tự vận hành được.</div></div></div>
+            <div class="faq-a"><div><div class="faq-a-inner">Có. Những module đầu tiên được thiết kế để giúp bạn định vị hiện trạng, làm rõ điều mình thật sự muốn và nhìn thấy những vòng lặp đang vận hành bên trong.</div></div></div>
           </div>
           <div class="faq-item" data-reveal>
             <button class="faq-q" aria-expanded="false">
-              <span>Tôi bận, không theo kịp hết thì sao?</span>
+              <span>Vì sao chương trình kéo dài 90 ngày?</span>
             </button>
-            <div class="faq-a"><div><div class="faq-a-inner">Tất cả buổi học đều có tài liệu chi tiết, record và có thể xếp lịch coaching 1:1 với Trâm để đảm bảo bạn không bị tụt lại.</div></div></div>
+            <div class="faq-a"><div><div class="faq-a-inner">Chuyển hoá thật không phải một sự kiện đơn lẻ. 90 ngày cho phép nhận thức mới có thời gian ngấm vào hành vi, lựa chọn, quan hệ và kế hoạch sống của bạn.</div></div></div>
           </div>
           <div class="faq-item" data-reveal>
             <button class="faq-q" aria-expanded="false">
-              <span>Khác gì khoá Passion to Profit?</span>
+              <span>Tôi có cần chuẩn bị gì trước phiên trải nghiệm không?</span>
             </button>
-            <div class="faq-a"><div><div class="faq-a-inner">P2P là bước nền tảng (tổng quan định hướng). B2F là bước nâng cấp đi kèm thực hành làm bài tập, template, SOP chi tiết và coaching theo từng tuần để thực sự khởi sự kinh doanh.</div></div></div>
+            <div class="faq-a"><div><div class="faq-a-inner">Bạn chỉ cần mang theo sự thành thật với chính mình: điều đang khiến bạn bế tắc, điều bạn khao khát thay đổi, và mức độ sẵn sàng nhìn sâu vào bên trong.</div></div></div>
           </div>
           <div class="faq-item" data-reveal>
             <button class="faq-q" aria-expanded="false">
-              <span>Không giỏi "số má" có theo được không?</span>
+              <span>Sau 90 ngày có thể đi tiếp không?</span>
             </button>
-            <div class="faq-a"><div><div class="faq-a-inner">Được. Các công cụ tài chính được thiết kế đơn giản, trực quan, phục vụ đúng góc nhìn của "người chủ doanh nghiệp" thay vì kế toán.</div></div></div>
-          </div>
-          <div class="faq-item" data-reveal>
-            <button class="faq-q" aria-expanded="false">
-              <span>Số lượng học viên thế nào?</span>
-            </button>
-            <div class="faq-a"><div><div class="faq-a-inner">Chỉ tối đa 10 học viên mỗi khoá để đảm bảo chất lượng và Trâm có thể theo sát từng mô hình kinh doanh.</div></div></div>
-          </div>
-          <div class="faq-item" data-reveal>
-            <button class="faq-q" aria-expanded="false">
-              <span>Học xong có thể khởi sự kinh doanh ngay không?</span>
-            </button>
-            <div class="faq-a"><div><div class="faq-a-inner">Có. Sau B2F bạn sẽ có bản kế hoạch kinh doanh, dự toán tài chính, menu định giá, sơ đồ nhân sự và quy trình SOP để tự tin xúc tiến.</div></div></div>
-          </div>
-          <div class="faq-item" data-reveal>
-            <button class="faq-q" aria-expanded="false">
-              <span>Có cung cấp tài liệu, template không?</span>
-            </button>
-            <div class="faq-a"><div><div class="faq-a-inner">Có. Trọn bộ template chuẩn bao gồm: Bảng báo cáo P&amp;L, Menu Engineering, SOP, Checklist mở quán, Lean Canvas đã được Việt hoá và tuỳ chỉnh cho F&amp;B.</div></div></div>
+            <div class="faq-a"><div><div class="faq-a-inner">Có. 90 Ngày Chuyển Hoá là chặng khai sáng đầu tiên. Khi đã thấy rõ tầm nhìn 5-10 năm, nhiều người chọn đi tiếp vào lộ trình chuyên sâu hơn để lên kế hoạch và hiện thực hoá tầm nhìn ấy.</div></div></div>
           </div>
         </div>
       </div>
     </section>
 
-
-    <!-- ═══ S10: CTA FINAL ═══ -->
-    <section class="srv-cta-final" aria-label="Đăng ký ngay">
+    <!-- ═══ S14: CTA FINAL ═══ -->
+    <section class="srv-cta-final" aria-label="Đặt lịch bắt đầu hành trình">
       <div class="container">
-        <h2>Bắt đầu hành trình<br>từ Đam mê đến Tự do</h2>
-        <p style="max-width: 560px;">Khai giảng 27/03/2026 – Chỉ 10 chỗ/khoá. Đăng ký ngay để giữ suất cho hành trình 10 tuần đầy giá trị.</p>
-        <a href="https://zalo.me/coachtram" class="btn btn--accent btn--lg" target="_blank" rel="noopener">Nhắn Zalo Giữ Chỗ</a>
-        <p class="cta-note">📅 27/03 – 29/05/2026 &nbsp;·&nbsp; 🕘 Thứ 6 hàng tuần &nbsp;·&nbsp; 💰 15.000.000 VNĐ</p>
+        <h2>Hãy đặt lịch ngay hôm nay</h2>
+        <p style="max-width: 660px;">Đừng bỏ lỡ cơ hội thay đổi cuộc đời mình. Một cuộc trò chuyện đủ thành thật có thể là điểm khởi đầu cho một hướng đi hoàn toàn mới.</p>
+        <a href="lien-he.html" class="btn btn--accent btn--lg">Đặt lịch kết nối với Edina Trâm</a>
+        <div class="contact-line">
+          <span>Website: edinatram.vn</span>
+          <span>WhatsApp/Zalo: (+84) 88-9590-888</span>
+          <span>Email: lequynhtram@gmail.com</span>
+        </div>
       </div>
     </section>
 
   </main>
-
 
   <!-- ═══ FOOTER ═══ -->
   <footer class="site-footer">
@@ -562,7 +800,7 @@
           <h4>Dịch vụ</h4>
           <div class="footer-links">
             <a href="dich-vu-1.html">Passion to Profit</a>
-            <a href="dich-vu-2.html">Business to Freedom</a>
+            <a href="dich-vu-2.html">TINA Awakening</a>
             <a href="dich-vu-3.html">Business Mastery</a>
           </div>
         </div>
@@ -570,17 +808,17 @@
           <h4>Kết nối</h4>
           <div class="footer-links">
             <a href="lien-he.html">Liên hệ</a>
-            <a href="mailto:coachtram@gmail.com">coachtram@gmail.com</a>
-            <a href="tel:0901234567">0901 234 567</a>
+            <a href="mailto:lequynhtram@gmail.com">lequynhtram@gmail.com</a>
+            <a href="tel:+84889590888">(+84) 88-9590-888</a>
           </div>
         </div>
       </div>
       <div class="footer-bottom">
         <span>© 2026 Edina Trâm. All rights reserved.</span>
         <div class="footer-social">
-          <a href="#" aria-label="Facebook"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></a>
-          <a href="#" aria-label="Instagram"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
-          <a href="#" aria-label="YouTube"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+          <a href="https://www.facebook.com/edina.quynhtram" target="_blank" rel="noopener" aria-label="Facebook"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg></a>
+          <a href="mailto:lequynhtram@gmail.com" aria-label="Email"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
+          <a href="https://edinatram.vn" target="_blank" rel="noopener" aria-label="Website"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"></path></svg></a>
         </div>
       </div>
     </div>
