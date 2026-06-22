@@ -6,8 +6,8 @@ from PIL import Image
 import os, sys
 sys.stdout.reconfigure(encoding='utf-8')
 
-SRC = "./Dich vu 1 - Passion to Profit"
-DST = "./assets/dv1"
+SRC = "./content/legacy-services/passion-to-profit"
+DST = "./static-site/assets/dv1"
 os.makedirs(DST, exist_ok=True)
 
 # ─── Helper ───────────────────────────────────────────────────

@@ -1,8 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./*.html",
-    "./js/**/*.js",
+    "./static-site/*.html",
+    "./static-site/js/**/*.js",
     "./wp-theme/coach-loan-vu/**/*.php",
     "./wp-theme/coach-loan-vu/**/*.js"
   ],

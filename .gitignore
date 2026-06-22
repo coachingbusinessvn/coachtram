@@ -33,7 +33,7 @@ node_modules/
 .dist/
 dist/
 build/
-css/tailwind.css
+static-site/css/tailwind.css
 
 # Environment files
 .env

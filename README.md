@@ -27,11 +27,26 @@ wp-theme/
   edina-tram/           ← V1 (legacy backup)
   coach-loan-vu/        ← V0 (legacy backup)
 
+static-site/            ← Bản HTML/CSS/JS tĩnh để tham khảo/backup
+  index.html
+  dich-vu-*.html
+  lien-he.html
+  css/
+  js/
+  assets/
+
+content/                ← Tư liệu nội dung, kịch bản, slide nguồn
+  tina-awakening/       ← Kịch bản DOCX/Markdown và media TINA Awakening
+  legacy-services/      ← Tư liệu các gói dịch vụ cũ
+
+feedback_1/             ← Feedback và kế hoạch triển khai đợt 1
+
+tools/                  ← Script hỗ trợ/crop/sửa bản HTML tĩnh
+
+docs/                   ← Tài liệu kỹ thuật phụ trợ
+
 brand/
   design.md             ← Design system documentation
-
-Dich vu */              ← Ảnh tham khảo & content từng dịch vụ
-assets/                 ← Ảnh dùng chung (static site backup)
 ```
 
 ## Công nghệ
@@ -46,7 +61,7 @@ assets/                 ← Ảnh dùng chung (static site backup)
 
 Xem [`DEPLOY.md`](DEPLOY.md) — hướng dẫn triển khai theme lên server thật (plugin demo import hoặc cài mới thủ công), checklist sau deploy, và tối ưu production.
 
-> CSS production của theme là các file modular trong `wp-theme/edina-tram-v2/assets/css/`. Không cần chạy npm để deploy theme. Script Tailwind chỉ xuất file thử nghiệm `css/tailwind.css` và không ghi đè `css/style.css`.
+> CSS production của theme là các file modular trong `wp-theme/edina-tram-v2/assets/css/`. Không cần chạy npm để deploy theme. Script Tailwind chỉ xuất file thử nghiệm `static-site/css/tailwind.css` và không ghi đè CSS production của theme.
 
 ## Design System
 

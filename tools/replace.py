@@ -1,7 +1,13 @@
 import os
 import re
 
-files = ['index.html', 'dich-vu-1.html', 'dich-vu-2.html', 'dich-vu-3.html', 'lien-he.html']
+files = [
+    'static-site/index.html',
+    'static-site/dich-vu-1.html',
+    'static-site/dich-vu-2.html',
+    'static-site/dich-vu-3.html',
+    'static-site/lien-he.html',
+]
 
 for f in files:
     path = f
