@@ -45,42 +45,42 @@ Bộ 3 chương trình thành hệ TINA: **Awareness → Awakening → Alignment
 - [x] 3 testimonial Awakening
 - [x] Giữ Sách (→ eBook miễn phí) + Đa kênh
 
-### ⬜ A8. Hai trang dịch vụ (Mục 8)
-**A8.1 — `dich-vu-1.html` → TINA Awareness** (viết lại, hiện là Passion to Profit)
-- [ ] Đổi title/meta/hero: "TINA Awareness", bỏ countdown/giá workshop cũ
-- [ ] Định vị: chương trình **nhập môn**, mục tiêu giúp khách bắt đầu kết nối & tìm hiểu bản thân
-- [ ] Thời lượng: **3 ngày · 3 phiên kết nối**
-- [ ] Giá: **3.000.000 VNĐ**
-- [ ] Phần "Dành cho bạn nếu…" (nhập môn)
-- [ ] CTA → `lien-he.html` (chương trình awareness)
-- [ ] Xoá toàn bộ nội dung F&B/workshop/học bổng/Zalo cũ
-- [ ] Cập nhật nav active = TINA Awareness; nhịp nền + mobile
+### ✅ A8. Hai trang dịch vụ (Mục 8) — DONE (local/static preview)
+**A8.1 — `dich-vu-1.html` → TINA Awareness** (đã viết lại)
+- [x] Đổi title/meta/hero: "TINA Awareness", bỏ countdown/giá workshop cũ
+- [x] Định vị: chương trình **nhập môn**, mục tiêu giúp khách bắt đầu kết nối & tìm hiểu bản thân
+- [x] Thời lượng: **3 ngày · 3 phiên kết nối**
+- [x] Giá: **3.000.000 VNĐ**
+- [x] Phần "Dành cho bạn nếu…" (nhập môn)
+- [x] CTA → `lien-he.html` (chương trình awareness)
+- [x] Xoá toàn bộ nội dung F&B/workshop/học bổng/Zalo cũ
+- [x] Cập nhật nav active = TINA Awareness; nhịp nền + mobile
 
-**A8.2 — `dich-vu-3.html` → TINA Alignment** (viết lại, hiện là Business Mastery)
-- [ ] Đổi title/meta/hero: "TINA Alignment"
-- [ ] Thời lượng: **6 tháng – 1 năm**
-- [ ] Trọng tâm: đồng hành hiện thực hoá mục tiêu hành động; bám tầm nhìn 5–10 năm & mục tiêu từ **Module 10 của TINA Awakening**
-- [ ] Phần "Dành cho bạn nếu…" / "Không dành cho bạn nếu…"
-- [ ] Xoá toàn bộ nội dung Business Mastery / F&B / Mastermind / bảng so sánh cũ
-- [ ] CTA → `lien-he.html` (chương trình alignment)
-- [ ] Cập nhật nav active = TINA Alignment; nhịp nền + mobile
+**A8.2 — `dich-vu-3.html` → TINA Alignment** (đã viết lại)
+- [x] Đổi title/meta/hero: "TINA Alignment"
+- [x] Thời lượng: **6 tháng – 1 năm**
+- [x] Trọng tâm: đồng hành hiện thực hoá mục tiêu hành động; bám tầm nhìn 5–10 năm & mục tiêu từ **Module 10 của TINA Awakening**
+- [x] Phần "Dành cho bạn nếu…" / "Không dành cho bạn nếu…"
+- [x] Xoá toàn bộ nội dung Business Mastery / F&B / Mastermind / bảng so sánh cũ
+- [x] CTA → `lien-he.html` (chương trình alignment)
+- [x] Cập nhật nav active = TINA Alignment; nhịp nền + mobile
 
-### ⬜ A5. Trang "Câu chuyện của tôi" (Mục 5) — file mới `cau-chuyen-cua-toi.html`
-- [ ] Trang độc lập, ngang hàng trang chủ (đã có link trong menu)
-- [ ] Cấu trúc 3S: **Story** (câu chuyện cá nhân) → **Solution** (Trâm đã chuyển hoá & tìm hướng đi) → **Success** (đồng hành & tạo giá trị)
-- [ ] Gộp nội dung "Người đồng hành" + "Đôi nét về Edina Trâm" (lấy từ phần đã gỡ ở trang chủ + DV2)
-- [ ] Dòng "Chân thực - Thấu hiểu - Truyền cảm hứng" + dòng EN in nghiêng "Authenticity - Compassionate - Inspiration"
-- [ ] Câu "Điều thú vị ở Edina Trâm…" → trình bày testimonial in nghiêng + attribution **"chị Mai Hương - Giám đốc Chiến lược khách hàng, cty TNT"**
-- [ ] Cập nhật 4 chỉ số: **20+ năm kinh nghiệm · 30+ đất nước · 7,500+ giờ học tập · 1000+ giờ huấn luyện, đào tạo**
-- [ ] Nav/footer + nhịp nền + mobile
+### ✅ A5. Trang "Câu chuyện của tôi" (Mục 5) — DONE (local/static preview)
+- [x] Trang độc lập, ngang hàng trang chủ (đã có link trong menu)
+- [x] Cấu trúc 3S: **Story** (câu chuyện cá nhân) → **Solution** (Trâm đã chuyển hoá & tìm hướng đi) → **Success** (đồng hành & tạo giá trị)
+- [x] Gộp nội dung "Người đồng hành" + "Đôi nét về Edina Trâm" (lấy từ phần đã gỡ ở trang chủ + DV2)
+- [x] Dòng "Chân thực - Thấu hiểu - Truyền cảm hứng" + dòng EN in nghiêng "Authenticity - Compassionate - Inspiration"
+- [x] Câu "Điều thú vị ở Edina Trâm…" → trình bày testimonial in nghiêng + attribution **"chị Mai Hương - Giám đốc Chiến lược khách hàng, cty TNT"**
+- [x] Cập nhật 4 chỉ số: **20+ năm kinh nghiệm · 30+ đất nước · 7,500+ giờ học tập · 1000+ giờ huấn luyện, đào tạo**
+- [x] Nav/footer + nhịp nền + mobile
 
-### ⬜ A6. Trang "Bài viết của Trâm" (Mục 6) — file mới `bai-viet-cua-tram.html`
-- [ ] Layout thư viện bài viết dạng **card** (mô phỏng cho WP blog gốc)
-- [ ] Phân nhóm chủ đề (vd: Chữa lành · Thấu hiểu bản thân · Chuyển hoá tâm thức) — dạng filter/section
-- [ ] Mỗi card: Chủ đề · Tiêu đề · Mô tả ngắn · link Substack (mở tab mới)
-- [ ] Không import nội dung Substack; chỉ link ra ngoài
-- [ ] Nav/footer + mobile
-- [ ] (Ghi chú: WP sẽ dùng **blog gốc** — xem B6)
+### ✅ A6. Trang "Bài viết của Trâm" (Mục 6) — DONE (local/static preview)
+- [x] Layout thư viện bài viết dạng **card** (mô phỏng cho WP blog gốc)
+- [x] Phân nhóm chủ đề (vd: Chữa lành · Thấu hiểu bản thân · Chuyển hoá tâm thức) — dạng filter/section
+- [x] Mỗi card: Chủ đề · Tiêu đề · Mô tả ngắn · link Substack (mở tab mới)
+- [x] Không import nội dung Substack; chỉ link ra ngoài
+- [x] Nav/footer + mobile
+- [x] (Ghi chú: WP sẽ dùng **blog gốc** — xem B6)
 
 ---
 

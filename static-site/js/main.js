@@ -89,7 +89,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // ══════════════════════════════════════════════════════════
-  // 4. FAQ ACCORDION
+  // 4. CONTACT PROGRAM PREFILL
+  // ══════════════════════════════════════════════════════════
+  const serviceSelect = document.querySelector('#service');
+  if (serviceSelect) {
+    const params = new URLSearchParams(window.location.search);
+    const program = params.get('program');
+    const aliases = {
+      first_connection: 'first-connection',
+      firstconnection: 'first-connection',
+      connect_3: 'awareness',
+      'connect-3': 'awareness'
+    };
+    const value = aliases[program] || program;
+
+    if (value && Array.from(serviceSelect.options).some(option => option.value === value)) {
+      serviceSelect.value = value;
+    }
+  }
+
+
+  // ══════════════════════════════════════════════════════════
+  // 5. FAQ ACCORDION
   // ══════════════════════════════════════════════════════════
   const faqItems = document.querySelectorAll('.faq-item');
   if (faqItems.length) {
