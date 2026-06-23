@@ -20,6 +20,14 @@
   --deep-forest-ink:   #0B1F19;
   --pale-gold-sand:    #DED3B8;
 
+  /* ═══ METALLIC GOLD (high-end · light-catching) ═══ */
+  /* Brushed-metal sheen: dark edge → bright highlight → dark edge */
+  --gold-metallic:      linear-gradient(135deg, #8A6A28 0%, #C8A244 24%, #F6E1A2 50%, #DCB95C 62%, #C8A244 78%, #8A6A28 100%);
+  --gold-metallic-soft: linear-gradient(135deg, #C8A244 0%, #F1D89A 50%, #C8A244 100%);
+  --gold-line:          linear-gradient(90deg, transparent, #C8A244 28%, #F6E1A2 50%, #C8A244 72%, transparent);
+  --gold-sheen:         linear-gradient(180deg, rgba(255,255,255,0.55), rgba(255,255,255,0) 46%);
+  --gold-ink:           #5C4413; /* dark gold for text on light surfaces */
+
   /* ═══ SEMANTIC ALIASES ═══ */
   --color-bg:           var(--pearl-ivory);
   --color-bg-alt:       var(--emerald-mist);
@@ -32,8 +40,8 @@
   --color-fg:           var(--deep-forest-ink);
   --color-fg-muted:     #4A5B54;
   --color-fg-subtle:    #6B7F75;
-  --color-border:       var(--pale-gold-sand);
-  --color-border-light: rgba(222, 211, 184, 0.4);
+  --color-border:       rgba(200, 162, 68, 0.30);
+  --color-border-light: rgba(200, 162, 68, 0.16);
 
   /* ═══ TYPOGRAPHY ═══ */
   --font-heading: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
@@ -274,15 +282,15 @@ ul, ol {
 
 /* ─── Gold Divider ─── */
 .divider {
-  width: 60px;
+  width: 64px;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--royal-gold), transparent);
+  background: var(--gold-line);
   margin: var(--space-4) auto;
 }
 
 .divider--left {
   margin-left: 0;
-  background: linear-gradient(90deg, var(--royal-gold), transparent);
+  background: linear-gradient(90deg, #C8A244, #F6E1A2 40%, transparent);
 }
 
 /* ─── Grids ─── */

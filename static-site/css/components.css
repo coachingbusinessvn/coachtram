@@ -20,8 +20,9 @@
 }
 
 .badge--gold {
-  background: rgba(200, 162, 68, 0.12);
-  color: var(--royal-gold);
+  background: linear-gradient(135deg, rgba(200, 162, 68, 0.16), rgba(246, 225, 162, 0.08));
+  border: 1px solid rgba(200, 162, 68, 0.32);
+  color: var(--gold-ink);
 }
 
 .badge--outline {
@@ -84,17 +85,21 @@
   color: var(--pearl-ivory);
 }
 
-/* Accent: Gold bg */
+/* Accent: Metallic gold bg (high-end, light-catching) */
 .btn--accent {
-  background: var(--royal-gold);
-  color: #fff;
-  border-color: var(--royal-gold);
+  background: var(--gold-metallic);
+  background-size: 170% 170%;
+  background-position: 28% 28%;
+  color: var(--emerald-noir);
+  border-color: rgba(138, 106, 40, 0.55);
+  font-weight: 600;
+  transition: background-position 0.55s ease, box-shadow 0.3s ease, transform 0.2s ease;
 }
 .btn--accent:hover {
-  background: #b38e33;
-  border-color: #b38e33;
+  background-position: 72% 72%;
+  border-color: rgba(138, 106, 40, 0.85);
   box-shadow: var(--shadow-gold);
-  color: #fff;
+  color: var(--emerald-noir);
 }
 
 /* Gold shimmer effect overlay */
