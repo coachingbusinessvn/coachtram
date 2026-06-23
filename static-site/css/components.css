@@ -36,6 +36,15 @@
   color: var(--champagne-glow);
 }
 
+/* Gold badge on dark surfaces → champagne text (override gold-ink) */
+.bg-sacred-pattern .badge--gold,
+.section--dark .badge--gold,
+.srv-section--dark .badge--gold {
+  background: rgba(200, 162, 68, 0.16);
+  border-color: rgba(241, 216, 154, 0.32);
+  color: var(--champagne-glow);
+}
+
 
 /* ─────────────────────────────────────────────────────────
    BUTTONS

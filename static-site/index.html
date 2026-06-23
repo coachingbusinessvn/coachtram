@@ -73,11 +73,11 @@
     .sign-card h3 { font-size: 1.05rem; color: var(--color-fg, #0b1f19); margin: 0.35rem 0 0.5rem; }
     .sign-card p { font-size: 0.9rem; line-height: 1.65; color: var(--color-fg-muted, #4A5B54); }
 
-    /* ── Signature triangle visual ── */
+    /* ── Signature triangle visual (SVG) ── */
     .triangle-visual { text-align: center; }
-    .triangle-visual img {
-      max-width: 460px; width: 100%; height: auto; margin-inline: auto;
-      filter: drop-shadow(0 14px 34px rgba(1, 79, 61, 0.14));
+    .triangle-visual svg {
+      max-width: 620px; width: 100%; height: auto; margin-inline: auto;
+      filter: drop-shadow(0 18px 40px rgba(1, 79, 61, 0.16));
     }
 
     @media (max-width: 860px) {
@@ -276,7 +276,58 @@
           <div class="divider"></div>
         </div>
         <div class="triangle-visual" data-reveal>
-          <img src="assets/images/tina-visual-triangle.png" alt="Tam giác chuyển hoá 3C — Clarity, Confidence, Connection" loading="lazy">
+          <svg viewBox="0 0 680 640" role="img" aria-label="Biểu đồ tam giác chuyển hoá T.I.N.A — Clarity, Confidence, Connection" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="goldMetal" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#8A6A28"/>
+                <stop offset="24%" stop-color="#C8A244"/>
+                <stop offset="50%" stop-color="#F6E1A2"/>
+                <stop offset="63%" stop-color="#DCB95C"/>
+                <stop offset="80%" stop-color="#C8A244"/>
+                <stop offset="100%" stop-color="#8A6A28"/>
+              </linearGradient>
+              <radialGradient id="emeraldGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#0B8A66" stop-opacity="0.20"/>
+                <stop offset="55%" stop-color="#005B45" stop-opacity="0.06"/>
+                <stop offset="100%" stop-color="#005B45" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+
+            <!-- Mystical glow + rings -->
+            <circle cx="340" cy="360" r="232" fill="url(#emeraldGlow)"/>
+            <circle cx="340" cy="360" r="250" fill="none" stroke="#C8A244" stroke-opacity="0.22" stroke-width="1"/>
+            <circle cx="340" cy="360" r="250" fill="none" stroke="#C8A244" stroke-opacity="0.30" stroke-width="1" stroke-dasharray="2 12"/>
+
+            <!-- Triangle -->
+            <path d="M340 158 L530 472 L150 472 Z" fill="#005B45" fill-opacity="0.05"
+                  stroke="url(#goldMetal)" stroke-width="2.5" stroke-linejoin="round"/>
+
+            <!-- Vertex nodes -->
+            <circle cx="340" cy="158" r="6" fill="url(#goldMetal)"/>
+            <circle cx="150" cy="472" r="6" fill="url(#goldMetal)"/>
+            <circle cx="530" cy="472" r="6" fill="url(#goldMetal)"/>
+
+            <!-- Center wordmark -->
+            <text x="340" y="352" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif"
+                  font-size="52" font-weight="600" letter-spacing="4" fill="url(#goldMetal)">T.I.N.A<tspan font-size="18" dy="-22" letter-spacing="0" fill="#C8A244">™</tspan></text>
+            <text x="340" y="390" text-anchor="middle" font-family="'Be Vietnam Pro', sans-serif"
+                  font-size="12.5" letter-spacing="2.2" fill="#F1D89A" fill-opacity="0.78">TRANSFORMATION INTO NEW AWARENESS</text>
+
+            <!-- Vertex label: Clarity (top) -->
+            <text x="340" y="60" text-anchor="middle" font-family="'Be Vietnam Pro', sans-serif" font-size="14" font-weight="700" letter-spacing="2.5" fill="#E2C36C">CLARITY</text>
+            <text x="340" y="84" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="19" font-style="italic" fill="#F1D89A">Sự thông suốt</text>
+            <text x="340" y="106" text-anchor="middle" font-family="'Be Vietnam Pro', sans-serif" font-size="12" fill="rgba(255,255,255,0.74)">Thấy rõ hướng đi của chính mình</text>
+
+            <!-- Vertex label: Confidence (bottom-left) -->
+            <text x="150" y="522" text-anchor="middle" font-family="'Be Vietnam Pro', sans-serif" font-size="14" font-weight="700" letter-spacing="2.5" fill="#E2C36C">CONFIDENCE</text>
+            <text x="150" y="546" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="19" font-style="italic" fill="#F1D89A">Tự tin làm chủ</text>
+            <text x="150" y="568" text-anchor="middle" font-family="'Be Vietnam Pro', sans-serif" font-size="12" fill="rgba(255,255,255,0.74)">Vững vàng từ bên trong</text>
+
+            <!-- Vertex label: Connection (bottom-right) -->
+            <text x="530" y="522" text-anchor="middle" font-family="'Be Vietnam Pro', sans-serif" font-size="14" font-weight="700" letter-spacing="2.5" fill="#E2C36C">CONNECTION</text>
+            <text x="530" y="546" text-anchor="middle" font-family="'Cormorant Garamond', Georgia, serif" font-size="19" font-style="italic" fill="#F1D89A">Khơi dậy kết nối</text>
+            <text x="530" y="568" text-anchor="middle" font-family="'Be Vietnam Pro', sans-serif" font-size="12" fill="rgba(255,255,255,0.74)">Kết nối lại với chính mình</text>
+          </svg>
         </div>
       </div>
     </section>
