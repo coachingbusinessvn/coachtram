@@ -1,9 +1,29 @@
 /* ═══════════════════════════════════════════════════════════
    BACKGROUNDS — Edina Trâm V2
    Reusable background depth utilities.
-   All classes assume `position: relative; overflow: hidden;`
-   already set on the target element.
+   The utilities are self-contained: they establish their own
+   positioning context and raise direct children above the
+   decorative pseudo-element layers.
    ═══════════════════════════════════════════════════════════ */
+
+/* ── Shared containment ─────────────────────────────────────
+   Pseudo-element patterns use negative insets and rotation, so
+   the host must clip them. Direct children (usually `.container`)
+   are raised above the overlays so text/buttons stay readable
+   and clickable.                                               */
+.bg-emerald-veil,
+.bg-sacred-pattern,
+.bg-silk-orbit {
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-emerald-veil > *,
+.bg-sacred-pattern > *,
+.bg-silk-orbit > * {
+  position: relative;
+  z-index: 1;
+}
 
 /* ── 1. Emerald Veil — default rich dark depth ─────────────
    Replaces the flat linear-gradient used on dark sections.
@@ -60,6 +80,22 @@
   inset: 0;
   pointer-events: none;
   background: radial-gradient(ellipse at 50% 50%, transparent 38%, rgba(0, 0, 0, 0.16) 100%);
+}
+
+/* Sacred Paper sits on a dark base — content rendered directly on the
+   pattern needs light text. Cards (.method-col) keep their own light
+   surface + dark text, so we target only section headers and callouts. */
+.bg-sacred-pattern .section-header h2,
+.bg-sacred-pattern .section-header h3 {
+  color: #fff;
+}
+
+.bg-sacred-pattern .section-header p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.bg-sacred-pattern .tina-callout p {
+  color: rgba(255, 255, 255, 0.92);
 }
 
 /* ── 3. Silk Orbit — cinematic CTA depth ───────────────────
