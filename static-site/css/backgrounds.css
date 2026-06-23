@@ -94,8 +94,16 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
-.bg-sacred-pattern .tina-callout p {
+.bg-sacred-pattern .tina-callout--emerald p {
   color: rgba(255, 255, 255, 0.92);
+}
+
+.bg-sacred-pattern .tina-callout:not(.tina-callout--emerald):not(.tina-callout--gold) p {
+  color: var(--color-fg, #0b1f19);
+}
+
+.bg-sacred-pattern .tina-callout--gold p {
+  color: #0b1f19;
 }
 
 /* ── 3. Silk Orbit — cinematic CTA depth ───────────────────

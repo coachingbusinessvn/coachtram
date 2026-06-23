@@ -543,7 +543,7 @@
 
 .method-col--positive {
   border-top: 4px solid var(--page-accent);
-  background: rgba(11, 138, 102, 0.02);
+  background: #f7fbf9;
 }
 
 .method-col h3 {
