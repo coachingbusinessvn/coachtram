@@ -3,9 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Coach Edina Trâm – Tham vấn Tâm lý, Khai vấn cuộc sống, Tâm linh và Tài chính. Đồng hành cùng bạn tìm lại sự rõ ràng, tự tin và kết nối sâu với chính mình.">
-  <title>Coach Edina Trâm – Tham vấn Tâm lý & Khai vấn cuộc sống</title>
+  <meta name="description" content="Edina Trâm – Hành trình chuyển hoá tại giao điểm Tâm lý học, Khai vấn, Tâm linh và Tài chính. Đồng hành cùng bạn tìm lại sự rõ ràng, tự tin và kết nối sâu với chính mình.">
+  <title>Edina Trâm – Hành trình chuyển hoá</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ── Home — premium callout (editorial declaration) ── */
+    .home-callout {
+      position: relative;
+      max-width: 860px;
+      margin: var(--space-8, 2rem) auto 0;
+      padding: var(--space-8, 2rem);
+      text-align: center;
+      background:
+        radial-gradient(120% 140% at 50% 0%, rgba(241, 216, 154, 0.18), transparent 60%),
+        linear-gradient(155deg, #06513c, #00372a);
+      border: 1px solid rgba(200, 162, 68, 0.5);
+      border-radius: var(--radius-lg, 1.25rem);
+      box-shadow: var(--shadow-lg, 0 8px 40px rgba(1, 79, 61, 0.09));
+      overflow: hidden;
+    }
+    .home-callout::before {
+      content: "\201C";
+      position: absolute; top: -0.18em; left: 50%; transform: translateX(-50%);
+      font-family: var(--font-heading); font-size: 5rem; line-height: 1;
+      color: var(--champagne-glow, #F1D89A); opacity: 0.35; pointer-events: none;
+    }
+    .home-callout p {
+      position: relative; margin: 0;
+      font-family: var(--font-heading);
+      font-size: clamp(1.5rem, 3.2vw, 1.75rem); font-weight: 600; line-height: 1.45;
+      color: #fff;
+    }
+
+    /* ── Roots of transformation (3 layers) ── */
+    .roots-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-6, 1.5rem);
+      margin-top: var(--space-8, 2rem);
+    }
+    .roots-card {
+      background: var(--color-surface, #fff);
+      border: 1px solid var(--color-border-light, #ece6d8);
+      border-radius: var(--radius-lg, 1.25rem);
+      padding: var(--space-8, 2rem); text-align: center;
+      box-shadow: var(--shadow-sm, 0 2px 10px rgba(1, 79, 61, 0.05));
+    }
+    .roots-num {
+      font-family: var(--font-heading); font-size: 2.5rem; font-weight: 600;
+      color: var(--royal-gold, #C8A244); line-height: 1; margin-bottom: var(--space-3, 0.75rem);
+    }
+    .roots-card h3 { color: var(--color-fg, #0b1f19); margin-bottom: var(--space-2, 0.5rem); font-size: 1.125rem; }
+    .roots-card p { color: var(--color-fg-muted, #4A5B54); font-size: 0.95rem; line-height: 1.65; }
+
+    /* ── 6 signs grid ── */
+    .signs-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-5, 1.25rem);
+      margin-top: var(--space-8, 2rem);
+    }
+    .sign-card {
+      background: var(--color-surface, #fff);
+      border: 1px solid var(--color-border-light, #ece6d8);
+      border-left: 3px solid var(--royal-gold, #C8A244);
+      border-radius: var(--radius-md, 0.85rem);
+      padding: var(--space-6, 1.5rem); text-align: left;
+    }
+    .sign-no {
+      font-family: var(--font-heading); color: var(--royal-gold, #C8A244); font-weight: 700;
+      font-size: 0.8rem; letter-spacing: .1em; text-transform: uppercase;
+    }
+    .sign-card h3 { font-size: 1.05rem; color: var(--color-fg, #0b1f19); margin: 0.35rem 0 0.5rem; }
+    .sign-card p { font-size: 0.9rem; line-height: 1.65; color: var(--color-fg-muted, #4A5B54); }
+
+    /* ── Signature triangle visual ── */
+    .triangle-visual { text-align: center; }
+    .triangle-visual img {
+      max-width: 460px; width: 100%; height: auto; margin-inline: auto;
+      filter: drop-shadow(0 14px 34px rgba(1, 79, 61, 0.14));
+    }
+
+    @media (max-width: 860px) {
+      .roots-grid, .signs-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
@@ -38,7 +116,7 @@
 
 
     <!-- ═══════════════════════════════════════════════════════
-         1. HERO SECTION
+         1. HERO / BANNER
          ═══════════════════════════════════════════════════════ -->
     <section class="home-hero">
       <div class="container">
@@ -46,9 +124,9 @@
 
           <!-- Content -->
           <div class="home-hero-content" data-reveal>
-            <span class="badge badge--gold">COACHING · MINDFULNESS · TRANSFORMATION</span>
-            <h1>Dẫn lối bình an,<br>khai mở <em>nội lực.</em></h1>
-            <p class="home-hero-desc">Đồng hành cùng bạn tìm lại sự rõ ràng trong tâm trí, tự tin trong hành động và sống một cuộc đời đúng với giá trị của chính mình.</p>
+            <span class="badge badge--gold">EDINA TRÂM · HÀNH TRÌNH CHUYỂN HOÁ</span>
+            <h1>Cảm ơn bạn đã<br>có mặt <em>ở đây.</em></h1>
+            <p class="home-hero-desc">Tôi tin không có gì là ngẫu nhiên. Việc bạn dừng lại nơi này có thể là khởi đầu cho một sự chuyển mình thật sự — rõ ràng hơn, vững vàng hơn, và kết nối sâu hơn với chính mình.</p>
             <div class="home-hero-ctas">
               <a href="#services" class="btn btn--primary btn--lg">Khám phá dịch vụ</a>
               <a href="lien-he.html" class="btn btn--outline btn--lg">Tư vấn 1:1 miễn phí</a>
@@ -68,7 +146,7 @@
               </div>
               <div class="home-hero-value">
                 <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-                <strong>Đồng Hành Từ Tê</strong>
+                <strong>Đồng Hành Tận Tâm</strong>
                 <span>Bước qua giới hạn</span>
               </div>
             </div>
@@ -76,7 +154,7 @@
 
           <!-- Hero Image -->
           <div class="home-hero-img" data-reveal="right">
-            <img src="coach-tram-hero.png" alt="Coach Edina Trâm" loading="lazy" width="600" height="680">
+            <img src="coach-tram-hero.png" alt="Coach Edina Trâm" loading="eager" width="600" height="680">
           </div>
 
         </div>
@@ -88,44 +166,161 @@
 
 
     <!-- ═══════════════════════════════════════════════════════
-         2. SERVICES SECTION
+         2. VÌ SAO HÀNH TRÌNH NÀY RA ĐỜI
          ═══════════════════════════════════════════════════════ -->
-    <section id="services" class="section section--alt">
+    <section class="section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="badge">Vì sao hành trình này ra đời?</span>
+          <h2>Tôi đã đi qua đúng con đường bạn đang đi</h2>
+          <div class="divider"></div>
+          <p>Từ một người thành công theo mọi chuẩn mực, tôi đi qua hai lần phá sản, một cuộc hôn nhân đổ vỡ và những năm dài suy sụp. Chính từ đáy sâu ấy, một sự thức tỉnh bắt đầu — và TINA ra đời để trở thành người đồng hành mà tôi từng ao ước có được trong những ngày tăm tối nhất.</p>
+        </div>
+        <div class="home-callout" data-reveal>
+          <p>Tôi không chỉ truyền đạt lý thuyết chuyển hoá. Tôi đã đi qua đúng con đường mà bạn đang đi.</p>
+        </div>
+        <div style="text-align:center; margin-top: var(--space-6, 1.5rem);" data-reveal>
+          <a href="cau-chuyen-cua-toi.html" class="btn btn--outline">Đọc câu chuyện của Trâm →</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         3. GỐC RỄ CỦA SỰ CHUYỂN HOÁ
+         ═══════════════════════════════════════════════════════ -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="badge badge--gold">Gốc rễ của sự chuyển hoá</span>
+          <h2>Vì sao khủng hoảng cứ quay lại?</h2>
+          <div class="divider"></div>
+          <p>Phần lớn giải pháp chỉ chữa phần ngọn nên nỗi đau cứ quay lại. Chuyển hoá chỉ bền vững khi ba tầng nền tảng bên trong cùng được tái cấu trúc.</p>
+        </div>
+        <div class="roots-grid" data-reveal-stagger>
+          <div class="roots-card" data-reveal>
+            <div class="roots-num">01</div>
+            <h3>Nhận thức được khai mở</h3>
+            <p>Bạn thật sự thấy rõ mình đang sống từ đâu, thay vì lặp lại những mô thức cũ một cách vô thức.</p>
+          </div>
+          <div class="roots-card" data-reveal>
+            <div class="roots-num">02</div>
+            <h3>Hành vi được làm mới</h3>
+            <p>Thay đổi bằng công cụ thực hành cụ thể, không chỉ bằng cảm hứng nhất thời rồi đâu lại vào đấy.</p>
+          </div>
+          <div class="roots-card" data-reveal>
+            <div class="roots-num">03</div>
+            <h3>Nghiệp lực được hoá giải</h3>
+            <p>Nhân cách sống được soi chiếu để chuyển hoá bền vững, cân bằng cả Đời lẫn Đạo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         4. CHUYỂN HOÁ THỰC SỰ LÀ GÌ (6 dấu hiệu)
+         ═══════════════════════════════════════════════════════ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="badge">Chuyển hoá thực sự</span>
+          <h2>Thế nào là một sự chuyển hoá thật sự?</h2>
+          <div class="divider"></div>
+          <p>Chuyển hoá không phải một khoảnh khắc “à há” rồi cuộc đời tự đổi. Một chuyển hoá thật mang sáu dấu hiệu.</p>
+        </div>
+        <div class="signs-grid" data-reveal-stagger>
+          <div class="sign-card" data-reveal>
+            <span class="sign-no">01 · Process</span>
+            <h3>Là một quá trình</h3>
+            <p>Nó không xảy ra trong một buổi học truyền cảm hứng, mà cần thời gian để ngấm, để sống, để trở thành chính con người bạn.</p>
+          </div>
+          <div class="sign-card" data-reveal>
+            <span class="sign-no">02 · Self-Actualization</span>
+            <h3>Đến từ sự tự nhận thức</h3>
+            <p>Không ai thay đổi bạn được từ bên ngoài. Mọi chuyển hoá thật đều nảy lên từ bên trong bạn — vai trò của tôi là giúp bạn nhìn rõ.</p>
+          </div>
+          <div class="sign-card" data-reveal>
+            <span class="sign-no">03 · Hidden Process</span>
+            <h3>Diễn ra âm thầm bên trong</h3>
+            <p>Nó không ồn ào, không phô trương. Những đổi thay quan trọng nhất thường xảy ra lặng lẽ, nơi không ai thấy ngoài bạn.</p>
+          </div>
+          <div class="sign-card" data-reveal>
+            <span class="sign-no">04 · Significant Emotional Event</span>
+            <h3>Được kích hoạt bởi một biến cố giàu cảm xúc</h3>
+            <p>Nó thường bắt đầu từ một cú chạm đủ sâu để lay chuyển những gì bạn tưởng đã cố định. Chương trình tạo ra những điểm chạm ấy một cách an toàn.</p>
+          </div>
+          <div class="sign-card" data-reveal>
+            <span class="sign-no">05 · Being Vulnerable</span>
+            <h3>Đòi hỏi dám tổn thương</h3>
+            <p>Bạn phải dám mong manh, dám thành thật với chính mình về những điều khó chấp nhận nhất. Đó là cái giá, và cũng là cánh cửa.</p>
+          </div>
+          <div class="sign-card" data-reveal>
+            <span class="sign-no">06 · One-Way Ticket</span>
+            <h3>Là tấm vé một chiều</h3>
+            <p>Một khi đã thật sự chuyển hoá, bạn không thể quay lại phiên bản cũ — vì nền tảng tư duy của bạn đã khác.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         5. SIGNATURE — TAM GIÁC CHUYỂN HOÁ 3C
+         ═══════════════════════════════════════════════════════ -->
+    <section class="section section--alt">
+      <div class="container">
+        <div class="section-header" data-reveal>
+          <span class="badge badge--gold">Tam giác chuyển hoá 3C</span>
+          <h2>Clarity · Confidence · Connection</h2>
+          <div class="divider"></div>
+        </div>
+        <div class="triangle-visual" data-reveal>
+          <img src="assets/images/tina-visual-triangle.png" alt="Tam giác chuyển hoá 3C — Clarity, Confidence, Connection" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         6. HỆ SINH THÁI DỊCH VỤ
+         ═══════════════════════════════════════════════════════ -->
+    <section id="services" class="section">
       <div class="container">
 
         <div class="section-header" data-reveal>
           <span class="badge">Hệ sinh thái dịch vụ</span>
-          <h2>Ba chương trình chuyển hóa</h2>
+          <h2>Ba chương trình đồng hành</h2>
           <div class="divider"></div>
-          <p>Mỗi chương trình được thiết kế riêng biệt, phục vụ từng giai đoạn trên hành trình phát triển của bạn — từ đam mê cá nhân đến tự do tài chính.</p>
+          <p>Mỗi chương trình phục vụ một giai đoạn trên hành trình chuyển hoá của bạn — từ bước kết nối đầu tiên, đến hành trình chuyển hoá chuyên sâu và đồng hành hiện thực hoá tầm nhìn dài hạn.</p>
         </div>
 
         <div class="srv-grid" data-reveal-stagger>
 
-          <!-- P2P -->
+          <!-- Gói kết nối 3 buổi -->
           <div class="srv-card srv-card--p2p">
             <div class="srv-num">01</div>
-            <h3>Passion to Profit</h3>
-            <div class="srv-sub">Workshop 2 ngày</div>
-            <p>Chuyển hóa đam mê thành mô hình kinh doanh có lợi nhuận. Tìm ra lợi thế cạnh tranh, xây dựng nền tảng vững chắc và bắt đầu hành trình khởi nghiệp đầy tự tin.</p>
+            <h3>Gói kết nối 3 buổi</h3>
+            <div class="srv-sub">Nhập môn · 3 buổi kết nối</div>
+            <p>Chương trình nhập môn giúp bạn bắt đầu kết nối và tìm hiểu chính mình qua 3 phiên đồng hành 1:1.</p>
             <a href="dich-vu-1.html" class="btn btn--primary btn--sm">Tìm hiểu thêm →</a>
           </div>
 
-          <!-- B2F -->
+          <!-- TINA Awakening -->
           <div class="srv-card srv-card--b2f">
             <div class="srv-num">02</div>
             <h3>TINA Awakening</h3>
             <div class="srv-sub">90 ngày chuyển hoá 1:1</div>
-            <p>Hành trình Coaching & Mentoring 1:1 giúp bạn tìm lại sự rõ ràng, tự tin làm chủ và kết nối sâu với chính mình qua 12 module chuyển hoá.</p>
+            <p>Hành trình chuyên sâu 12 module giúp bạn tìm lại sự rõ ràng, tự tin làm chủ và kết nối sâu với chính mình.</p>
             <a href="dich-vu-2.html" class="btn btn--primary btn--sm">Tìm hiểu thêm →</a>
           </div>
 
-          <!-- BM -->
+          <!-- TINA Alignment -->
           <div class="srv-card srv-card--bm">
             <div class="srv-num">03</div>
-            <h3>Business Mastery</h3>
-            <div class="srv-sub">Coaching 1:1 chiến lược</div>
-            <p>Chương trình coaching cá nhân hóa dành cho doanh nhân muốn làm chủ mọi khía cạnh — từ chiến lược kinh doanh, lãnh đạo đội ngũ đến phát triển bản thân.</p>
+            <h3>TINA Alignment</h3>
+            <div class="srv-sub">Đồng hành 6 tháng – 1 năm</div>
+            <p>Đồng hành dài hơi để hiện thực hoá tầm nhìn 5–10 năm và những mục tiêu đã xác định từ Module 10 của TINA Awakening.</p>
             <a href="dich-vu-3.html" class="btn btn--primary btn--sm">Tìm hiểu thêm →</a>
           </div>
 
@@ -135,134 +330,41 @@
 
 
     <!-- ═══════════════════════════════════════════════════════
-         3. ABOUT SECTION
-         ═══════════════════════════════════════════════════════ -->
-    <section class="section" id="about">
-      <div class="container">
-        <div class="about-grid">
-
-          <!-- Image -->
-          <div class="about-img-wrap" data-reveal="left">
-            <img src="coach-tram.JPG" alt="Coach Edina Trâm" loading="lazy" width="520" height="640">
-            <div class="about-badge">Tâm lý · Khai vấn</div>
-          </div>
-
-          <!-- Content -->
-          <div class="about-content" data-reveal="right">
-            <span class="badge">Người đồng hành</span>
-            <h2>Chân thực. Thấu hiểu.<br>Truyền cảm hứng.</h2>
-            <div class="divider divider--left"></div>
-            <div class="about-name">Edina Trâm</div>
-            <p class="about-bio">Edina Trâm là người đồng hành tại giao điểm của Tâm lý học, Khai vấn, Tâm linh và Tài chính. Với nền tảng học thuật, trải nghiệm sống qua nhiều quốc gia và hành trình chuyển hoá cá nhân sâu sắc, Trâm giúp bạn nhìn rõ chính mình, phục hồi nội lực và kiến tạo một đời sống vững vàng cả Đời lẫn Đạo.</p>
-            <div class="about-credentials">
-              <span class="badge badge--gold">Thạc sỹ Tâm lý học</span>
-              <span class="badge badge--gold">ICF ACC</span>
-              <span class="badge badge--gold">Thạc sỹ Tài chính</span>
-              <span class="badge badge--gold">Tâm linh & Thiền định</span>
-            </div>
-
-            <!-- Stats -->
-            <div class="stat-grid" data-reveal-stagger>
-              <div class="stat-card">
-                <div class="stat-num" data-count="20" data-suffix="+">0</div>
-                <div class="stat-label">Năm sống & làm việc quốc tế</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-num" data-count="4">0</div>
-                <div class="stat-label">Quốc gia đã sinh sống</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-num" data-count="3">0</div>
-                <div class="stat-label">Ngôn ngữ sử dụng</div>
-              </div>
-              <div class="stat-card">
-                <div class="stat-num" data-count="15" data-suffix="+">0</div>
-                <div class="stat-label">Năm thực hành tâm linh</div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ═══════════════════════════════════════════════════════
-         4. BOOK SECTION
-         ═══════════════════════════════════════════════════════ -->
-    <section class="section book-section">
-      <div class="container">
-        <div class="book-grid">
-
-          <!-- Book Image -->
-          <div class="book-img" data-reveal="left">
-            <img src="assets/book-mockup.png" alt="Sách Ánh Sáng Của Ước Mơ – Edina Trâm" loading="lazy" width="340" height="420">
-          </div>
-
-          <!-- Book Content -->
-          <div class="book-content" data-reveal="right">
-            <span class="badge badge--dark">Sách mới</span>
-            <h2>Ánh Sáng Của Ước Mơ</h2>
-            <p>Cuốn sách chia sẻ hành trình chuyển hóa cá nhân và những bài học quý giá trên con đường kiến tạo cuộc sống ý nghĩa. Một nguồn cảm hứng cho bất kỳ ai đang tìm kiếm sự rõ ràng và mục đích sống.</p>
-            <div class="book-ctas">
-              <a href="#" class="btn btn--accent btn--lg">Đặt sách ngay</a>
-              <a href="#" class="btn btn--outline-light btn--lg">Xem thêm</a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ═══════════════════════════════════════════════════════
-         5. TESTIMONIALS SECTION
+         7. TESTIMONIALS (Awakening)
          ═══════════════════════════════════════════════════════ -->
     <section class="section section--alt">
       <div class="container">
 
         <div class="section-header" data-reveal>
           <span class="badge">Khách hàng nói gì</span>
-          <h2>Hành trình chuyển hóa thật sự</h2>
+          <h2>Những chia sẻ sau hành trình Awakening</h2>
           <div class="divider"></div>
         </div>
 
         <div class="testi-grid" data-reveal-stagger>
 
-          <!-- Testimonial 1 -->
-          <div class="testi-card">
-            <div class="testi-img-wrap">
-              <img class="testi-img" src="assets/dv2/t1-caolan.png" alt="Cao Lân" loading="lazy" width="320" height="400">
-            </div>
+          <div class="testi-card" data-reveal>
             <div>
-              <div class="testi-name">Cao Lân</div>
-              <div class="testi-role">Chủ quán F&B</div>
+              <p class="testi-name">Chị Hoàng Hương</p>
+              <p class="testi-role">1984 · Phó phòng Tín dụng khách hàng, Ngân hàng BIDV</p>
+              <p class="testi-quote">Tôi đã sống 40 năm, va chạm xã hội nhiều, nhưng hôm nay tôi mới thật sự sáng mắt ra. Trâm giúp tôi hiểu tam giác Bi - Trí - Dũng và soi thẳng vào đời mình. Một tháng trước, lúc bế tắc nhất, tôi đã cầu xin một quý nhân dẫn đường. Và Trâm đã xuất hiện.</p>
             </div>
-            <p class="testi-quote">Trước khi gặp chị Trâm, tôi gần như kiệt sức với việc vận hành quán. Sau chương trình coaching, tôi đã xây dựng được hệ thống, có thời gian cho gia đình và doanh thu tăng 40%.</p>
           </div>
 
-          <!-- Testimonial 2 -->
-          <div class="testi-card">
-            <div class="testi-img-wrap">
-              <img class="testi-img" src="assets/dv2/t1-thanhnga.png" alt="Thanh Ngà" loading="lazy" width="320" height="400">
-            </div>
+          <div class="testi-card" data-reveal>
             <div>
-              <div class="testi-name">Thanh Ngà</div>
-              <div class="testi-role">Startup Founder</div>
+              <p class="testi-name">Chị Minh Hương</p>
+              <p class="testi-role">1984 · Boston, Massachusetts</p>
+              <p class="testi-quote">Phiên coach với Trâm là một trong những trải nghiệm sâu nhất tôi từng có. Trâm giúp tôi chạm vào một ký ức tưởng đã quên từ lâu. Ở Trâm luôn có cảm giác an toàn, kiên nhẫn và không bao giờ phán xét.</p>
             </div>
-            <p class="testi-quote">Chị Trâm không chỉ coaching về kinh doanh mà còn giúp tôi tìm lại chính mình. Tôi học được cách lắng nghe bản thân, đưa ra quyết định sáng suốt và sống đúng với giá trị cốt lõi.</p>
           </div>
 
-          <!-- Testimonial 3 -->
-          <div class="testi-card">
-            <div class="testi-img-wrap">
-              <img class="testi-img" src="assets/dv2/t1-phamhieu.png" alt="Phạm Hiếu" loading="lazy" width="320" height="400">
-            </div>
+          <div class="testi-card" data-reveal>
             <div>
-              <div class="testi-name">Phạm Hiếu</div>
-              <div class="testi-role">Giám đốc vận hành</div>
+              <p class="testi-name">Anh Lê Thế Hào</p>
+              <p class="testi-role">1993 · Dịch giả, TP. Hồ Chí Minh</p>
+              <p class="testi-quote">Hai điều giá trị nhất trong phiên: em nhìn rõ hơn đâu là phương tiện và đâu mới thật sự là cứu cánh của đời mình; và bài học “còn thở là còn gỡ”. Em cảm nhận được một tình thương thiêng liêng trong đó.</p>
             </div>
-            <p class="testi-quote">Business Mastery đã thay đổi hoàn toàn cách tôi lãnh đạo đội ngũ. Từ một người quản lý áp lực, tôi trở thành nhà lãnh đạo truyền cảm hứng, và đội ngũ cũng phát triển vượt bậc.</p>
           </div>
 
         </div>
@@ -271,68 +373,13 @@
 
 
     <!-- ═══════════════════════════════════════════════════════
-         6. MULTI-CHANNEL SECTION
-         ═══════════════════════════════════════════════════════ -->
-    <section class="section">
-      <div class="container">
-
-        <div class="section-header" data-reveal>
-          <span class="badge">Kết nối đa kênh</span>
-          <h2>Đi cùng Edina trên mọi nền tảng</h2>
-          <div class="divider"></div>
-        </div>
-
-        <div class="eco-grid" data-reveal-stagger>
-
-          <!-- Facebook -->
-          <div class="eco-card">
-            <div class="eco-icon">
-              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-            </div>
-            <h3>Facebook</h3>
-            <p>Cộng đồng chia sẻ kiến thức, cảm hứng và kết nối hàng ngày cùng hàng nghìn doanh nhân.</p>
-          </div>
-
-          <!-- YouTube -->
-          <div class="eco-card">
-            <div class="eco-icon">
-              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
-            </div>
-            <h3>YouTube</h3>
-            <p>Video chia sẻ chuyên sâu về coaching, mindfulness và phát triển bản thân cho doanh nhân.</p>
-          </div>
-
-          <!-- Newsletter -->
-          <div class="eco-card">
-            <div class="eco-icon">
-              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </div>
-            <h3>Newsletter</h3>
-            <p>Nhận bài viết chuyên sâu, tài nguyên miễn phí và cập nhật mới nhất mỗi tuần qua email.</p>
-          </div>
-
-          <!-- Edina Workspace -->
-          <div class="eco-card">
-            <div class="eco-icon">
-              <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            </div>
-            <h3>Edina Workspace</h3>
-            <p>Không gian làm việc và học tập trực tuyến dành riêng cho cộng đồng học viên Edina Trâm.</p>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ═══════════════════════════════════════════════════════
-         7. CTA FINAL
+         8. CTA FINAL
          ═══════════════════════════════════════════════════════ -->
     <section class="cta-final section--dark">
       <div class="container" data-reveal>
         <span class="badge badge--dark">Bắt đầu hành trình</span>
         <h2>Bạn đã sẵn sàng cho phiên bản<br>tuyệt vời nhất?</h2>
-        <p>Đặt lịch tư vấn miễn phí để cùng tôi tìm ra chương trình phù hợp nhất cho hành trình chuyển hóa của bạn.</p>
+        <p>Đặt lịch tư vấn miễn phí để cùng tôi tìm ra chương trình phù hợp nhất cho hành trình chuyển hoá của bạn.</p>
         <a href="lien-he.html" class="btn btn--accent btn--lg">Đặt lịch Tư vấn miễn phí</a>
       </div>
     </section>
