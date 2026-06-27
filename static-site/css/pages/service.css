@@ -155,7 +155,6 @@
 }
 
 .srv-section--dark {
-  background: linear-gradient(170deg, var(--emerald-noir) 0%, var(--deep-forest-ink) 100%);
   color: #fff;
 }
 
@@ -496,7 +495,6 @@
 /* ─── CTA Final Section ─── */
 .srv-cta-final {
   text-align: center;
-  background: linear-gradient(170deg, var(--emerald-noir) 0%, var(--deep-forest-ink) 100%);
   padding-block: var(--space-24);
   position: relative;
   overflow: hidden;
@@ -537,6 +535,7 @@
   border-radius: var(--radius-lg);
   padding: var(--space-8);
   text-align: left;
+  color: var(--color-fg);
 }
 
 .method-col--negative {
@@ -545,7 +544,7 @@
 
 .method-col--positive {
   border-top: 4px solid var(--page-accent);
-  background: rgba(11, 138, 102, 0.02);
+  background: #f7fbf9;
 }
 
 .method-col h3 {
@@ -860,4 +859,31 @@
 .timeline-item p {
   font-size: var(--text-sm);
   line-height: 1.7;
+}
+
+/* ── Bridge: apply Emerald Veil to dark service sections ── */
+.srv-section--dark:not(.bg-sacred-pattern):not(.bg-silk-orbit) {
+  background: var(--ev-gradient);
+}
+.srv-section--dark:not(.bg-sacred-pattern):not(.bg-silk-orbit)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: var(--ev-veil);
+}
+
+/* ── Bridge: bare final CTAs (no Silk Orbit) still get Emerald Veil ──
+   The flat background was removed so .bg-silk-orbit can render, but
+   pages that don't opt into Silk Orbit (dich-vu-1/3, cau-chuyen) would
+   otherwise be transparent with white text. Give them a dark default. */
+.srv-cta-final:not(.bg-silk-orbit):not(.bg-emerald-veil) {
+  background: var(--ev-gradient);
+}
+.srv-cta-final:not(.bg-silk-orbit):not(.bg-emerald-veil)::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: var(--ev-veil);
 }
