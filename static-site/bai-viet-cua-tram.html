@@ -24,21 +24,7 @@
   </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container nav">
-      <a href="index.html" class="nav-logo">Edina <span>Trâm</span></a>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button>
-      <nav class="nav-links">
-        <a href="index.html">Trang chủ</a>
-        <a href="cau-chuyen-cua-toi.html">Câu chuyện của tôi</a>
-        <a href="bai-viet-cua-tram.html" class="active">Bài viết của Trâm</a>
-        <a href="dich-vu-1.html">TINA Awareness</a>
-        <a href="dich-vu-2.html">TINA Awakening</a>
-        <a href="dich-vu-3.html">TINA Alignment</a>
-
-      </nav>
-    </div>
-  </header>
+  <site-header active="bai-viet-cua-tram.html"></site-header>
 
   <main>
     <section class="library-hero">
@@ -146,43 +132,9 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-inner">
-        <div>
-          <div class="footer-logo">Edina <span>Trâm</span></div>
-          <p class="footer-tagline">Dẫn lối bình an, khai mở nội lực. Đồng hành cùng bạn trên hành trình kiến tạo cuộc sống chất lượng.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Về Trâm</h4>
-          <div class="footer-links">
-            <a href="cau-chuyen-cua-toi.html">Câu chuyện của tôi</a>
-            <a href="bai-viet-cua-tram.html">Bài viết của Trâm</a>
-            <a href="lien-he.html">Kết nối 1:1</a>
-          </div>
-        </div>
-        <div class="footer-col">
-          <h4>Dịch vụ</h4>
-          <div class="footer-links">
-            <a href="dich-vu-1.html">TINA Awareness</a>
-            <a href="dich-vu-2.html">TINA Awakening</a>
-            <a href="dich-vu-3.html">TINA Alignment</a>
-          </div>
-        </div>
-        <div class="footer-col">
-          <h4>Kết nối</h4>
-          <div class="footer-links">
-            <a href="lien-he.html">Liên hệ</a>
-            <a href="mailto:lequynhtram@gmail.com">lequynhtram@gmail.com</a>
-            <a href="tel:+84889590888">(+84) 88-9590-888</a>
-            <a href="https://edinatram.vn" target="_blank" rel="noopener">edinatram.vn</a>
-          </div>
-        </div>
-      </div>
-      <div class="footer-bottom"><span>© 2026 Edina Trâm. All rights reserved.</span></div>
-    </div>
-  </footer>
-  <button class="scroll-top-btn" aria-label="Cuộn lên đầu trang">↑</button>
+  <site-footer></site-footer>
+  <script src="js/components.js" defer></script>
+  <script src="js/sections.js" defer></script>
   <script src="js/main.js" defer></script>
 </body>
 </html>
