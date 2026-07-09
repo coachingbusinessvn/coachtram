@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Book lịch phiên khám phá 1:1 cùng Edina Trâm. Điền questionnaire để tiết kiệm thời gian và giúp Trâm nắm rõ vấn đề của bạn trước buổi gặp." />
+  <title>Book lịch – Phiên khám phá cùng Edina Trâm</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <site-header active="book-lich.html"></site-header>
+  <noscript>
+    <div style="background:#06513c;color:#fff;text-align:center;padding:.6rem 1rem;font-size:.9rem;">
+      Trang hiển thị đầy đủ hơn khi bật JavaScript.
+      <a href="index.html" style="color:#F1D89A;">Trang chủ</a> ·
+      <a href="coaching-cung-edina.html" style="color:#F1D89A;">Coaching cùng Edina</a> ·
+      <a href="lien-he.html" style="color:#F1D89A;">Liên hệ</a>
+    </div>
+  </noscript>
+
+  <main>
+    <glow-blobs></glow-blobs>
+
+    <section class="book-hero">
+      <div class="container" data-reveal>
+        <span class="badge badge--gold">Phiên khám phá 1:1 miễn phí</span>
+        <h1>Book lịch <em>cùng Edina</em></h1>
+        <p>Để bạn tiết kiệm thời gian với tôi, và để tôi nắm rõ vấn đề của bạn trước buổi gặp, vui lòng điền questionnaire ngắn bên dưới trước khi chọn lịch.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container book-layout">
+        <aside class="book-sidebar" data-reveal>
+          <span class="badge">Chọn dịch vụ</span>
+          <h2>Bậc bạn đang cân nhắc</h2>
+          <p>Bạn có thể đổi lựa chọn sau phiên khám phá. Nếu chưa chắc, hãy chọn gói gần nhất với nhu cầu hiện tại.</p>
+
+          <div class="book-services" role="radiogroup" aria-label="Dịch vụ quan tâm">
+            <label class="book-service-option">
+              <input type="radio" name="service" value="awareness" form="booking-form" required />
+              <span><strong>TINA Awareness</strong><span>30 ngày · gỡ một nút thắt hoặc quyết định quan trọng.</span></span>
+            </label>
+            <label class="book-service-option">
+              <input type="radio" name="service" value="awakening" form="booking-form" required />
+              <span><strong>TINA Awakening</strong><span>90 ngày · tái cấu trúc nền tảng sống.</span></span>
+            </label>
+            <label class="book-service-option">
+              <input type="radio" name="service" value="alignment" form="booking-form" required />
+              <span><strong>TINA Alignment</strong><span>1 năm · đồng hành hiện thực hoá tầm nhìn.</span></span>
+            </label>
+            <label class="book-service-option">
+              <input type="radio" name="service" value="unsure" form="booking-form" required />
+              <span><strong>Chưa chắc</strong><span>Tôi muốn cùng Trâm xác định bậc phù hợp.</span></span>
+            </label>
+          </div>
+        </aside>
+
+        <div class="book-form-card" data-reveal="right">
+          <span class="badge badge--gold">Questionnaire</span>
+          <h2>Trước phiên khám phá</h2>
+          <form id="booking-form" class="book-form" data-calendar-url="">
+            <div class="book-form-row">
+              <div class="book-field">
+                <label for="book-name">Họ và tên <span class="book-required">*</span></label>
+                <input id="book-name" name="name" type="text" autocomplete="name" required />
+              </div>
+              <div class="book-field">
+                <label for="book-email">Email <span class="book-required">*</span></label>
+                <input id="book-email" name="email" type="email" autocomplete="email" required />
+              </div>
+            </div>
+
+            <div class="book-form-row">
+              <div class="book-field">
+                <label for="book-phone">Số điện thoại / WhatsApp / Zalo <span class="book-required">*</span></label>
+                <input id="book-phone" name="phone" type="tel" autocomplete="tel" required />
+              </div>
+              <div class="book-field">
+                <label for="book-timezone">Bạn đang ở múi giờ / thành phố nào? <span class="book-required">*</span></label>
+                <input id="book-timezone" name="timezone" type="text" placeholder="VD: Việt Nam, Singapore, Boston..." required />
+              </div>
+            </div>
+
+            <div class="book-field">
+              <label for="book-situation">Điều gì khiến bạn muốn book phiên này ngay lúc này? <span class="book-required">*</span></label>
+              <textarea id="book-situation" name="situation" required></textarea>
+            </div>
+
+            <div class="book-field">
+              <label for="book-goal">Nếu phiên này hữu ích, bạn muốn rời buổi gặp với điều gì rõ hơn? <span class="book-required">*</span></label>
+              <textarea id="book-goal" name="goal" required></textarea>
+            </div>
+
+            <div class="book-field">
+              <label for="book-history">Bạn đã từng thử coaching, trị liệu, chữa lành hoặc thực hành tâm linh nào trước đây chưa? <span class="book-required">*</span></label>
+              <textarea id="book-history" name="history" required></textarea>
+            </div>
+
+            <div class="book-field">
+              <label for="book-readiness">Mức độ sẵn sàng làm việc với chính mình hiện tại <span class="book-required">*</span></label>
+              <select id="book-readiness" name="readiness" required>
+                <option value="">Chọn một mức</option>
+                <option value="exploring">Tôi đang tìm hiểu và muốn nhìn rõ hơn</option>
+                <option value="ready">Tôi đã sẵn sàng bắt đầu một hành trình</option>
+                <option value="urgent">Tôi đang có một vấn đề cần gỡ sớm</option>
+              </select>
+            </div>
+
+            <label class="book-consent">
+              <input type="checkbox" name="consent" required />
+              <span>Tôi đồng ý để Edina Trâm lưu câu trả lời này nhằm chuẩn bị cho phiên khám phá. <span class="book-required">*</span></span>
+            </label>
+
+            <div class="book-submit-row">
+              <button type="submit" class="btn btn--primary btn--lg" disabled>Submit questionnaire</button>
+              <span class="book-status" aria-live="polite">Điền đủ các mục bắt buộc để bật nút Submit.</span>
+            </div>
+          </form>
+
+          <div class="book-result tina-callout tina-callout--gold" id="booking-result" aria-live="polite">
+            <p>Questionnaire đã được lưu trên trình duyệt này.</p>
+            <cite>Link Google Calendar thật chưa được cung cấp trong feedback3. Vui lòng gửi thông tin qua Zalo/WhatsApp hoặc email để hoàn tất đặt lịch.</cite>
+            <div class="book-submit-row">
+              <a href="lien-he.html" class="btn btn--primary">Liên hệ hoàn tất đặt lịch</a>
+              <a href="coaching-cung-edina.html" class="btn btn--outline">Xem lại các gói</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <site-footer></site-footer>
+  <script src="js/components.js" defer></script>
+  <script src="js/sections.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

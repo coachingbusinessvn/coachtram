@@ -1,0 +1,16 @@
+/* ═══════════════════════════════════════════════════════════
+   STYLE.CSS — Edina Trâm V2 Import Hub
+   ═══════════════════════════════════════════════════════════ */
+
+@import url('design-system.css?v=feedback3');
+@import url('components.css?v=feedback3');
+@import url('animations.css?v=feedback3');
+@import url('backgrounds.css?v=feedback3');
+@import url('pages/home.css?v=feedback3');
+@import url('pages/service.css?v=feedback3');
+@import url('pages/contact.css?v=feedback3');
+@import url('pages/testimonial.css?v=feedback3');
+@import url('pages/coaching.css?v=feedback3');
+@import url('pages/bai-viet.css?v=feedback3');
+@import url('pages/payment.css?v=feedback3');
+@import url('pages/book.css?v=feedback3');

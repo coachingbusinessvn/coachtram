@@ -1,0 +1,179 @@
+/* ═══════════════════════════════════════════════════════════
+   pages/testimonial.css — Trang Testimonial
+   Chỉ chứa layout RIÊNG của trang. Card lời chứng dùng lại
+   .testi-* (components.css); callout dùng .tina-callout;
+   nút dùng .btn — không định nghĩa lại theme.
+   ═══════════════════════════════════════════════════════════ */
+
+/* Hero đầu trang — theo cấu trúc chung: 1 bên text, 1 bên ảnh
+   (cùng ngôn ngữ với .story-hero của trang Câu chuyện). */
+.testi-page-hero {
+  min-height: 78dvh;
+  display: flex;
+  align-items: center;
+  padding-top: var(--header-height);
+  background:
+    radial-gradient(ellipse at 15% 55%, rgba(11, 138, 102, .08), transparent 55%),
+    radial-gradient(ellipse at 85% 20%, rgba(200, 162, 68, .06), transparent 50%),
+    var(--color-bg);
+  overflow: hidden;
+}
+.testi-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+.testi-page-hero h1 {
+  font-size: clamp(var(--text-4xl), 6vw, var(--text-7xl));
+  line-height: 1.05;
+  margin: var(--space-4) 0 var(--space-4);
+}
+.testi-page-hero h1 em { color: var(--royal-gold); font-style: normal; }
+.testi-page-hero .hero-lead {
+  max-width: 520px;
+  color: var(--color-fg-muted);
+}
+.testi-hero-portrait img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  border: 3px solid var(--pale-gold-sand);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.18), 0 6px 16px rgba(1, 79, 61, 0.10);
+}
+
+/* Callout đặt trong cột text của hero — thu gọn để vừa cột */
+.testi-hero-callout {
+  max-width: 100%;
+  margin: var(--space-6) 0 0;
+  padding: var(--space-6) var(--space-6) calc(var(--space-6) + 2px);
+  text-align: left;
+}
+.testi-hero-callout::before { left: var(--space-6); transform: none; font-size: 3.5rem; }
+.testi-hero-callout p {
+  font-size: clamp(var(--text-lg), 1.6vw, var(--text-2xl));
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .testi-hero-grid { grid-template-columns: 1fr; }
+  .testi-hero-portrait {
+    order: -1;
+    max-width: 420px;
+    margin-inline: auto;
+  }
+}
+
+/* Tiêu đề nhóm section trong trang */
+.testi-block { padding: var(--space-12) 0; }
+.testi-block:nth-child(even) {
+  background: var(--color-bg-alt);
+  border-top: 1px solid rgba(200, 162, 68, 0.10);
+  border-bottom: 1px solid rgba(200, 162, 68, 0.10);
+}
+.testi-block-head {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto var(--space-10);
+}
+.testi-block-head h2 { margin-bottom: var(--space-3); }
+.testi-block-head p { color: var(--color-fg-muted); }
+
+/* Monogram avatar — dùng khi chưa có ảnh chân dung thật.
+   Giữ đúng khung .testi-avatar-wrap, chỉ đổi nội dung sang chữ cái. */
+.testi-avatar--mono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  color: var(--color-primary);
+  background:
+    radial-gradient(120% 120% at 30% 20%, rgba(200,162,68,0.18), transparent 60%),
+    var(--emerald-mist);
+}
+
+/* ─── Gallery ảnh chụp tin nhắn / khoảnh khắc thật ─── */
+.msg-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-6);
+}
+.msg-shot {
+  margin: 0;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--duration-medium) var(--ease-out-expo),
+              box-shadow var(--duration-medium) var(--ease-out-expo);
+}
+.msg-shot:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+.msg-shot img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  display: block;
+}
+.msg-shot figcaption {
+  margin-top: var(--space-3);
+  font-size: var(--text-xs);
+  color: var(--color-fg-muted);
+  text-align: center;
+}
+
+/* ─── Video testimonial ─── */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: var(--space-8);
+}
+.video-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+.video-embed {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--emerald-noir);
+}
+.video-embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+.video-meta {
+  padding: var(--space-4) var(--space-5) var(--space-5);
+}
+.video-meta .testi-name { font-size: var(--text-lg); }
+
+/* Placeholder cho video sắp lên YouTube */
+.video-embed--pending {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgba(255,255,255,0.82);
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  padding: var(--space-6);
+  background:
+    radial-gradient(120% 140% at 50% 0%, rgba(200,162,68,0.18), transparent 60%),
+    linear-gradient(155deg, #06513c, #00372a);
+}
+
+@media (max-width: 600px) {
+  .testi-page-hero { padding: var(--space-16) 0 var(--space-8); }
+}

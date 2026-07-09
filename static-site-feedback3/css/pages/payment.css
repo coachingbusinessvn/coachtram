@@ -1,0 +1,143 @@
+/* ═══════════════════════════════════════════════════════════
+   THANH TOÁN — QR payment page
+   ═══════════════════════════════════════════════════════════ */
+
+.payment-hero {
+  min-height: 54dvh;
+  display: flex;
+  align-items: center;
+  padding: calc(var(--header-height) + var(--space-10)) 0 var(--space-12);
+  background:
+    radial-gradient(circle at 18% 28%, rgba(241, 216, 154, 0.18), transparent 34%),
+    radial-gradient(circle at 84% 20%, rgba(11, 138, 102, 0.13), transparent 38%),
+    linear-gradient(145deg, #fbf8f1 0%, #f7fbf9 52%, #ffffff 100%);
+}
+
+.payment-hero h1 {
+  margin: var(--space-4) 0;
+  font-size: clamp(var(--text-4xl), 6vw, var(--text-6xl));
+  line-height: 1.04;
+}
+
+.payment-hero h1 em {
+  color: var(--royal-gold);
+  font-style: italic;
+}
+
+.payment-hero p {
+  max-width: 700px;
+  font-size: var(--text-lg);
+  line-height: 1.75;
+}
+
+.payment-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.82fr) minmax(0, 1fr);
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.payment-qr-card,
+.payment-info-card {
+  min-width: 0;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-sm);
+}
+
+.payment-qr-frame {
+  display: grid;
+  place-items: center;
+  min-height: 330px;
+  border: 1px dashed rgba(200, 162, 68, 0.55);
+  border-radius: var(--radius-lg);
+  background:
+    radial-gradient(circle at 50% 0%, rgba(241, 216, 154, 0.28), transparent 52%),
+    #fbf8f1;
+  text-align: center;
+}
+
+.payment-qr-placeholder {
+  max-width: 260px;
+}
+
+.payment-qr-placeholder strong {
+  display: block;
+  color: var(--color-primary);
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  line-height: 1.2;
+  margin-bottom: var(--space-3);
+}
+
+.payment-qr-placeholder span {
+  color: var(--color-fg-muted);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}
+
+.payment-info-card h2 {
+  margin-bottom: var(--space-4);
+}
+
+.payment-steps,
+.payment-details {
+  display: grid;
+  gap: var(--space-4);
+  margin: var(--space-6) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.payment-steps li,
+.payment-details li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-4);
+  align-items: start;
+  color: var(--color-fg-muted);
+  font-size: var(--text-sm);
+  line-height: 1.7;
+}
+
+.payment-step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  background: var(--color-primary);
+  color: #fff;
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.payment-details strong {
+  color: var(--color-fg);
+}
+
+.payment-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-top: var(--space-8);
+}
+
+@media (max-width: 860px) {
+  .payment-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .payment-actions {
+    flex-direction: column;
+  }
+
+  .payment-actions .btn {
+    width: 100%;
+  }
+}

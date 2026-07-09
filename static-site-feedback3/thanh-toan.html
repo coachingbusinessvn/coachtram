@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Trang thanh toán của Edina Trâm. QR chuyển khoản sẽ được cập nhật khi có thông tin tài khoản chính thức." />
+  <title>Thanh toán – Edina Trâm</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <site-header active="thanh-toan.html"></site-header>
+  <noscript>
+    <div style="background:#06513c;color:#fff;text-align:center;padding:.6rem 1rem;font-size:.9rem;">
+      Trang hiển thị đầy đủ hơn khi bật JavaScript.
+      <a href="index.html" style="color:#F1D89A;">Trang chủ</a> ·
+      <a href="lien-he.html" style="color:#F1D89A;">Liên hệ</a>
+    </div>
+  </noscript>
+
+  <main>
+    <glow-blobs></glow-blobs>
+
+    <section class="payment-hero">
+      <div class="container" data-reveal>
+        <span class="badge badge--gold">Thanh toán</span>
+        <h1>Thông tin <em>chuyển khoản</em></h1>
+        <p>Trang này dành riêng cho QR thanh toán. Vui lòng chỉ chuyển khoản sau khi đã xác nhận chương trình và thông tin thanh toán với Edina Trâm.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container payment-layout">
+        <div class="payment-qr-card" data-reveal>
+          <div class="payment-qr-frame">
+            <div class="payment-qr-placeholder">
+              <strong>QR đang được cập nhật</strong>
+              <span>Ảnh QR và thông tin tài khoản chính thức chưa có trong tài liệu feedback3.</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="payment-info-card" data-reveal="right">
+          <span class="badge">Hướng dẫn</span>
+          <h2>Trước khi thanh toán</h2>
+          <p>Để tránh nhầm lẫn, hãy xác nhận lại gói coaching, số tiền và nội dung chuyển khoản qua Zalo, WhatsApp hoặc email.</p>
+
+          <ol class="payment-steps">
+            <li><span class="payment-step-num">1</span><span>Xác nhận gói chương trình và học phí với Edina Trâm.</span></li>
+            <li><span class="payment-step-num">2</span><span>Quét QR khi ảnh QR chính thức được cập nhật trên trang này.</span></li>
+            <li><span class="payment-step-num">3</span><span>Gửi ảnh xác nhận chuyển khoản qua kênh liên hệ bạn đang dùng.</span></li>
+          </ol>
+
+          <ul class="payment-details">
+            <li><span></span><span><strong>Tên tài khoản:</strong> đang cập nhật.</span></li>
+            <li><span></span><span><strong>Ngân hàng:</strong> đang cập nhật.</span></li>
+            <li><span></span><span><strong>Nội dung:</strong> họ tên + gói coaching đã xác nhận.</span></li>
+          </ul>
+
+          <div class="payment-actions">
+            <a href="lien-he.html" class="btn btn--primary">Liên hệ xác nhận</a>
+            <a href="coaching-cung-edina.html" class="btn btn--outline">Xem lại các gói</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <site-footer></site-footer>
+  <script src="js/components.js" defer></script>
+  <script src="js/sections.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
